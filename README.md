@@ -42,9 +42,9 @@ This platform is engineered using modern, high-performance web technologies:
 
 For inquiries, support, or partnership opportunities, please reach out to our team:
 
-- **Website:** [www.udhary.com](https://udhary.netlify.app/)
+- **Website:** [www.udhary.com](https://udhary.onrender.com/)
 - **WhatsApp Support:** [+91-7838899530](https://wa.me/917838899530)
-- **Careers:** Visit our [Careers Page](https://udhary.netlify.app/career) to join our growing team!
+- **Careers:** Visit our [Careers Page](https://udhary.onrender.com/career) to join our growing team!
 
 <br/>
 
