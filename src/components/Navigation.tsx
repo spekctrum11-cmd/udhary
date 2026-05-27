@@ -38,7 +38,7 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="flex gap-6 items-center font-normal text-slate-600 text-sm">
             <div className="relative group">
-              <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3">
+              <a href="https://app.udhary.com/loan-application" className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3">
                 Loans <span className="material-symbols-outlined text-[18px] group-hover:rotate-180 transition-transform" style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
               </a>
               {/* Standard Menu Dropdown with colorful icons */}
