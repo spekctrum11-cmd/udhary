@@ -35,7 +35,7 @@ export default function EmiCalculatorPage() {
 
       {/* Main Content Area */}
       <section className="pb-24 pt-0">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <EmiCalculator />
         </div>
       </section>

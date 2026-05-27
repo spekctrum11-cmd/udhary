@@ -7,7 +7,7 @@ export function PremiumOfferingsSection() {
       <div className="absolute top-0 left-0 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-blue-200/30 rounded-full blur-[80px] md:blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-orange-100/40 rounded-full blur-[80px] md:blur-[120px] translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-6 lg:mb-16 max-w-2xl mx-auto">
           <span className="inline-block px-4 py-1.5 bg-blue-100/50 text-blue-700 font-bold text-[10px] md:text-xs tracking-widest uppercase rounded-full mb-4 shadow-[0_2px_10px_rgba(37,99,235,0.1)] border border-blue-200/50 backdrop-blur-sm">

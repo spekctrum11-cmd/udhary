@@ -15,7 +15,7 @@ export function FinancialEcosystemSection() {
       {/* Subtle Ambient Glow for the Dock */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[120px] bg-blue-500/5 rounded-full blur-[60px] pointer-events-none"></div>
 
-      <div className="max-w-5xl mx-auto px-4 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
         
         {/* Minimalist Heading Inline with Dock */}
         <div className="text-center mb-8">

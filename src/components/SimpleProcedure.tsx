@@ -43,7 +43,7 @@ export function SimpleProcedure() {
         className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-50/50 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-6 lg:mb-20">
           <span className="inline-block px-4 py-1.5 bg-orange-50 text-orange-600 font-semibold text-xs tracking-widest uppercase rounded-full mb-4 border border-orange-100">
             How It Works
@@ -56,7 +56,7 @@ export function SimpleProcedure() {
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-2 md:px-0" key={key}>
+        <div className="relative max-w-6xl mx-auto px-2 md:px-0" key={key}>
           {/* Desktop Horizontal Track */}
           <div className="hidden md:block absolute top-12 left-[16.66%] right-[16.66%] h-1 bg-slate-100 rounded-full z-0"></div>
           <motion.div

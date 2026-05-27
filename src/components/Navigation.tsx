@@ -6,6 +6,7 @@ import Image from 'next/image';
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileLoansOpen, setIsMobileLoansOpen] = useState(false);
+  const [isDesktopLoansOpen, setIsDesktopLoansOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -13,6 +14,13 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isDesktopLoansOpen) return;
+    const closeDropdown = () => setIsDesktopLoansOpen(false);
+    document.addEventListener('click', closeDropdown);
+    return () => document.removeEventListener('click', closeDropdown);
+  }, [isDesktopLoansOpen]);
 
   const loansList = [
     { title: "Personal Loan", icon: "person", color: "text-blue-600" },
@@ -37,12 +45,25 @@ export function Navigation() {
         <div className="hidden lg:flex items-center gap-8">
           {/* Desktop Navigation */}
           <div className="flex gap-6 items-center font-normal text-slate-600 text-sm">
-            <div className="relative group">
-              <a href="https://app.udhary.com/loan-application" className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3">
-                Loans <span className="material-symbols-outlined text-[18px] group-hover:rotate-180 transition-transform" style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
-              </a>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsDesktopLoansOpen(true)}
+              onMouseLeave={() => setIsDesktopLoansOpen(false)}
+            >
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsDesktopLoansOpen(!isDesktopLoansOpen);
+                }}
+                className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3 focus:outline-none cursor-pointer font-normal text-slate-600 text-sm"
+              >
+                Loans <span className={`material-symbols-outlined text-[18px] transition-transform duration-300 ${isDesktopLoansOpen ? 'rotate-180' : ''}`} style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
+              </button>
               {/* Minimalist Glassmorphism Dropdown with Elite Infinite Animation */}
-              <div className="absolute top-full left-0 w-[240px] bg-white/80 backdrop-blur-2xl ring-1 ring-slate-900/5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-4 z-50 overflow-hidden flex flex-col py-2">
+              <div 
+                onClick={(e) => e.stopPropagation()}
+                className={`absolute top-full left-0 w-[240px] bg-white/80 backdrop-blur-2xl ring-1 ring-slate-900/5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl transition-all duration-300 z-50 overflow-hidden flex flex-col py-2 ${isDesktopLoansOpen ? 'opacity-100 visible transform translate-y-4' : 'opacity-0 invisible transform translate-y-2'}`}
+              >
                 
                 {/* Infinite Auto Floating Aurora Background */}
                 <div className="absolute top-0 -left-4 w-32 h-32 bg-blue-500/15 rounded-full blur-2xl animate-blob z-0 pointer-events-none"></div>

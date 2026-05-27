@@ -3,7 +3,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 export function FAQSection() {
   return (
     <section className="py-2 lg:py-8 bg-surface-blue">
-      <div className="max-w-3xl mx-auto px-gutter">
+      <div className="max-w-6xl mx-auto px-gutter">
         <div className="text-center mb-6 lg:mb-12">
           <h2 className="text-headline-md font-headline-md text-primary">Frequently Asked Questions</h2>
         </div>

@@ -61,7 +61,7 @@ export default function EmiCalculator() {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 pt-8 pb-12 lg:pt-12 lg:pb-20 relative">
+    <div className="w-full max-w-6xl mx-auto px-4 pt-8 pb-12 lg:pt-12 lg:pb-20 relative">
 
       {/* Main Unified Calculator Card */}
       <motion.div
