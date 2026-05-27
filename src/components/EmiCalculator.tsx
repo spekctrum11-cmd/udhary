@@ -63,25 +63,6 @@ export default function EmiCalculator() {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-12 lg:py-20 relative">
 
-      {/* Header outside */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center mb-10 relative"
-      >
-        <div className="inline-flex items-center justify-center px-6 py-2 bg-blue-50 text-blue-600 rounded-full mb-6 border border-blue-100 shadow-sm">
-          <Sparkles className="w-5 h-5 mr-2" />
-          <span className="font-semibold tracking-wide text-sm uppercase">Smart Planner</span>
-        </div>
-        <h2 className="text-display-lg-mobile lg:text-display-lg text-slate-900 mb-6 font-extrabold tracking-tight">
-          Live EMI Calculator
-        </h2>
-        <p className="text-body-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Design your perfect loan. Adjust the parameters below to instantly visualize your payments, interest, and total outlay in beautiful detail.
-        </p>
-      </motion.div>
-
       {/* Main Unified Calculator Card */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

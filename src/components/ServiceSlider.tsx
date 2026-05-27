@@ -44,15 +44,15 @@ const services = [
 
 const ServiceCard = ({ service }: { service: any }) => {
   const inner = (
-    <div className="relative z-10 flex items-center gap-2 md:gap-3 px-3.5 py-1 md:px-5 md:py-1.5 bg-white/70 backdrop-blur-xl rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-white/60 min-w-max transition-all duration-500 group-hover:bg-white group-hover:-translate-y-1.5 group-hover:shadow-[0_15px_35px_rgba(249,115,22,0.12)] overflow-hidden">
+    <div className="relative z-10 flex items-center gap-2 md:gap-2.5 px-3 py-1 md:px-4 md:py-1 bg-white/70 backdrop-blur-xl rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-white/60 min-w-max transition-all duration-500 group-hover:bg-white group-hover:-translate-y-1.5 group-hover:shadow-[0_15px_35px_rgba(249,115,22,0.12)] overflow-hidden">
       
       {/* Animated glowing gradient background that appears on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 via-orange-400/0 to-orange-500/0 group-hover:from-orange-500/[0.04] group-hover:via-orange-400/[0.08] group-hover:to-orange-500/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
-      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-slate-50/80 flex items-center justify-center group-hover:bg-blue-50 group-hover:scale-110 transition-all duration-500 shrink-0 shadow-inner border border-slate-100/50 group-hover:border-blue-100/80">
-        <span className="material-symbols-outlined text-primary text-[15px] md:text-[18px] transition-colors duration-500">{service.icon}</span>
+      <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-slate-50/80 flex items-center justify-center group-hover:bg-blue-50 group-hover:scale-110 transition-all duration-500 shrink-0 shadow-inner border border-slate-100/50 group-hover:border-blue-100/80">
+        <span className="material-symbols-outlined text-primary text-[13px] md:text-[15px] transition-colors duration-500" style={{ fontVariationSettings: "'wght' 300" }}>{service.icon}</span>
       </div>
-      <span className="text-[12px] md:text-[14px] font-medium text-slate-700 whitespace-nowrap tracking-wide group-hover:text-primary transition-colors duration-500 relative z-10">{service.label}</span>
+      <span className="text-[11px] md:text-[13px] font-normal text-slate-600 whitespace-nowrap tracking-wide group-hover:text-primary transition-colors duration-500 relative z-10">{service.label}</span>
     </div>
   );
 

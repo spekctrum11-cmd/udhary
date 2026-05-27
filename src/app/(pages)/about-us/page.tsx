@@ -8,14 +8,26 @@ export const metadata = {
 export default function AboutUsPage() {
   return (
     <main className="flex-1 bg-surface-container-lowest">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary to-deep-navy text-white py-24">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="max-w-container-max mx-auto px-gutter relative z-10 text-center">
-          <h1 className="text-display-lg font-display-lg mb-6 leading-tight">
-            About <span className="text-secondary-fixed">Udhary.com</span>
+      {/* Header Section */}
+                  {/* Elegant Ambient Background */}
+      <section className="bg-slate-50 pt-20 pb-16 border-b border-slate-200 relative overflow-hidden">
+        {/* Ambient Aurora Glows (Highly Visible) */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-[150px] -left-[100px] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[80px]"></div>
+          <div className="absolute -bottom-[150px] -right-[100px] w-[500px] h-[500px] bg-orange-500/15 rounded-full blur-[80px]"></div>
+        </div>
+        
+        {/* Crisp Top Highlight */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"></div>
+        
+        <div className="max-w-container-max mx-auto px-gutter text-center relative z-10">
+          <span className="inline-block px-4 py-1.5 bg-blue-500/10 text-primary font-bold text-xs tracking-widest uppercase rounded-full mb-6 border border-blue-500/20 shadow-sm backdrop-blur-sm">
+            Who we are
+          </span>
+          <h1 className="text-display-lg font-display-lg text-primary mb-4">
+            About <span className="text-secondary">Udhary.com</span>
           </h1>
-          <p className="text-body-lg opacity-90 max-w-2xl mx-auto">
+          <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
             Your first initial choice for loans due to our commitment and dedication to providing a great exceptional lending experience.
           </p>
         </div>

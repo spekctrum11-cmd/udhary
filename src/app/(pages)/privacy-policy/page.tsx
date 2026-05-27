@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Privacy Policy | Udhary.com',
@@ -9,18 +10,40 @@ export default function PrivacyPolicyPage() {
   return (
     <main className="flex-1 bg-surface-container-lowest">
       {/* Hero Section */}
-      <section className="bg-surface-blue py-20 border-b border-outline-variant/30">
-        <div className="max-w-container-max mx-auto px-gutter text-center">
+                  {/* Elegant Ambient Background */}
+      <section className="bg-slate-50 pt-20 pb-20 border-b border-slate-200 relative overflow-hidden">
+        {/* Ambient Aurora Glows (Highly Visible) */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-[150px] -left-[100px] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[80px]"></div>
+          <div className="absolute -bottom-[150px] -right-[100px] w-[500px] h-[500px] bg-orange-500/15 rounded-full blur-[80px]"></div>
+        </div>
+        
+        {/* Crisp Top Highlight */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"></div>
+        
+        <div className="max-w-container-max mx-auto px-gutter text-center relative z-10">
           <h1 className="text-display-lg font-display-lg text-primary mb-4">Privacy <span className="text-secondary">Policy</span></h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">How we manage, protect, and use your personal information securely.</p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="-mt-10 pb-20 relative z-10">
         <div className="max-w-4xl mx-auto px-gutter">
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-outline-variant/20 prose prose-lg prose-blue max-w-none text-on-surface-variant">
-            
+          <div className="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-outline-variant/20 prose prose-lg prose-blue max-w-none text-on-surface-variant">
+
+            {/* Header Image */}
+            <div className="w-full mb-10 rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30">
+              <Image
+                src="/Privacy-policy.jpeg"
+                alt="Privacy Policy"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+
             <p>
               In this Privacy Policy, the words such as “we”, “our”, “company”, and “us” refer to <strong>Udhary.com</strong> and its undertaken system. Words such as “you” and “your” refer to Udhary.com’s user, customer, channel partner, etc.
             </p>

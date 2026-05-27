@@ -16,19 +16,26 @@ const awards = [
 export default function AwardPage() {
   return (
     <main className="flex-1 bg-slate-50">
-      <section className="bg-slate-900 py-16 lg:py-24 relative overflow-hidden">
-        {/* Subtle premium background glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center relative z-10">
-          <span className="inline-block px-4 py-1.5 bg-blue-500/10 text-blue-400 font-bold text-xs tracking-widest uppercase rounded-full mb-6 border border-blue-500/20 shadow-sm backdrop-blur-sm">
+      {/* Header Section */}
+                  {/* Elegant Ambient Background */}
+      <section className="bg-slate-50 pt-20 pb-16 border-b border-slate-200 relative overflow-hidden">
+        {/* Ambient Aurora Glows (Highly Visible) */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-[150px] -left-[100px] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[80px]"></div>
+          <div className="absolute -bottom-[150px] -right-[100px] w-[500px] h-[500px] bg-orange-500/15 rounded-full blur-[80px]"></div>
+        </div>
+        
+        {/* Crisp Top Highlight */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"></div>
+        
+        <div className="max-w-container-max mx-auto px-gutter text-center relative z-10">
+          <span className="inline-block px-4 py-1.5 bg-blue-500/10 text-primary font-bold text-xs tracking-widest uppercase rounded-full mb-6 border border-blue-500/20 shadow-sm backdrop-blur-sm">
             Milestones
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Awards & Recognition
+          <h1 className="text-display-lg font-display-lg text-primary mb-4">
+            Awards & <span className="text-secondary">Recognition</span>
           </h1>
-          <p className="text-slate-400 max-w-2xl mx-auto text-[16px] md:text-lg leading-relaxed">
+          <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
             Celebrating our milestones and the trust we have built with our partners across India.
           </p>
         </div>
