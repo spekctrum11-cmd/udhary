@@ -66,6 +66,8 @@ export default function GalleryPage() {
                   height={800}
                   className="w-full h-auto object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                  unoptimized
+                  priority={index < 6}
                 />
               </div>
             </div>

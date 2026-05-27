@@ -50,6 +50,8 @@ export default function AwardPage() {
                     height={600}
                     className="w-full h-auto object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-sm"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    unoptimized
+                    priority
                   />
                 </div>
               </div>
