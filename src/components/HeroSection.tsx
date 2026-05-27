@@ -86,7 +86,7 @@ export function HeroSection() {
             <div className="relative w-full flex justify-center scale-125">
               <Image
                 alt="Family planning for their future"
-                src="/phone-hero.jpg"
+                src="/phone-hero-v2.png"
                 width={1000}
                 height={1000}
                 className="w-full max-w-[600px] lg:max-w-[1000px] object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.06)] pointer-events-none"

@@ -37,7 +37,7 @@ export function Navigation() {
       <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-[110px] sm:w-[120px]">
-            <Image src="/logo.png" alt="logo" width={160} height={50} className="w-full h-auto object-contain" />
+            <Image src="/logo.png" alt="logo" width={160} height={50} priority className="w-full h-auto object-contain" />
           </div>
         </div>
 
