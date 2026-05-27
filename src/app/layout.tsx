@@ -54,9 +54,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-on-surface font-body-md">
+      <body className="min-h-full flex flex-col bg-white text-on-surface font-body-md">
         <Navigation />
-        {children}
+        <main className="flex-1 flex flex-col w-full">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

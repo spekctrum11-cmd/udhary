@@ -33,46 +33,48 @@ export function Navigation() {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex gap-6 items-center font-normal text-slate-600 text-sm">
-          <div className="relative group">
-            <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3">
-              Loans <span className="material-symbols-outlined text-[18px] group-hover:rotate-180 transition-transform" style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
-            </a>
-            {/* Standard Menu Dropdown with colorful icons */}
-            <div className="absolute top-full left-0 w-[240px] bg-white border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-4 z-50 overflow-hidden flex flex-col py-1.5">
-              <div className="flex flex-col">
-                {loansList.map((loan, idx) => (
-                  <a
-                    key={idx}
-                    href="https://app.udhary.com/loan-application"
-                    className="flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition-colors group/item"
-                  >
-                    <span className={`material-symbols-outlined text-[18px] ${loan.color}`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
-                    <div className="text-slate-600 text-[13px] font-normal group-hover/item:text-primary transition-colors">
-                      {loan.title}
-                    </div>
-                  </a>
-                ))}
+        {/* Desktop Navigation & Actions (Right Aligned) */}
+        <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation */}
+          <div className="flex gap-6 items-center font-normal text-slate-600 text-sm">
+            <div className="relative group">
+              <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3">
+                Loans <span className="material-symbols-outlined text-[18px] group-hover:rotate-180 transition-transform" style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
+              </a>
+              {/* Standard Menu Dropdown with colorful icons */}
+              <div className="absolute top-full left-0 w-[240px] bg-white border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-4 z-50 overflow-hidden flex flex-col py-1.5">
+                <div className="flex flex-col">
+                  {loansList.map((loan, idx) => (
+                    <a
+                      key={idx}
+                      href="https://app.udhary.com/loan-application"
+                      className="flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition-colors group/item"
+                    >
+                      <span className={`material-symbols-outlined text-[18px] ${loan.color}`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
+                      <div className="text-slate-600 text-[13px] font-normal group-hover/item:text-primary transition-colors">
+                        {loan.title}
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
+            <a href="/emi-calculator" className="hover:text-primary transition-colors flex items-center gap-1">
+              EMI Calculators
+            </a>
+            <a href="https://app.udhary.com/apply-credit-card" className="hover:text-primary transition-colors">Credit Card</a>
+            <a href="/contact-us" className="hover:text-primary transition-colors">Contact Us</a>
           </div>
-          <a href="/emi-calculator" className="hover:text-primary transition-colors flex items-center gap-1">
-            EMI Calculators
-          </a>
-          <a href="https://app.udhary.com/apply-credit-card" className="hover:text-primary transition-colors">Credit Card</a>
-          <a href="/contact-us" className="hover:text-primary transition-colors">Contact Us</a>
 
-        </div>
-
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex gap-3">
-          <a href="https://app.udhary.com/login" className="px-5 py-1.5 rounded-xl text-primary font-medium text-[13px] border border-primary hover:bg-primary hover:text-white transition-all">
-            Login
-          </a>
-          <a href="https://app.udhary.com/phone-verification" className="px-5 py-1.5 rounded-xl bg-primary text-white font-medium text-[13px] hover:bg-primary-container transition-all">
-            Become a Partner
-          </a>
+          {/* Desktop Actions */}
+          <div className="flex gap-3">
+            <a href="https://app.udhary.com/login" className="px-5 py-1.5 rounded-xl text-primary font-medium text-[13px] border border-primary hover:bg-primary hover:text-white transition-all">
+              Login
+            </a>
+            <a href="https://app.udhary.com/phone-verification" className="px-5 py-1.5 rounded-xl bg-primary text-white font-medium text-[13px] hover:bg-primary-container transition-all">
+              Become a Partner
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}
