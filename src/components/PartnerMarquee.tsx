@@ -47,7 +47,7 @@ export function PartnerMarquee() {
                 tabIndex={0}
                 onClick={() => setActivePartner(isActive ? null : index)}
                 onBlur={() => setActivePartner(null)}
-                className={`flex-shrink-0 w-40 md:w-48 h-20 relative transition-all duration-500 cursor-pointer outline-none ${isActive
+                className={`flex-shrink-0 w-40 md:w-48 h-20 relative transition-all duration-500 cursor-pointer outline-none mix-blend-multiply ${isActive
                     ? 'grayscale-0 opacity-100'
                     : 'grayscale opacity-60 hover:grayscale-0 hover:opacity-100'
                   }`}
@@ -56,7 +56,8 @@ export function PartnerMarquee() {
                   src={src}
                   alt={`Partner ${index}`}
                   fill
-                  className="object-contain"
+                  sizes="(max-width: 768px) 160px, 192px"
+                  className="object-contain contrast-[1.05] brightness-[1.05]"
                 />
               </div>
             );
