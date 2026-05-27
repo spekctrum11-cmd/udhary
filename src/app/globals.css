@@ -83,6 +83,16 @@
   --font-weight-semibold: 500;
   --font-weight-bold: 600;
   --font-weight-extrabold: 700;
+
+  /* Elite Background Animations */
+  --animate-blob: blob 10s infinite alternate ease-in-out;
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
 }
 
 @utility text-display-lg {
@@ -92,6 +102,15 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
+
+@utility hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @utility text-display-lg-mobile {
   font-family: var(--font-plus-jakarta);
   font-size: 28px;

@@ -41,17 +41,23 @@ export function Navigation() {
               <a href="https://app.udhary.com/loan-application" className="hover:text-primary transition-colors flex items-center gap-1 py-3 -my-3">
                 Loans <span className="material-symbols-outlined text-[18px] group-hover:rotate-180 transition-transform" style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
               </a>
-              {/* Standard Menu Dropdown with colorful icons */}
-              <div className="absolute top-full left-0 w-[240px] bg-white border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-4 z-50 overflow-hidden flex flex-col py-1.5">
-                <div className="flex flex-col">
+              {/* Minimalist Glassmorphism Dropdown with Elite Infinite Animation */}
+              <div className="absolute top-full left-0 w-[240px] bg-white/80 backdrop-blur-2xl ring-1 ring-slate-900/5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-4 z-50 overflow-hidden flex flex-col py-2">
+                
+                {/* Infinite Auto Floating Aurora Background */}
+                <div className="absolute top-0 -left-4 w-32 h-32 bg-blue-500/15 rounded-full blur-2xl animate-blob z-0 pointer-events-none"></div>
+                <div className="absolute bottom-0 -right-4 w-32 h-32 bg-orange-500/15 rounded-full blur-2xl animate-blob z-0 pointer-events-none" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-blob z-0 pointer-events-none" style={{ animationDelay: '4s' }}></div>
+
+                <div className="flex flex-col px-1.5 relative z-10">
                   {loansList.map((loan, idx) => (
                     <a
                       key={idx}
                       href="https://app.udhary.com/loan-application"
-                      className="flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition-colors group/item"
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/60 transition-all duration-300 group/item"
                     >
-                      <span className={`material-symbols-outlined text-[18px] ${loan.color}`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
-                      <div className="text-slate-600 text-[13px] font-normal group-hover/item:text-primary transition-colors">
+                      <span className={`material-symbols-outlined text-[18px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
+                      <div className="text-slate-600 text-[13px] font-normal group-hover/item:text-slate-900 transition-colors">
                         {loan.title}
                       </div>
                     </a>
