@@ -1,7 +1,7 @@
 export function WhatsAppFAB() {
   return (
     <a
-      href="https://wa.me/917838899530"
+      href="https://wa.me/917669755501"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-14 md:h-14 bg-success-green text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50 group"
