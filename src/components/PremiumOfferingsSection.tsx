@@ -73,7 +73,7 @@ export function PremiumOfferingsSection() {
           </div>
 
           {/* Home Loan (Compact Card on Desktop, Tall on Mobile/Tablet) */}
-          <div className="lg:col-span-1 md:col-span-1 group rounded-[24px] md:rounded-[2rem] overflow-hidden relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-800/50 flex flex-col bg-[#061124]">
+          <div className="lg:col-span-1 md:col-span-2 group rounded-[24px] md:rounded-[2rem] overflow-hidden relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 border border-slate-800/50 flex flex-col bg-[#061124]">
             <div className="h-[140px] md:h-[160px] relative overflow-hidden shrink-0">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#061124] z-10"></div>
               <Image
@@ -111,7 +111,7 @@ export function PremiumOfferingsSection() {
           </div>
 
           {/* Credit Card Card */}
-          <div className="lg:col-span-3 md:col-span-1 group relative overflow-hidden rounded-[24px] md:rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-700 flex flex-col lg:flex-row items-center">
+          <div className="lg:col-span-3 md:col-span-2 group relative overflow-hidden rounded-[24px] md:rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-700 flex flex-col lg:flex-row items-center">
             {/* Ambient glowing orb */}
             <div className="absolute right-0 top-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-gradient-to-bl from-blue-100 via-indigo-50/50 to-transparent rounded-full blur-[60px] opacity-60 md:opacity-40 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none"></div>
 

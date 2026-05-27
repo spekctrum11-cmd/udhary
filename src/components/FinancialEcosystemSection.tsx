@@ -28,27 +28,27 @@ export function FinancialEcosystemSection() {
         </div>
 
         {/* Floating Glass Dock Container */}
-        <div className="relative mx-auto w-full max-w-max">
+        <div className="relative mx-auto w-full max-w-4xl">
           {/* Glass Container */}
-          <div className="flex flex-wrap justify-center items-center gap-1 p-2 bg-white/70 backdrop-blur-2xl border border-white/60 rounded-[2rem] shadow-[0_15px_40px_rgb(0,0,0,0.06)]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-nowrap lg:justify-center items-center gap-3 sm:gap-4 lg:gap-1 p-4 lg:p-2 bg-white/70 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-[2rem] shadow-[0_15px_40px_rgb(0,0,0,0.06)]">
               {ecosystemItems.map((item, idx) => {
                 const content = (
-                  <div className="flex flex-col items-center justify-center gap-2 px-4 py-3 sm:px-7 sm:py-5 rounded-3xl hover:bg-white hover:shadow-[0_8px_25px_rgb(0,0,0,0.04)] transition-all duration-500 group min-w-[100px]">
-                  <span className="material-symbols-outlined text-slate-400 group-hover:text-blue-500 group-hover:-translate-y-1 transition-all duration-500 text-[26px] sm:text-[32px]" style={{ fontVariationSettings: "'wght' 300" }}>
+                  <div className="flex flex-col items-center justify-center gap-2 px-2 py-4 lg:px-7 lg:py-5 rounded-2xl lg:rounded-3xl hover:bg-white hover:shadow-[0_8px_25px_rgb(0,0,0,0.04)] transition-all duration-500 group text-center h-full">
+                  <span className="material-symbols-outlined text-slate-400 group-hover:text-blue-500 group-hover:-translate-y-1 transition-all duration-500 text-[28px] sm:text-[32px]" style={{ fontVariationSettings: "'wght' 300" }}>
                     {item.icon}
                   </span>
-                  <span className="text-[12px] sm:text-[13px] font-medium text-slate-500 group-hover:text-slate-800 whitespace-nowrap transition-colors duration-300">
+                  <span className="text-[13px] font-medium text-slate-500 group-hover:text-slate-800 transition-colors duration-300">
                     {item.label}
                   </span>
                 </div>
               );
 
               return item.href === "#" ? (
-                <div key={idx} className="cursor-default outline-none">
+                <div key={idx} className="cursor-default outline-none h-full">
                   {content}
                 </div>
               ) : (
-                <Link href={item.href} key={idx} className="outline-none block">
+                <Link href={item.href} key={idx} className="outline-none block h-full">
                   {content}
                 </Link>
               );
