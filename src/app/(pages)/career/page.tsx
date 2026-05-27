@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 export default function CareerPage() {
-  const WHATSAPP_NUMBER = "917838899530";
+  const WHATSAPP_NUMBER = "917669755501";
   
   const generateWhatsAppLink = (jobTitle: string) => {
     const text = encodeURIComponent(`Application for ${jobTitle} - North-Delhi`);
