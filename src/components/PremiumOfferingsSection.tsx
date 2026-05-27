@@ -83,18 +83,21 @@ export function PremiumOfferingsSection() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out opacity-80 group-hover:opacity-100"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute top-5 left-5 md:top-6 md:left-6 z-20">
+              <div className="absolute top-5 left-5 right-5 md:top-6 md:left-6 md:right-6 z-20 flex justify-between items-center">
                 <span className="px-3 py-1.5 bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest rounded-lg shadow-sm">
                   Housing
                 </span>
+                <div className="w-8 h-8 md:w-9 md:h-9 bg-white/15 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 shadow-sm text-emerald-400">
+                  <span className="material-symbols-outlined text-[16px] md:text-[18px]">home</span>
+                </div>
               </div>
             </div>
             <div className="p-6 md:p-7 pt-0 relative z-20 flex-1 flex flex-col">
               <h3 className="text-[20px] md:text-2xl font-bold text-white mb-2 tracking-tight">Unlock Your Dream Home</h3>
               <div className="flex items-baseline gap-1.5 mb-5">
                 <span className="text-[11px] text-blue-300/80 font-bold uppercase tracking-wider">Starts at</span>
-                <span className="text-[32px] md:text-[36px] font-black text-white leading-none tracking-tighter">11.9%</span>
-                <span className="text-blue-300 font-bold">*</span>
+                <span className="text-[34px] md:text-[38px] font-black text-emerald-400 leading-none tracking-tighter">11.9%</span>
+                <span className="text-emerald-400 font-bold">*</span>
               </div>
               <p className="text-blue-100/60 text-[14px] leading-relaxed mb-8 font-medium">
                 Simple eligibility for Indian residents and salaried professionals aged 22-62 years.
@@ -113,10 +116,13 @@ export function PremiumOfferingsSection() {
             <div className="absolute right-0 top-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-gradient-to-bl from-blue-100 via-indigo-50/50 to-transparent rounded-full blur-[60px] opacity-60 md:opacity-40 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none"></div>
 
             <div className="p-7 md:p-10 lg:p-14 flex-1 relative z-10 w-full flex flex-col h-full">
-              <div className="mb-5 md:mb-6">
+              <div className="flex justify-between items-start mb-5 md:mb-6">
                 <span className="px-3 py-1 bg-blue-50 text-blue-600 border border-blue-100 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-lg shadow-sm">
                   Exclusive Access
                 </span>
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center border border-blue-200/50 shadow-sm text-blue-500">
+                  <span className="material-symbols-outlined text-[20px] md:text-[24px]">credit_card</span>
+                </div>
               </div>
 
               <h3 className="text-[28px] md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-3 md:mb-4 leading-[1.1] tracking-tight">
