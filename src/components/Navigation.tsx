@@ -28,7 +28,9 @@ export function Navigation() {
     <nav className={`w-full sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
       <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="logo" width={150} height={150} className="w-[120px] sm:w-[150px] h-auto" style={{ height: 'auto' }} />
+          <div className="w-[120px] sm:w-[150px]">
+            <Image src="/logo.png" alt="logo" width={160} height={50} className="w-full h-auto object-contain" />
+          </div>
         </div>
 
         {/* Desktop Navigation */}
