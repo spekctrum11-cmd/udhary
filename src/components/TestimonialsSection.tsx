@@ -2,12 +2,14 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const testimonialsData = [
   {
     id: 1,
     name: "Sara Bansal",
     initials: "SB",
+    image: "/Testinomial/Sara-bansal.jpg",
     bg: "bg-gradient-to-br from-blue-600 to-blue-800",
     stars: 4.5,
     text: "I had a fantastic experience securing a mortgage loan through Udhary.com. As a first-time homebuyer, I had many questions, and their team patiently guided me through each step, ensuring I understood the process thoroughly. My dream came true of owning my own house, and I owe a big thank you to Udhary.com for making it possible.",
@@ -16,6 +18,7 @@ const testimonialsData = [
     id: 2,
     name: "Happy Singh",
     initials: "HS",
+    image: "/Testinomial/Happy-singh.jpg",
     bg: "bg-gradient-to-br from-slate-800 to-slate-900",
     stars: 5,
     text: "Udhary.com truly understands the needs of small businesses. Their flexible loan options and competitive rates helped my company through a challenging and tough period. What impressed me. Their commitment to client satisfaction is commendable.my business not only survived but is now on the path to growth.",
@@ -24,6 +27,7 @@ const testimonialsData = [
     id: 3,
     name: "Rhea Sharma",
     initials: "RS",
+    image: "/Testinomial/Rhea-Sharma.jpg",
     bg: "bg-gradient-to-br from-orange-500 to-orange-700",
     stars: 4,
     text: "Choosing Udhary.com for refinancing my existing loans was one of the best decisions I made. Their team went above and beyond to understand my financial situation and provided me with a refinancing option that significantly reduced my monthly payments and overall interest costs.All thanks to Udhary.com expertise and support.",
@@ -88,9 +92,15 @@ export function TestimonialsSection() {
                 </p>
               </div>
               <div className="flex items-center gap-4 relative z-10 mt-8 pt-6 border-t border-white/20">
-                <div className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center font-bold shadow-inner border border-white/30 backdrop-blur-md shrink-0">
-                  {card.initials}
-                </div>
+                {card.image ? (
+                  <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white/30 shadow-inner relative">
+                    <Image src={card.image} alt={card.name} fill className="object-cover" />
+                  </div>
+                ) : (
+                  <div className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center font-bold shadow-inner border border-white/30 backdrop-blur-md shrink-0">
+                    {card.initials}
+                  </div>
+                )}
                 <div>
                   <div className="font-bold text-white text-[16px] drop-shadow-sm">{card.name}</div>
                 </div>
@@ -161,9 +171,15 @@ export function TestimonialsSection() {
                 </div>
 
                 <div className="flex items-center gap-3 relative z-10 mt-auto pt-5 border-t border-white/20">
-                  <div className="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center font-bold text-[13px] shadow-inner border border-white/30 backdrop-blur-md shrink-0">
-                    {card.initials}
-                  </div>
+                  {card.image ? (
+                    <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border-2 border-white/30 shadow-inner relative">
+                      <Image src={card.image} alt={card.name} fill className="object-cover" />
+                    </div>
+                  ) : (
+                    <div className="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center font-bold text-[13px] shadow-inner border border-white/30 backdrop-blur-md shrink-0">
+                      {card.initials}
+                    </div>
+                  )}
                   <div>
                     <div className="font-bold text-white text-[14px] drop-shadow-sm">{card.name}</div>
                   </div>
