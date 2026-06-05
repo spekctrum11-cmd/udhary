@@ -51,13 +51,13 @@ export function PremiumOfferingsSection() {
 
               <ul className="space-y-3.5 mb-8">
                 <li className="flex items-center gap-3.5 text-slate-700 text-[15px] md:text-base font-semibold">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-50 flex items-center justify-center text-green-600 shadow-sm border border-green-100/50">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 shadow-sm border border-slate-100/50">
                     <span className="material-symbols-outlined text-[14px]">check</span>
                   </span>
                   Zero Collateral Required
                 </li>
                 <li className="flex items-center gap-3.5 text-slate-700 text-[15px] md:text-base font-semibold">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-50 flex items-center justify-center text-green-600 shadow-sm border border-green-100/50">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 shadow-sm border border-slate-100/50">
                     <span className="material-symbols-outlined text-[14px]">check</span>
                   </span>
                   100% Digital Process
@@ -87,7 +87,7 @@ export function PremiumOfferingsSection() {
                 <span className="px-3 py-1.5 bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest rounded-lg shadow-sm">
                   Housing
                 </span>
-                <div className="w-8 h-8 md:w-9 md:h-9 bg-white/15 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 shadow-sm text-emerald-400">
+                <div className="w-8 h-8 md:w-9 md:h-9 bg-white/15 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 shadow-sm text-blue-400">
                   <span className="material-symbols-outlined text-[16px] md:text-[18px]">home</span>
                 </div>
               </div>
@@ -96,8 +96,8 @@ export function PremiumOfferingsSection() {
               <h3 className="text-[20px] md:text-2xl font-bold text-white mb-2 tracking-tight">Unlock Your Dream Home</h3>
               <div className="flex items-baseline gap-1.5 mb-5">
                 <span className="text-[11px] text-blue-300/80 font-bold uppercase tracking-wider">Starts at</span>
-                <span className="text-[34px] md:text-[38px] font-black text-emerald-400 leading-none tracking-tighter">11.9%</span>
-                <span className="text-emerald-400 font-bold">*</span>
+                <span className="text-[34px] md:text-[38px] font-black text-blue-400 leading-none tracking-tighter">11.9%</span>
+                <span className="text-blue-400 font-bold">*</span>
               </div>
               <p className="text-blue-100/60 text-[14px] leading-relaxed mb-8 font-medium">
                 Simple eligibility for Indian residents and salaried professionals aged 22-62 years.

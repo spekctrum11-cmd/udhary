@@ -68,7 +68,7 @@ export function ContactForm() {
   if (isSuccess) {
     return (
       <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-outline-variant/20 flex flex-col items-center justify-center min-h-[400px] text-center animate-in fade-in zoom-in duration-500">
-        <div className="w-24 h-24 bg-success-green/20 text-success-green rounded-full flex items-center justify-center mb-6">
+        <div className="w-24 h-24 bg-blue-500/20 text-blue-500 rounded-full flex items-center justify-center mb-6">
           <span className="material-symbols-outlined text-5xl">check_circle</span>
         </div>
         <h2 className="text-headline-md font-bold text-primary mb-2">Appointment Booked!</h2>

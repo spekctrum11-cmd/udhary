@@ -99,8 +99,8 @@ export function Footer() {
                   <span className="text-[13.5px] text-slate-400 leading-relaxed mt-1">Unit 502, 5th Floor, Time House Tower, Delhi-110052</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                  <div className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-green-500/50 transition-colors">
-                    <span className="material-symbols-outlined text-[16px] text-green-500">call</span>
+                  <div className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-slate-500/50 transition-colors">
+                    <span className="material-symbols-outlined text-[16px] text-slate-500">call</span>
                   </div>
                   <span className="text-[14px] text-slate-400 font-medium">+91 - 7669755501</span>
                 </li>

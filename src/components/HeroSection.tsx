@@ -46,7 +46,7 @@ export function HeroSection() {
             className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-4 lg:mb-10"
           >
             <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm transition-all hover:border-orange-200">
-              <span className="material-symbols-outlined text-[18px] text-green-600">verified</span>
+              <span className="material-symbols-outlined text-[18px] text-slate-600">verified</span>
               <span className="font-semibold text-sm text-slate-800">Low Interest</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm transition-all hover:border-blue-200">
@@ -74,7 +74,7 @@ export function HeroSection() {
         {/* IMAGE CONTENT - Elite Interactive Signature Design */}
         <div className="relative hidden lg:flex justify-end mt-4 lg:mt-0 flex-1 lg:flex-auto items-center">
           {/* Decorative background shape for the image */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[700px] aspect-square bg-gradient-to-tr from-orange-200/50 to-blue-200/50 rounded-full blur-[80px] -z-10 animate-blob"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[700px] aspect-square bg-gradient-to-tr from-orange-200/50 via-purple-200/50 to-blue-200/50 rounded-full blur-[80px] -z-10 animate-blob"></div>
 
           {/* Hero Family Graphic */}
           <motion.div

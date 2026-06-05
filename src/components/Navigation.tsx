@@ -24,7 +24,7 @@ export function Navigation() {
 
   const loansList = [
     { title: "Personal Loan", icon: "person", color: "text-blue-600" },
-    { title: "Home Loan", icon: "home", color: "text-green-600" },
+    { title: "Home Loan", icon: "home", color: "text-slate-600" },
     { title: "Business Loan", icon: "storefront", color: "text-purple-600" },
     { title: "Gold Loan", icon: "diamond", color: "text-yellow-600" },
     { title: "Loan Against Property", icon: "real_estate_agent", color: "text-orange-600" },
@@ -147,7 +147,7 @@ export function Navigation() {
           </div>
 
           <a href="/emi-calculator" className="flex items-center gap-3 px-4 py-4 rounded-2xl hover:bg-slate-50 text-slate-800 font-medium text-[15px] transition-all">
-            <span className="material-symbols-outlined text-emerald-500 text-[22px]" style={{ fontVariationSettings: "'wght' 300" }}>calculate</span>
+            <span className="material-symbols-outlined text-blue-500 text-[22px]" style={{ fontVariationSettings: "'wght' 300" }}>calculate</span>
             EMI Calculators
           </a>
           <a href="https://app.udhary.com/apply-credit-card" className="flex items-center gap-3 px-4 py-4 rounded-2xl hover:bg-slate-50 text-slate-800 font-medium text-[15px] transition-all">
