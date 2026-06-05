@@ -15,14 +15,7 @@ export function UdharyAdvantageSection() {
             The Udhary Advantage
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 md:mb-3 tracking-tight">
-            Before vs After{" "}
-            <Image
-              src="/logo.png"
-              alt="Udhary Logo"
-              width={160}
-              height={48}
-              className="inline-block h-8 sm:h-10 md:h-12 w-auto align-middle -mt-1 md:-mt-2 drop-shadow-sm"
-            />
+            Before vs After
           </h2>
           <p className="text-sm sm:text-base text-slate-500 max-w-xl mx-auto font-medium px-4">
             The smarter, transparent way to choose financial products
