@@ -94,7 +94,7 @@ export function TestimonialsSection() {
               <div className="flex items-center gap-4 relative z-10 mt-8 pt-6 border-t border-white/20">
                 {card.image ? (
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white/30 shadow-inner relative">
-                    <Image src={card.image} alt={card.name} fill className="object-cover" />
+                    <Image src={card.image} alt={card.name} fill sizes="48px" className="object-cover" />
                   </div>
                 ) : (
                   <div className="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center font-bold shadow-inner border border-white/30 backdrop-blur-md shrink-0">
@@ -173,7 +173,7 @@ export function TestimonialsSection() {
                 <div className="flex items-center gap-3 relative z-10 mt-auto pt-5 border-t border-white/20">
                   {card.image ? (
                     <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border-2 border-white/30 shadow-inner relative">
-                      <Image src={card.image} alt={card.name} fill className="object-cover" />
+                      <Image src={card.image} alt={card.name} fill sizes="48px" className="object-cover" />
                     </div>
                   ) : (
                     <div className="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center font-bold text-[13px] shadow-inner border border-white/30 backdrop-blur-md shrink-0">
