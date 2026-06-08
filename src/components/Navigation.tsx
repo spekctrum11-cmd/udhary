@@ -26,7 +26,7 @@ export function Navigation() {
     { title: "Personal Loan", icon: "person", color: "text-blue-600" },
     { title: "Home Loan", icon: "home", color: "text-slate-600" },
     { title: "Business Loan", icon: "storefront", color: "text-purple-600" },
-    { title: "Gold Loan", icon: "diamond", color: "text-yellow-600" },
+    { title: "Gold Loan", icon: "/gold-icon.svg", color: "text-yellow-600", isImg: true },
     { title: "Loan Against Property", icon: "real_estate_agent", color: "text-orange-600" },
     { title: "Vehicle Loan", icon: "directions_car", color: "text-red-600" },
     { title: "Education Loan", icon: "school", color: "text-indigo-600" }
@@ -45,12 +45,12 @@ export function Navigation() {
         <div className="hidden lg:flex items-center lg:gap-4 xl:gap-8">
           {/* Desktop Navigation */}
           <div className="flex lg:gap-4 xl:gap-6 items-center font-normal text-slate-600 text-sm">
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsDesktopLoansOpen(true)}
               onMouseLeave={() => setIsDesktopLoansOpen(false)}
             >
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsDesktopLoansOpen(!isDesktopLoansOpen);
@@ -60,11 +60,11 @@ export function Navigation() {
                 Loans <span className={`material-symbols-outlined text-[18px] transition-transform duration-300 ${isDesktopLoansOpen ? 'rotate-180' : ''}`} style={{ fontVariationSettings: "'wght' 300" }}>expand_more</span>
               </button>
               {/* Minimalist Glassmorphism Dropdown with Elite Infinite Animation */}
-              <div 
+              <div
                 onClick={(e) => e.stopPropagation()}
                 className={`absolute top-full left-0 w-[240px] bg-white/80 backdrop-blur-2xl ring-1 ring-slate-900/5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl transition-all duration-300 z-50 overflow-hidden flex flex-col py-2 ${isDesktopLoansOpen ? 'opacity-100 visible transform translate-y-4' : 'opacity-0 invisible transform translate-y-2'}`}
               >
-                
+
                 {/* Infinite Auto Floating Aurora Background */}
                 <div className="absolute top-0 -left-4 w-32 h-32 bg-blue-500/15 rounded-full blur-2xl animate-blob z-0 pointer-events-none"></div>
                 <div className="absolute bottom-0 -right-4 w-32 h-32 bg-orange-500/15 rounded-full blur-2xl animate-blob z-0 pointer-events-none" style={{ animationDelay: '2s' }}></div>
@@ -77,7 +77,11 @@ export function Navigation() {
                       href="https://app.udhary.com/loan-application"
                       className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/60 transition-all duration-300 group/item"
                     >
-                      <span className={`material-symbols-outlined text-[18px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
+                      {loan.isImg ? (
+                        <img src={loan.icon} alt={loan.title} className="w-[18px] h-[18px] opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all object-contain" />
+                      ) : (
+                        <span className={`material-symbols-outlined text-[18px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
+                      )}
                       <div className="text-slate-600 text-[13px] font-normal group-hover/item:text-slate-900 transition-colors">
                         {loan.title}
                       </div>
@@ -136,7 +140,11 @@ export function Navigation() {
               <div className="flex flex-col gap-1 pl-4 ml-6 border-l-2 border-slate-200/60 mt-1">
                 {loansList.map((loan, idx) => (
                   <a key={idx} href="https://app.udhary.com/loan-application" className="flex items-center gap-3 px-4 py-3 hover:bg-white transition-all duration-300 group/item rounded-xl">
-                    <span className={`material-symbols-outlined text-[20px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
+                    {loan.isImg ? (
+                      <img src={loan.icon} alt={loan.title} className="w-[20px] h-[20px] opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all object-contain" />
+                    ) : (
+                      <span className={`material-symbols-outlined text-[20px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
+                    )}
                     <span className="text-slate-600 text-[14px] font-medium group-hover/item:text-slate-900 transition-colors">
                       {loan.title}
                     </span>
