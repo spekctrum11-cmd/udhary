@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function HeroSection() {
@@ -65,6 +66,14 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full max-w-md mx-auto lg:mx-0"
           >
+            <Link 
+              href="/apply" 
+              className="relative flex items-center justify-center px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-extrabold rounded-2xl transition-all shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 w-full sm:w-auto text-lg overflow-hidden group border border-slate-700"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-150%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              Check Eligibility <span className="material-symbols-outlined ml-2 text-[22px] group-hover:scale-110 transition-transform">bolt</span>
+            </Link>
+
             <a href="https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw" className="flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-2xl transition-all shadow-lg shadow-orange-500/25 hover:-translate-y-0.5 w-full sm:w-auto text-lg">
               Apply Now <span className="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
             </a>
