@@ -28,7 +28,7 @@ export default function KnowledgeCenterPage() {
             Knowledge <span className="text-secondary">Center</span>
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Resources, guides, and insights to help you make informed financial decisions.
+            Resources, guides and insights to help you make informed financial decisions.
           </p>
         </div>
       </section>

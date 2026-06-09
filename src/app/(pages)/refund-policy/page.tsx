@@ -2,7 +2,7 @@ import React from 'react';
 
 export const metadata = {
   title: 'Refund Policy | Udhary.com',
-  description: 'Read the refund policy for application fees, loan processing fees, and other charges at Udhary.com.',
+  description: 'Read the refund policy for application fees, loan processing fees and other charges at Udhary.com.',
 };
 
 export default function RefundPolicyPage() {
@@ -93,7 +93,7 @@ export default function RefundPolicyPage() {
 
             <div className="bg-surface-blue p-6 rounded-2xl border border-outline-variant/30 text-sm mt-8">
               <p>
-                <strong>Please note</strong> that this Refund Policy is subject to change, and any revisions will be updated on our website. It is the responsibility of users to review the policy periodically for changes.
+                <strong>Please note</strong> that this Refund Policy is subject to change and any revisions will be updated on our website. It is the responsibility of users to review the policy periodically for changes.
               </p>
               <p className="mt-2 font-medium text-primary">
                 Thank you for choosing Udhary.com. We appreciate the opportunity to assist you with your financial needs.

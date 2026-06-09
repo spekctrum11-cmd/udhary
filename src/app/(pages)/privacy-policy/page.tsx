@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="max-w-container-max mx-auto px-gutter text-center relative z-10">
           <h1 className="text-display-lg font-display-lg text-primary mb-4">Privacy <span className="text-secondary">Policy</span></h1>
-          <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">How we manage, protect, and use your personal information securely.</p>
+          <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">How we manage, protect and use your personal information securely.</p>
         </div>
       </section>
 
@@ -45,10 +45,10 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <p>
-              In this Privacy Policy, the words such as “we”, “our”, “company”, and “us” refer to <strong>Udhary.com</strong> and its undertaken system. Words such as “you” and “your” refer to Udhary.com’s user, customer, channel partner, etc.
+              In this Privacy Policy, the words such as “we”, “our”, “company” and “us” refer to <strong>Udhary.com</strong> and its undertaken system. Words such as “you” and “your” refer to Udhary.com’s user, customer, channel partner, etc.
             </p>
             <p>
-              As a user of the website owned by Udhary.com, your privacy is important to us. This Privacy Policy discusses the information we collect about you, how we treat it, with whom we share it, and how we protect it.
+              As a user of the website owned by Udhary.com, your privacy is important to us. This Privacy Policy discusses the information we collect about you, how we treat it, with whom we share it and how we protect it.
             </p>
             <p>
               Udhary.com is our company’s domain name/brand name and <strong>Spectrum Fintech Private Limited</strong> is our company’s name.
@@ -60,8 +60,8 @@ export default function PrivacyPolicyPage() {
             <h3 className="text-headline-sm font-bold text-primary mt-12 mb-4">Information Collection</h3>
             <p>In the normal course of business, we collect personal information about you from a variety of sources, including:</p>
             <ul>
-              <li>Information from you, such as applications or other forms (which includes your name, address, marital status, employment, assets, and income)</li>
-              <li>Information about you, your accounts, and your holdings and transactions that we receive from you or others, such as account custodians, brokers, and other financial services firms, banks, etc.</li>
+              <li>Information from you, such as applications or other forms (which includes your name, address, marital status, employment, assets and income)</li>
+              <li>Information about you, your accounts and your holdings and transactions that we receive from you or others, such as account custodians, brokers and other financial services firms, banks, etc.</li>
             </ul>
 
             <h3 className="text-headline-sm font-bold text-primary mt-12 mb-4">How We Manage and Protect Your Personal Information</h3>
@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
               <li>Maintain or service your account with us or with another entity.</li>
             </ul>
             <p>
-              We restrict access to your personal information to our employees and to permit third parties who need to know that information to provide products or services for us... To protect your personal information from unauthorized access and use, we have adopted administrative, technical, and physical security procedures that comply with the Laws in India.
+              We restrict access to your personal information to our employees and to permit third parties who need to know that information to provide products or services for us... To protect your personal information from unauthorized access and use, we have adopted administrative, technical and physical security procedures that comply with the Laws in India.
             </p>
             <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 my-6">
               <strong>Note:</strong> All the KYC documents submitted by the customer remain in our system for a span of 7 days only. After that, the documents get removed from the system.

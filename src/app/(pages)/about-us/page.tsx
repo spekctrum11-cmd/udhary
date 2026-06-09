@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About Us | Udhary.com',
-  description: 'Learn about Udhary.com, our mission, vision, and commitment to providing exceptional lending experiences.',
+  description: 'Learn about Udhary.com, our mission, vision and commitment to providing exceptional lending experiences.',
 };
 
 export default function AboutUsPage() {
@@ -22,7 +22,7 @@ export default function AboutUsPage() {
             About <span className="text-blue-600">Udhary.com</span>
           </h1>
           <p className="text-slate-500 text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed">
-            Your premier choice for loans, dedicated to providing an exceptional lending experience through speed, transparency, and trust.
+            Your premier choice for loans, dedicated to providing an exceptional lending experience through speed, transparency and trust.
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function AboutUsPage() {
                 At Udhary.com, we stand apart as your first choice for loans. With competitive interest rates and a range of flexible loan options tailored to diverse needs, we ensure that our customers find the perfect financial solution without the traditional red tape.
               </p>
               <p>
-                Our transparent terms dispose of confusion, offering a comprehensive understanding of fees, penalties, and repayment schedules right from the start. Our smooth online application process promises ease and convenience, while our quick approval and disbursement highlight our dedication to meeting your financial needs.
+                Our transparent terms dispose of confusion, offering a comprehensive understanding of fees, penalties and repayment schedules right from the start. Our smooth online application process promises ease and convenience, while our quick approval and disbursement highlight our dedication to meeting your financial needs.
               </p>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
               <p className="text-slate-600 text-[13px] font-medium leading-relaxed">
-                To deliver accessible, transparent, and tailored financial products that meet diverse needs. We strive to foster financial stability by leveraging cutting-edge technology and a customer-centric approach, building lasting relationships based on trust and reliability.
+                To deliver accessible, transparent and tailored financial products that meet diverse needs. We strive to foster financial stability by leveraging cutting-edge technology and a customer-centric approach, building lasting relationships based on trust and reliability.
               </p>
             </div>
 
@@ -119,7 +119,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
               <p className="text-slate-300 text-[13px] font-medium leading-relaxed relative z-10">
-                To be the foremost financial partner, empowering individuals and businesses to achieve their goals through innovative solutions. We aim to set new benchmarks in the industry through integrity, expertise, and a steadfast commitment to enhancing financial well-being.
+                To be the foremost financial partner, empowering individuals and businesses to achieve their goals through innovative solutions. We aim to set new benchmarks in the industry through integrity, expertise and a steadfast commitment to enhancing financial well-being.
               </p>
             </div>
           </div>

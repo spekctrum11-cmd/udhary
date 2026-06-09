@@ -3,18 +3,18 @@ import { FAQAccordion } from '@/components/FAQAccordion';
 
 export const metadata = {
   title: 'FAQs | Udhary.com',
-  description: 'Frequently Asked Questions about Udhary.com loan products, eligibility, and process.',
+  description: 'Frequently Asked Questions about Udhary.com loan products, eligibility and process.',
 };
 
 export default function FAQsPage() {
   const faqs = [
     {
       q: "What types of loans does Udhary.com offer?",
-      a: "Udhary.com offers a diverse range of loan products tailored to various needs, including personal loans, business loans, home loans, loans against property, gold loans, education loans, and vehicle loans."
+      a: "Udhary.com offers a diverse range of loan products tailored to various needs, including personal loans, business loans, home loans, loans against property, gold loans, education loans and vehicle loans."
     },
     {
       q: "What are the eligibility criteria to apply for a loan?",
-      a: "Eligibility criteria may vary based on the type of loan. Generally, factors such as credit score, income, employment status, and other financial aspects are considered to processing for loan."
+      a: "Eligibility criteria may vary based on the type of loan. Generally, factors such as credit score, income, employment status and other financial aspects are considered to processing for loan."
     },
     {
       q: "How long does the loan approval process take?",
@@ -22,7 +22,7 @@ export default function FAQsPage() {
     },
     {
       q: "What interest rates can I expect?",
-      a: "Interest rates vary based on several factors, including the type of loan, credit score, loan amount, and term of loan. Udhary.com aims to offer the most competitive interest rates and provides the best rates to acquire loan."
+      a: "Interest rates vary based on several factors, including the type of loan, credit score, loan amount and term of loan. Udhary.com aims to offer the most competitive interest rates and provides the best rates to acquire loan."
     },
     {
       q: "Are there any prepayment penalties or hidden fees?",
@@ -30,7 +30,7 @@ export default function FAQsPage() {
     },
     {
       q: "What documents are required to apply for a loan?",
-      a: "The specific documents required may vary depending on the loan type. Generally, you may need identification, proof of income, bank statements, and other financial documents. Detailed document requirements are provided during the application process."
+      a: "The specific documents required may vary depending on the loan type. Generally, you may need identification, proof of income, bank statements and other financial documents. Detailed document requirements are provided during the application process."
     },
     {
       q: "How do I repay my loan?",
@@ -68,7 +68,7 @@ export default function FAQsPage() {
             Frequently Asked <span className="text-secondary">Questions</span>
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Find answers to the most common questions about our loan products, application process, and repayment options.
+            Find answers to the most common questions about our loan products, application process and repayment options.
           </p>
         </div>
       </section>

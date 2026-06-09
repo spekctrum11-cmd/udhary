@@ -49,7 +49,7 @@ export default function GalleryPage() {
             Our <span className="text-secondary">Gallery</span>
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            A glimpse into our events, celebrations, and the vibrant culture that makes Udhary.com special.
+            A glimpse into our events, celebrations and the vibrant culture that makes Udhary.com special.
           </p>
         </div>
       </section>

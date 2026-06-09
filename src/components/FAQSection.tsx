@@ -10,12 +10,12 @@ export function FAQSection() {
         <div className="space-y-4">
           <FAQAccordion
             question="What types of loans does Udhary.com offer?"
-            answer="Udhary.com offers a diverse range of loan products tailored to various needs, including personal loans, business loans, home loans, loans against property, gold loans, education loans, and vehicle loans."
+            answer="Udhary.com offers a diverse range of loan products tailored to various needs, including personal loans, business loans, home loans, loans against property, gold loans, education loans and vehicle loans."
             defaultOpen
           />
           <FAQAccordion
             question="What are the eligibility criteria to apply?"
-            answer="Eligibility criteria vary based on the loan type. Generally, factors like credit score, monthly income, employment status, and age (typically 21-60 years) are considered during processing."
+            answer="Eligibility criteria vary based on the loan type. Generally, factors like credit score, monthly income, employment status and age (typically 21-60 years) are considered during processing."
           />
           <FAQAccordion
             question="How long does the approval process take?"

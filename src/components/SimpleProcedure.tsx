@@ -18,19 +18,19 @@ export function SimpleProcedure() {
     {
       step: 1,
       title: 'Share your profile',
-      desc: 'Enter your loan amount, income, and CIBIL score. Takes under 90 seconds.',
+      desc: 'Enter your loan amount, income and CIBIL score. Takes under 90 seconds.',
       icon: 'person',
     },
     {
       step: 2,
       title: 'See matched offers',
-      desc: 'We rank offers from 50+ lenders by rate, fee, and your eligibility — not commission.',
+      desc: 'We rank offers from 50+ lenders by rate, fee and your eligibility — not commission.',
       icon: 'checklist_rtl',
     },
     {
       step: 3,
       title: 'Apply and get funded',
-      desc: 'Pick your offer, complete digital KYC, and receive disbursement directly to your account.',
+      desc: 'Pick your offer, complete digital KYC and receive disbursement directly to your account.',
       icon: 'account_balance_wallet',
     },
   ];

@@ -12,7 +12,7 @@ const testimonialsData = [
     image: "/Testinomial/Sara-bansal.jpg",
     bg: "bg-gradient-to-br from-blue-600 to-blue-800",
     stars: 4.5,
-    text: "I had a fantastic experience securing a mortgage loan through Udhary.com. As a first-time homebuyer, I had many questions, and their team patiently guided me through each step, ensuring I understood the process thoroughly. My dream came true of owning my own house, and I owe a big thank you to Udhary.com for making it possible.",
+    text: "I had a fantastic experience securing a mortgage loan through Udhary.com. As a first-time homebuyer, I had many questions and their team patiently guided me through each step, ensuring I understood the process thoroughly. My dream came true of owning my own house and I owe a big thank you to Udhary.com for making it possible.",
   },
   {
     id: 2,

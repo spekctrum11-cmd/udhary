@@ -115,7 +115,7 @@ export default function CareerPage() {
                   <div>
                     <h4 className="font-bold text-on-surface mb-2">Responsibilities:</h4>
                     <ul className="list-disc pl-5 space-y-1">
-                      <li>Respond promptly to customer inquiries via phone, email, and chat.</li>
+                      <li>Respond promptly to customer inquiries via phone, email and chat.</li>
                       <li>Resolve customer complaints and ensure a high level of customer satisfaction.</li>
                       <li>Maintain detailed records of customer interactions.</li>
                       <li>Collaborate with internal teams to address customer needs.</li>

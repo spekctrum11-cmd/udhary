@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "EMI Calculator | Udhary",
-  description: "Calculate your loan EMI, total interest, and payment break-up instantly with our beautiful and interactive EMI Calculator.",
+  description: "Calculate your loan EMI, total interest and payment break-up instantly with our beautiful and interactive EMI Calculator.",
 };
 
 export default function EmiCalculatorPage() {
@@ -28,7 +28,7 @@ export default function EmiCalculatorPage() {
             EMI <span className="text-secondary">Calculator</span>
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Design your perfect loan. Adjust the parameters below to instantly visualize your payments, interest, and total outlay in beautiful detail.
+            Design your perfect loan. Adjust the parameters below to instantly visualize your payments, interest and total outlay in beautiful detail.
           </p>
         </div>
       </section>
