@@ -38,6 +38,7 @@ export const metadata: Metadata = {
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { LiveNotifications } from "@/components/LiveNotifications";
+import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
 export default function RootLayout({
   children,
@@ -63,6 +64,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <LiveNotifications />
+        <WhatsAppFAB />
       </body>
     </html>
   );
