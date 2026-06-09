@@ -68,7 +68,7 @@ export function HeroSection() {
           >
             <Link 
               href="/apply" 
-              className="relative flex items-center justify-center px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-extrabold rounded-2xl transition-all shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 w-full sm:w-auto text-lg overflow-hidden group border border-slate-700"
+              className="relative flex items-center justify-center px-8 py-4 bg-gradient-to-r from-violet-900 to-fuchsia-900 hover:from-violet-950 hover:to-fuchsia-950 text-white font-extrabold rounded-2xl transition-all shadow-[0_8px_30px_rgba(124,58,237,0.4)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.6)] hover:-translate-y-0.5 w-full sm:w-auto text-lg overflow-hidden group border border-violet-500/30"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-150%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
               Check Eligibility <span className="material-symbols-outlined ml-2 text-[22px] group-hover:scale-110 transition-transform">bolt</span>
