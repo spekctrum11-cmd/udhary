@@ -168,7 +168,7 @@ export const LiveNotifications = () => {
     <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8 flex justify-start z-[100] pointer-events-none w-auto">
       <AnimatePresence mode="wait">
         {currentNotification && IconComponent && (
-          <div className="w-[230px] sm:w-[280px] relative" style={{ perspective: 1000 }}>
+          <div className="w-[260px] sm:w-[300px] relative" style={{ perspective: 1000 }}>
             {/* The glowing orb behind the card */}
             <motion.div
               key={`orb-${currentNotification.id}`}
@@ -219,20 +219,20 @@ export const LiveNotifications = () => {
                   initial={{ left: "-40%" }}
                   animate={{ left: "120%" }}
                   transition={{ duration: 1.2, ease: "easeInOut", delay: 0.35 }}
-                  className="absolute inset-y-0 w-24 sm:w-32 z-10 pointer-events-none -skew-x-[25deg] mix-blend-overlay"
+                  className="absolute inset-y-0 w-28 sm:w-36 z-10 pointer-events-none -skew-x-[25deg] mix-blend-overlay"
                   style={{
                     background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.05) 80%, transparent)'
                   }}
                 />
 
                 {/* Inner content wrapper */}
-                <div className="flex items-center py-1.5 pr-2.5 pl-6 sm:py-2 sm:pr-3 sm:pl-8">
+                <div className="flex items-center py-2 pr-3 pl-7 sm:py-2.5 sm:pr-4 sm:pl-9">
                   {/* Message Content */}
                   <div className="flex-1">
-                    <p className="text-[10px] sm:text-[11px] font-medium text-slate-100 leading-snug">
+                    <p className="text-[11px] sm:text-[12px] font-medium text-slate-100 leading-snug">
                       {currentNotification.message}
                     </p>
-                    <p className="text-[7.5px] sm:text-[8.5px] text-slate-400 mt-0.5 font-bold tracking-widest uppercase">
+                    <p className="text-[8px] sm:text-[9px] text-slate-400 mt-0.5 font-bold tracking-widest uppercase">
                       Just now
                     </p>
                   </div>
@@ -240,8 +240,8 @@ export const LiveNotifications = () => {
               </div>
 
               {/* The overlapping raw Icon (no background, no circle) */}
-              <div className="absolute -top-1.5 -left-1.5 sm:-top-2 sm:-left-2 z-20">
-                <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
+              <div className="absolute -top-2 -left-2 sm:-top-2.5 sm:-left-2.5 z-20">
+                <IconComponent className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
               </div>
             </motion.div>
           </div>
