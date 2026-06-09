@@ -11,6 +11,7 @@ const UdharyAdvantageSection = dynamic(() => import("@/components/UdharyAdvantag
 const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection").then(mod => mod.TestimonialsSection));
 const LenderRatesSection = dynamic(() => import("@/components/LenderRatesSection").then(mod => mod.LenderRatesSection));
 const FAQSection = dynamic(() => import("@/components/FAQSection").then(mod => mod.FAQSection));
+const CTASection = dynamic(() => import("@/components/CTASection").then(mod => mod.CTASection));
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <TestimonialsSection />
         <LenderRatesSection />
         <FAQSection />
+        <CTASection />
       </main>
     </>
   );
