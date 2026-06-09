@@ -165,7 +165,7 @@ export const LiveNotifications = () => {
   const IconComponent = currentNotification?.iconData.icon;
 
   return (
-    <div className="fixed inset-x-0 bottom-4 sm:bottom-6 flex justify-center z-[60] pointer-events-none w-full px-5 sm:px-4">
+    <div className="fixed inset-x-0 bottom-4 sm:bottom-6 flex justify-center z-[100] pointer-events-none w-full px-5 sm:px-4">
       <AnimatePresence mode="wait">
         {currentNotification && IconComponent && (
           <div className="w-full max-w-sm sm:max-w-md relative" style={{ perspective: 1000 }}>
