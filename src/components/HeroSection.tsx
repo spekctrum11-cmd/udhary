@@ -78,6 +78,26 @@ export function HeroSection() {
               Apply Now <span className="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
             </a>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-6 flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 text-slate-600 text-sm font-medium"
+          >
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              No credit score impact
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              Zero hidden charges
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
+              No paper work to get started
+            </div>
+          </motion.div>
         </div>
 
         {/* IMAGE CONTENT - Elite Interactive Signature Design */}
