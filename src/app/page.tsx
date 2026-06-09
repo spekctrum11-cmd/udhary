@@ -5,6 +5,7 @@ import { FinancialEcosystemSection } from "@/components/FinancialEcosystemSectio
 import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
 // Below-the-fold components lazy loaded to reduce initial TBT and bundle size
+const ComparisonEngineSection = dynamic(() => import("@/components/ComparisonEngineSection").then(mod => mod.ComparisonEngineSection));
 const PremiumOfferingsSection = dynamic(() => import("@/components/PremiumOfferingsSection").then(mod => mod.PremiumOfferingsSection));
 const SimpleProcedure = dynamic(() => import("@/components/SimpleProcedure").then(mod => mod.SimpleProcedure));
 const PartnerMarquee = dynamic(() => import("@/components/PartnerMarquee").then(mod => mod.PartnerMarquee));
@@ -20,6 +21,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <FinancialEcosystemSection />
+        <ComparisonEngineSection />
         <PremiumOfferingsSection />
         <SimpleProcedure />
         <PartnerMarquee />

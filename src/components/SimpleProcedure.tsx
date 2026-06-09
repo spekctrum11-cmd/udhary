@@ -17,21 +17,21 @@ export function SimpleProcedure() {
   const steps = [
     {
       step: 1,
-      title: 'Apply Online',
-      desc: 'Fill our quick 2-minute secure application form.',
-      icon: 'edit_document',
+      title: 'Share your profile',
+      desc: 'Enter your loan amount, income, and CIBIL score. Takes under 90 seconds.',
+      icon: 'person',
     },
     {
       step: 2,
-      title: 'Digital Approval',
-      desc: 'Our intelligent system provides instant preliminary approval.',
-      icon: 'fact_check',
+      title: 'See matched offers',
+      desc: 'We rank offers from 50+ lenders by rate, fee, and your eligibility — not commission.',
+      icon: 'checklist_rtl',
     },
     {
       step: 3,
-      title: 'Track Status',
-      desc: 'Funds disbursed. Monitor everything in real-time.',
-      icon: 'query_stats',
+      title: 'Apply and get funded',
+      desc: 'Pick your offer, complete digital KYC, and receive disbursement directly to your account.',
+      icon: 'account_balance_wallet',
     },
   ];
 
@@ -49,10 +49,11 @@ export function SimpleProcedure() {
             How It Works
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Your journey, simplified.
+            From curious to approved,<br className="hidden sm:block" />
+            <span className="text-orange-500 font-bold"> in minutes.</span>
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
-            Experience a completely frictionless process. We've removed the hurdles so you can get funded faster.
+            No branch visits. No paperwork stacks. No waiting.
           </p>
         </div>
 

@@ -37,6 +37,7 @@ export const metadata: Metadata = {
 
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { LiveNotifications } from "@/components/LiveNotifications";
 
 export default function RootLayout({
   children,
@@ -61,6 +62,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <LiveNotifications />
       </body>
     </html>
   );
