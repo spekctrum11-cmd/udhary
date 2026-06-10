@@ -20,10 +20,10 @@ export function SavingsCalculatorSection() {
       const emiCurrent = (loanAmount * rCurrent * Math.pow(1 + rCurrent, months)) / (Math.pow(1 + rCurrent, months) - 1);
       const rNew = newInterestRate / 12 / 100;
       const emiNew = (loanAmount * rNew * Math.pow(1 + rNew, months)) / (Math.pow(1 + rNew, months) - 1);
-      
+
       const savings = emiCurrent - emiNew;
       const actualSavings = Math.max(0, savings);
-      
+
       setNewEmi(Math.round(emiNew));
       setMonthlySavings(Math.round(actualSavings));
       setTotalSaved(Math.round(actualSavings * months));
@@ -42,7 +42,7 @@ export function SavingsCalculatorSection() {
         <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10 relative z-10">
           <h2 className="relative inline-block text-2xl md:text-4xl font-black mb-3 text-slate-900 tracking-tight z-10">
             How much can you save?
-            
+
             {/* Sparkle Doodle */}
             <svg className="absolute -top-4 -left-6 md:-top-6 md:-left-8 w-6 h-6 md:w-8 md:h-8 text-emerald-400 -z-10 animate-[pulse_3s_ease-in-out_infinite]" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round">
               <path d="M50 10 Q50 50 10 50 Q50 50 50 90 Q50 50 90 50 Q50 50 50 10" />
@@ -50,12 +50,12 @@ export function SavingsCalculatorSection() {
 
             {/* Plus Doodle */}
             <svg className="absolute -top-1 -right-6 md:-top-2 md:-right-8 w-4 h-4 md:w-5 md:h-5 text-rose-400 -z-10 rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="16" strokeLinecap="round">
-               <path d="M 50 10 L 50 90 M 10 50 L 90 50" />
+              <path d="M 50 10 L 50 90 M 10 50 L 90 50" />
             </svg>
-            
+
             {/* Dot Doodle */}
             <svg className="absolute top-4 -right-8 md:top-6 md:-right-12 w-2 h-2 md:w-3 md:h-3 text-blue-400 -z-10" viewBox="0 0 100 100" fill="currentColor">
-               <circle cx="50" cy="50" r="50" />
+              <circle cx="50" cy="50" r="50" />
             </svg>
 
             {/* Swoosh Underline Doodle */}
@@ -68,7 +68,7 @@ export function SavingsCalculatorSection() {
 
         {/* Bento Grid Layout - Fully Asymmetric */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:auto-rows-fr">
-          
+
           {/* Card 1: Total Interest Saved (Massive 2x2 Block) */}
           <div className="col-start-1 col-span-2 row-start-1 row-span-1 md:row-span-2 bg-slate-900 rounded-[1.25rem] p-5 md:p-6 flex flex-col justify-center items-center text-center">
             <p className="text-slate-400 font-bold mb-1 uppercase tracking-wider text-[10px] md:text-xs">Total Interest Saved</p>
@@ -77,7 +77,7 @@ export function SavingsCalculatorSection() {
             </div>
             <p className="text-slate-500 font-bold text-xs md:text-sm">Over {tenureYears} years</p>
           </div>
-          
+
           {/* Card 2: Loan Amount (Super Wide 3x1 Block) */}
           <div className="col-start-1 col-span-2 row-start-2 row-span-1 md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-1 bg-amber-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div className="flex justify-between items-start mb-2">
@@ -85,9 +85,9 @@ export function SavingsCalculatorSection() {
               <span className="text-xl sm:text-2xl md:text-3xl font-black text-amber-700 tracking-tight">{formatCurrency(loanAmount)}</span>
             </div>
             <div className="mt-2 md:mt-auto">
-              <input 
-                type="range" min="50000" max="5000000" step="50000" 
-                value={loanAmount} 
+              <input
+                type="range" min="50000" max="5000000" step="50000"
+                value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
                 className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-amber-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-amber-500 [&::-moz-range-thumb]:transition-transform"
                 style={{ background: `linear-gradient(to right, #f59e0b ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%, #fde68a ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%)` }}
@@ -105,9 +105,9 @@ export function SavingsCalculatorSection() {
               <span className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-700 block tracking-tight">{currentInterest}%</span>
             </div>
             <div className="mt-4 md:mt-3">
-              <input 
-                type="range" min="8" max="24" step="0.5" 
-                value={currentInterest} 
+              <input
+                type="range" min="8" max="24" step="0.5"
+                value={currentInterest}
                 onChange={(e) => setCurrentInterest(Number(e.target.value))}
                 className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-emerald-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-emerald-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-emerald-500 [&::-moz-range-thumb]:transition-transform"
                 style={{ background: `linear-gradient(to right, #10b981 ${((currentInterest - 8) / (24 - 8)) * 100}%, #a7f3d0 ${((currentInterest - 8) / (24 - 8)) * 100}%)` }}
@@ -127,9 +127,9 @@ export function SavingsCalculatorSection() {
               </span>
             </div>
             <div className="mt-4 md:mt-3">
-              <input 
-                type="range" min="1" max="7" step="1" 
-                value={tenureYears} 
+              <input
+                type="range" min="1" max="7" step="1"
+                value={tenureYears}
                 onChange={(e) => setTenureYears(Number(e.target.value))}
                 className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-rose-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-rose-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-rose-500 [&::-moz-range-thumb]:transition-transform"
                 style={{ background: `linear-gradient(to right, #f43f5e ${((tenureYears - 1) / (7 - 1)) * 100}%, #fecaca ${((tenureYears - 1) / (7 - 1)) * 100}%)` }}

@@ -89,7 +89,7 @@ export default function ApplyPage() {
 
   return (
     <div className="bg-slate-50 selection:bg-slate-200 selection:text-slate-900 overflow-x-hidden relative">
-      
+
       {/* ======================= CORPORATE MEMPHIS BACKGROUND ======================= */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#fafafa]">
         {/* Large Amber Circle */}
@@ -150,7 +150,7 @@ export default function ApplyPage() {
             >
 
               {/* BOX 1: Header (8 cols) */}
-              <div className="md:col-span-8 bg-white/90 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-4 md:p-6 flex flex-col justify-center shadow-[0_2px_15px_rgb(0,0,0,0.02)]">
+              <div className="md:col-span-8 bg-amber-200 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-4 md:p-6 flex flex-col justify-center shadow-[0_2px_15px_rgb(0,0,0,0.02)]">
                 <div className="flex items-center justify-between mb-1.5">
                   <h1 className="text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700 tracking-tight">
                     Check Eligibility
@@ -188,7 +188,7 @@ export default function ApplyPage() {
               </div>
 
               {/* BOX 3: Dynamic Inputs (12 cols) */}
-              <div className="md:col-span-12 bg-white/90 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-4 md:p-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)] relative overflow-hidden min-h-[250px] md:min-h-[280px]">
+              <div className="md:col-span-12  bg-orange-200 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-4 md:p-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)] relative overflow-hidden min-h-[250px] md:min-h-[280px]">
                 <AnimatePresence mode="wait">
 
                   {/* --- STEP 1 --- */}
@@ -489,7 +489,7 @@ export default function ApplyPage() {
               </div>
 
               {/* BOX 4: Trust Badge (4 cols) */}
-              <div className="md:col-span-4 bg-emerald-50/80 backdrop-blur-xl border border-emerald-200/60 rounded-2xl p-3 md:p-4 flex flex-row md:flex-col items-center justify-center md:justify-center gap-3 md:gap-1.5 text-center shadow-inner">
+              <div className="md:col-span-4 bg-green-200 backdrop-blur-xl border border-emerald-200/60 rounded-2xl p-3 md:p-4 flex flex-row md:flex-col items-center justify-center md:justify-center gap-3 md:gap-1.5 text-center shadow-inner">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-emerald-100 flex items-center justify-center shadow-sm text-emerald-600 shrink-0">
                   <span className="material-symbols-outlined text-[16px] md:text-[20px]">verified_user</span>
                 </div>
@@ -502,7 +502,7 @@ export default function ApplyPage() {
               {/* BOX 5: Action Button (8 cols) */}
               <button
                 type="submit"
-                className="md:col-span-8 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl text-[14px] md:text-[15px] font-extrabold tracking-wide shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.3)] hover:-translate-y-[1px] transition-all active:scale-[0.98] flex items-center justify-center gap-2 group h-12 md:h-auto py-3 md:py-0 border border-slate-800"
+                className="md:col-span-8 bg-blue-500 hover:bg-blue-600 text-white rounded-2xl text-[14px] md:text-[15px] font-extrabold tracking-wide shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.3)] hover:-translate-y-[1px] transition-all active:scale-[0.98] flex items-center justify-center gap-2 group h-12 md:h-auto py-3 md:py-0 border border-slate-800"
               >
                 {step === 3 ? "Check Final Offers" : "Continue"}
                 {step !== 3 && (
