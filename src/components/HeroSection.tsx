@@ -12,12 +12,6 @@ export function HeroSection() {
       <svg className="absolute top-16 left-8 md:left-16 w-10 h-10 md:w-16 md:h-16 text-amber-300 -z-10 rotate-12 animate-pulse" viewBox="0 0 100 100" fill="currentColor">
          <polygon points="50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40" />
       </svg>
-      <svg className="absolute bottom-20 left-1/4 w-8 h-8 md:w-12 md:h-12 text-emerald-300 -z-10 -rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="12" strokeLinecap="round">
-         <path d="M 50 10 L 50 90 M 10 50 L 90 50" />
-      </svg>
-      <svg className="absolute top-32 right-10 lg:right-[45%] w-16 h-16 md:w-24 md:h-24 text-violet-200 -z-10" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round">
-         <path d="M 10 50 Q 30 10 50 50 T 90 50" />
-      </svg>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6 items-center relative z-10 text-center lg:text-left">
 
@@ -123,7 +117,6 @@ export function HeroSection() {
           
           {/* Floating Background Accent Shapes */}
           <div className="absolute top-0 right-10 lg:-right-10 w-20 h-20 bg-amber-300 rounded-full -z-10 animate-[bounce_5s_infinite]"></div>
-          <div className="absolute bottom-10 left-5 w-16 h-16 bg-blue-300 rounded-[1rem] -rotate-12 -z-10 animate-[pulse_4s_infinite]"></div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

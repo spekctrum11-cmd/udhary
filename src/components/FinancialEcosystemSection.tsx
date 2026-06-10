@@ -2,24 +2,21 @@ import Link from "next/link";
 
 export function FinancialEcosystemSection() {
   const ecosystemItems = [
-    { icon: 'account_balance', label: 'Personal Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw" },
-    { icon: 'credit_card', label: 'Credit Card', href: "https://app.udhary.com/apply-credit-card?_gl=1*1n4nhtf*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzEkdDE3Nzk0MjUzOTAkajgkbDAkaDA." },
-    { icon: 'home', label: 'Home Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw" },
-    { icon: 'directions_car', label: 'Car Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw" },
-    { icon: 'health_and_safety', label: 'Insurance', href: "https://beemaaa.com/" },
-    { icon: 'flight_takeoff', label: 'Travel Booking', href: "https://www.spectrumtravel.in/" },
+    { icon: 'account_balance', label: 'Personal Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw", bgBase: "bg-blue-50", bgHover: "hover:bg-blue-200", iconColor: "text-blue-600" },
+    { icon: 'credit_card', label: 'Credit Card', href: "https://app.udhary.com/apply-credit-card?_gl=1*1n4nhtf*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzEkdDE3Nzk0MjUzOTAkajgkbDAkaDA.", bgBase: "bg-emerald-50", bgHover: "hover:bg-emerald-200", iconColor: "text-emerald-600" },
+    { icon: 'home', label: 'Home Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw", bgBase: "bg-amber-50", bgHover: "hover:bg-amber-200", iconColor: "text-amber-600" },
+    { icon: 'directions_car', label: 'Car Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw", bgBase: "bg-rose-50", bgHover: "hover:bg-rose-200", iconColor: "text-rose-600" },
+    { icon: 'health_and_safety', label: 'Insurance', href: "https://beemaaa.com/", bgBase: "bg-violet-50", bgHover: "hover:bg-violet-200", iconColor: "text-violet-600" },
+    { icon: 'flight_takeoff', label: 'Travel Booking', href: "https://www.spectrumtravel.in/", bgBase: "bg-orange-50", bgHover: "hover:bg-orange-200", iconColor: "text-orange-600" },
   ];
 
   return (
-    <section className="py-12 bg-transparent relative overflow-hidden">
-      {/* Subtle Ambient Glow for the Dock */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[120px] bg-blue-500/5 rounded-full blur-[60px] pointer-events-none"></div>
+    <section className="py-12 bg-white relative overflow-hidden z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
-        
         {/* Minimalist Heading Inline with Dock */}
         <div className="text-center mb-8">
-          <span className="inline-block px-4 py-1.5 bg-white border border-slate-200 text-slate-500 font-medium text-[11px] tracking-widest uppercase rounded-full mb-4 shadow-[0_2px_10px_rgb(0,0,0,0.02)]">
+          <span className="inline-block px-4 py-1.5 bg-slate-100 border border-slate-200 text-slate-600 font-bold text-[11px] tracking-widest uppercase rounded-full mb-4 shadow-sm">
             Ecosystem
           </span>
           <h2 className="text-xl md:text-2xl font-normal text-slate-800 tracking-tight">
@@ -27,17 +24,18 @@ export function FinancialEcosystemSection() {
           </h2>
         </div>
 
-        {/* Floating Glass Dock Container */}
+        {/* Floating Solid Dock Container */}
         <div className="relative mx-auto w-full max-w-4xl">
-          {/* Glass Container */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-nowrap lg:justify-center items-center gap-3 sm:gap-4 lg:gap-1 p-4 lg:p-2 bg-white/70 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-[2rem] shadow-[0_15px_40px_rgb(0,0,0,0.06)]">
-              {ecosystemItems.map((item, idx) => {
-                const content = (
-                  <div className="flex flex-col items-center justify-center gap-2 px-2 py-4 lg:px-7 lg:py-5 rounded-2xl lg:rounded-3xl hover:bg-white hover:shadow-[0_8px_25px_rgb(0,0,0,0.04)] transition-all duration-500 group text-center h-full">
-                  <span className="material-symbols-outlined text-slate-400 group-hover:text-blue-500 group-hover:-translate-y-1 transition-all duration-500 text-[28px] sm:text-[32px]" style={{ fontVariationSettings: "'wght' 300" }}>
-                    {item.icon}
-                  </span>
-                  <span className="text-[13px] font-medium text-slate-500 group-hover:text-slate-800 transition-colors duration-300">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-2 md:gap-3 p-2 md:p-3 bg-slate-50 border border-slate-200/60 rounded-2xl lg:rounded-3xl shadow-[0_10px_30px_rgb(0,0,0,0.04)]">
+            {ecosystemItems.map((item, idx) => {
+              const content = (
+                <div className={`flex flex-col items-center justify-center gap-1.5 px-2 py-3 lg:py-4 rounded-xl lg:rounded-2xl ${item.bgBase} ${item.bgHover} transition-colors duration-300 group text-center h-full border border-black/5`}>
+                  <div className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white shadow-sm mb-1 group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ${item.iconColor}`}>
+                    <span className="material-symbols-outlined text-[20px] md:text-[24px]" style={{ fontVariationSettings: "'wght' 400" }}>
+                      {item.icon}
+                    </span>
+                  </div>
+                  <span className="text-xs font-bold text-slate-700 group-hover:text-slate-900 transition-colors duration-300">
                     {item.label}
                   </span>
                 </div>
@@ -55,7 +53,7 @@ export function FinancialEcosystemSection() {
             })}
           </div>
         </div>
-        
+
       </div>
     </section>
   );
