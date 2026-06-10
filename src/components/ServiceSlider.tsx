@@ -42,17 +42,23 @@ const services = [
   { icon: 'trending_up', label: 'Investment Plan', href: 'https://beemaaa.com/' },
 ];
 
-const ServiceCard = ({ service }: { service: any }) => {
-  const inner = (
-    <div className="relative z-10 flex items-center gap-2 md:gap-2.5 px-3 py-1 md:px-4 md:py-1 bg-white/70 backdrop-blur-xl rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-white/60 min-w-max transition-all duration-500 group-hover:bg-white group-hover:-translate-y-1.5 group-hover:shadow-[0_15px_35px_rgba(249,115,22,0.12)] overflow-hidden">
-      
-      {/* Animated glowing gradient background that appears on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 via-orange-400/0 to-orange-500/0 group-hover:from-orange-500/[0.04] group-hover:via-orange-400/[0.08] group-hover:to-orange-500/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+const ServiceCard = ({ service, index }: { service: any, index: number }) => {
+  const colors = [
+    "text-blue-300",
+    "text-emerald-300",
+    "text-amber-300",
+    "text-rose-300",
+    "text-violet-300",
+    "text-orange-300"
+  ];
+  const color = colors[index % colors.length];
 
-      <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-slate-50/80 flex items-center justify-center group-hover:bg-blue-50 group-hover:scale-110 transition-all duration-500 shrink-0 shadow-inner border border-slate-100/50 group-hover:border-blue-100/80">
-        <span className="material-symbols-outlined text-primary text-[13px] md:text-[15px] transition-colors duration-500" style={{ fontVariationSettings: "'wght' 300" }}>{service.icon}</span>
+  const inner = (
+    <div className="relative flex items-center gap-1.5 px-1 py-1 pr-2.5 md:px-1.5 md:py-1 md:pr-3 bg-white rounded-md md:rounded-lg shadow-[0_1px_3px_rgb(0,0,0,0.04)] border border-slate-200/60 min-w-max transition-all duration-300 group-hover:border-slate-300 group-hover:bg-slate-50 group-hover:-translate-y-0.5 group-hover:shadow-[0_2px_8px_rgb(0,0,0,0.06)]">
+      <div className={`w-5 h-5 md:w-6 md:h-6 rounded-[4px] md:rounded-md flex items-center justify-center shrink-0 ${color} transition-transform duration-300 group-hover:scale-110`}>
+        <span className="material-symbols-outlined text-[12px] md:text-[14px]" style={{ fontVariationSettings: "'wght' 400" }}>{service.icon}</span>
       </div>
-      <span className="text-[11px] md:text-[13px] font-normal text-slate-600 whitespace-nowrap tracking-wide group-hover:text-primary transition-colors duration-500 relative z-10">{service.label}</span>
+      <span className="text-[10px] md:text-[13px] font-bold text-slate-700 group-hover:text-slate-900 whitespace-nowrap">{service.label}</span>
     </div>
   );
 
@@ -70,10 +76,10 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
-  
+
   // Track sub-pixel scrolling accurately
-  const exactScrollLeft = useRef(0); 
-  
+  const exactScrollLeft = useRef(0);
+
   const isPaused = useRef(false);
   const pauseTimeout = useRef<NodeJS.Timeout | null>(null);
 
@@ -90,7 +96,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
     damping: 50,
     stiffness: 400
   });
-  
+
   // Map smooth velocity to a skew degree and scale down. 
   // When swiped fast, the items aerodynamically lean and stretch!
   const skew = useTransform(smoothVelocity, [-3000, 3000], [15, -15]);
@@ -115,7 +121,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
   const handleBoundaryWrap = (el: HTMLDivElement) => {
     const unit = el.scrollWidth / 4;
     let didWrap = false;
-    
+
     if (el.scrollLeft <= unit * 0.5) {
       el.scrollLeft += unit;
       exactScrollLeft.current += unit;
@@ -140,7 +146,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
         } else {
           exactScrollLeft.current += speed;
         }
-        
+
         el.scrollLeft = exactScrollLeft.current;
         handleBoundaryWrap(el);
       }
@@ -164,7 +170,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
     isDragging.current = true;
     startX.current = e.pageX;
     scrollLeft.current = scrollRef.current?.scrollLeft || 0;
-    
+
     lastTime.current = performance.now();
     lastX.current = e.pageX;
     velocity.current = 0;
@@ -174,8 +180,8 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
     if (!isDragging.current) return;
     e.preventDefault();
     const x = e.pageX;
-    const walk = (x - startX.current) * 1.5; 
-    
+    const walk = (x - startX.current) * 1.5;
+
     if (scrollRef.current) {
       scrollRef.current.scrollLeft = scrollLeft.current - walk;
     }
@@ -183,18 +189,18 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
     const now = performance.now();
     const dt = now - lastTime.current;
     const dx = x - lastX.current;
-    
+
     if (dt > 0) {
-      velocity.current = (velocity.current * 0.4) + ((dx / dt) * 0.6); 
+      velocity.current = (velocity.current * 0.4) + ((dx / dt) * 0.6);
     }
-    
+
     lastTime.current = now;
     lastX.current = x;
   };
 
   const handleMouseUpOrLeave = () => {
     if (!isDragging.current) {
-      resumeAutoScroll(500); 
+      resumeAutoScroll(500);
       return;
     }
     isDragging.current = false;
@@ -202,25 +208,25 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
     const applyInertia = () => {
       if (Math.abs(velocity.current) > 0.05 && scrollRef.current) {
         const el = scrollRef.current;
-        el.scrollLeft -= velocity.current * 16 * 1.2; 
+        el.scrollLeft -= velocity.current * 16 * 1.2;
         exactScrollLeft.current = el.scrollLeft;
-        
-        velocity.current *= 0.94; 
-        
+
+        velocity.current *= 0.94;
+
         handleBoundaryWrap(el);
         inertiaFrameId.current = requestAnimationFrame(applyInertia);
       } else {
         resumeAutoScroll(500);
       }
     };
-    
+
     inertiaFrameId.current = requestAnimationFrame(applyInertia);
   };
 
   return (
     <div
       ref={scrollRef}
-      className="flex overflow-x-auto cursor-grab active:cursor-grabbing w-full scroll-smooth-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-1.5 px-2"
+      className="flex overflow-x-auto cursor-grab active:cursor-grabbing w-full scroll-smooth-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-0.5 px-2"
       onMouseEnter={pauseAutoScroll}
       onMouseLeave={handleMouseUpOrLeave}
       onMouseDown={handleMouseDown}
@@ -229,14 +235,14 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], 
       onTouchStart={pauseAutoScroll}
       onTouchEnd={() => resumeAutoScroll(2000)}
     >
-      <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 w-max shrink-0 items-center">
+      <div className="flex gap-2.5 md:gap-3 pr-2.5 md:pr-3 w-max shrink-0 items-center">
         {[...items, ...items, ...items, ...items].map((service, index) => (
-          <motion.div 
-            key={`${index}`} 
+          <motion.div
+            key={`${index}`}
             style={{ skewX: skew, scale: scale }}
             className="origin-bottom transform-gpu"
           >
-            <ServiceCard service={service} />
+            <ServiceCard service={service} index={index} />
           </motion.div>
         ))}
       </div>
@@ -250,10 +256,10 @@ export function ServiceSlider() {
   const row2 = services.slice(halfLength);
 
   return (
-    <section className="bg-slate-50/60 border-t border-b border-slate-200/80 overflow-hidden pt-4 pb-4 relative backdrop-blur-md">
+    <section className="bg-slate-50/60 border-t border-b border-slate-200/80 overflow-hidden py-2 relative backdrop-blur-md">
       {/* Subtle Premium Background Mesh */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-100 via-slate-50/20 to-slate-50/0 pointer-events-none -z-10"></div>
-      
+
       {/* Edge Gradients for smooth fading */}
       <div className="absolute top-0 left-0 w-16 md:w-40 h-full bg-gradient-to-r from-slate-50/90 via-slate-50/50 to-transparent z-10 pointer-events-none"></div>
       <div className="absolute top-0 right-0 w-16 md:w-40 h-full bg-gradient-to-l from-slate-50/90 via-slate-50/50 to-transparent z-10 pointer-events-none"></div>

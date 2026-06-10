@@ -33,7 +33,7 @@ export function Navigation() {
   ];
 
   return (
-    <nav className={`w-full sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-1' : 'bg-white py-1.5'}`}>
+    <nav className={`w-full sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-0.5' : 'bg-white py-1'}`}>
       <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-[110px] sm:w-[120px]">
@@ -98,11 +98,11 @@ export function Navigation() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="flex gap-3">
-            <a href="https://app.udhary.com/login" className="px-5 py-1.5 rounded-xl text-primary font-medium text-[13px] border border-primary hover:bg-primary hover:text-white transition-all">
+          <div className="flex gap-4 items-center">
+            <a href="https://app.udhary.com/login" className="px-5 lg:px-6 py-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300 font-bold text-[13px] sm:text-sm transition-all shadow-sm">
               Login
             </a>
-            <a href="https://app.udhary.com/phone-verification" className="px-5 py-1.5 rounded-xl bg-primary text-white font-medium text-[13px] hover:bg-primary-container transition-all">
+            <a href="https://app.udhary.com/phone-verification" className="px-5 lg:px-6 py-2 rounded-xl bg-blue-600 text-white font-bold text-[13px] sm:text-sm transition-transform active:translate-y-[3px] active:shadow-none shadow-[0_4px_0_#1e40af] hover:translate-y-[1px] hover:shadow-[0_3px_0_#1e40af]">
               Become a Partner
             </a>
           </div>
@@ -169,13 +169,13 @@ export function Navigation() {
 
           <div className="h-px bg-slate-100 my-3 mx-4"></div>
 
-          <div className="flex flex-col gap-3 px-4 py-2 pb-6">
-            <a href="https://app.udhary.com/login" className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-primary font-semibold text-[15px] border-2 border-primary/20 bg-primary/5 hover:bg-primary hover:text-white transition-all">
-              <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'wght' 300" }}>login</span>
+          <div className="flex flex-col gap-4 px-4 py-2 pb-8 mt-2">
+            <a href="https://app.udhary.com/login" className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 font-bold text-[15px] transition-transform active:scale-95 shadow-sm">
+              <span className="material-symbols-outlined text-[20px]">login</span>
               Login
             </a>
-            <a href="https://app.udhary.com/phone-verification" className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary-container shadow-lg shadow-primary/25 transition-all">
-              <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'wght' 300" }}>handshake</span>
+            <a href="https://app.udhary.com/phone-verification" className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-bold text-[15px] transition-transform active:translate-y-[4px] active:shadow-none shadow-[0_6px_0_#1e40af] hover:translate-y-[2px] hover:shadow-[0_4px_0_#1e40af]">
+              <span className="material-symbols-outlined text-[20px]">handshake</span>
               Become a Partner
             </a>
           </div>

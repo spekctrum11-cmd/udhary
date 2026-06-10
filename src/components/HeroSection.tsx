@@ -8,6 +8,10 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white py-8 lg:py-10 z-0">
       
+      {/* Light Multicolor Aurora Backgrounds */}
+      <div className="absolute top-[-10%] left-[-5%] md:left-[10%] w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-blue-400/30 rounded-full blur-[80px] md:blur-[120px] pointer-events-none -z-10 animate-blob"></div>
+      <div className="absolute top-[20%] right-[-5%] md:right-[15%] w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-purple-400/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none -z-10 animate-blob" style={{ animationDelay: '2s' }}></div>
+
       {/* Background Floating Doodles */}
       <svg className="absolute top-16 left-8 md:left-16 w-10 h-10 md:w-16 md:h-16 text-amber-300 -z-10 rotate-12 animate-pulse" viewBox="0 0 100 100" fill="currentColor">
          <polygon points="50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40" />
