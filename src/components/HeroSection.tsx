@@ -38,7 +38,7 @@ export function HeroSection() {
             className="text-[40px] sm:text-5xl lg:text-[56px] font-black text-slate-900 mb-4 leading-[1.05] tracking-tighter"
           >
             Quick, Hassle-Free Loans for Your <span className="text-blue-600 relative inline-block whitespace-nowrap">Every Need
-              <svg className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-3 md:h-5 text-amber-400 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+              <svg className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-3 md:h-5 text-yellow-400 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
                 <path d="M 5 15 Q 50 0 95 15" />
               </svg>
             </span>
@@ -83,7 +83,7 @@ export function HeroSection() {
           >
             <Link 
               href="/apply" 
-              className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-transform active:translate-y-[4px] active:shadow-none w-full sm:w-auto text-base md:text-lg shadow-[0_6px_0_#1e40af] hover:translate-y-[2px] hover:shadow-[0_4px_0_#1e40af]"
+              className="flex items-center justify-center px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-black rounded-2xl transition-transform active:translate-y-[4px] active:shadow-none w-full sm:w-auto text-base md:text-lg shadow-[0_6px_0_#5b21b6] hover:translate-y-[2px] hover:shadow-[0_4px_0_#5b21b6]"
             >
               Check Eligibility <span className="material-symbols-outlined ml-2 text-[20px]">bolt</span>
             </Link>
