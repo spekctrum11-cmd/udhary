@@ -17,7 +17,7 @@ export function FinancialEcosystemSection() {
         {/* Minimalist Heading Inline with Dock */}
         <div className="text-center mb-8">
           <span className="inline-block px-4 py-1.5 bg-slate-100 border border-slate-200 text-slate-600 font-bold text-[11px] tracking-widest uppercase rounded-full mb-4 shadow-sm">
-            Ecosystem
+            Core Services
           </span>
           <h2 className="text-xl md:text-2xl font-normal text-slate-800 tracking-tight">
             One platform for all your <span className="font-medium text-blue-600">financial needs</span>.
