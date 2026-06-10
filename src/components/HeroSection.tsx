@@ -7,14 +7,13 @@ import { motion } from "framer-motion";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white py-8 lg:py-10 z-0">
-      
-      {/* Light Multicolor Aurora Backgrounds */}
+
+      {/* Sky Blue Aurora Background */}
       <div className="absolute top-[-10%] left-[-5%] md:left-[10%] w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-blue-400/30 rounded-full blur-[80px] md:blur-[120px] pointer-events-none -z-10 animate-blob"></div>
-      <div className="absolute top-[20%] right-[-5%] md:right-[15%] w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-purple-400/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none -z-10 animate-blob" style={{ animationDelay: '2s' }}></div>
 
       {/* Background Floating Doodles */}
       <svg className="absolute top-16 left-8 md:left-16 w-10 h-10 md:w-16 md:h-16 text-amber-300 -z-10 rotate-12 animate-pulse" viewBox="0 0 100 100" fill="currentColor">
-         <polygon points="50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40" />
+        <polygon points="50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40" />
       </svg>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6 items-center relative z-10 text-center lg:text-left">
@@ -30,7 +29,7 @@ export function HeroSection() {
             <span className="w-2 h-2 rounded-full bg-rose-500 animate-[pulse_2s_infinite]"></span>
             Trusted Fintech Solutions
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +42,7 @@ export function HeroSection() {
               </svg>
             </span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,15 +80,15 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full max-w-md mx-auto lg:mx-0"
           >
-            <Link 
-              href="/apply" 
+            <Link
+              href="/apply"
               className="flex items-center justify-center px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-black rounded-2xl transition-transform active:translate-y-[4px] active:shadow-none w-full sm:w-auto text-base md:text-lg shadow-[0_6px_0_#5b21b6] hover:translate-y-[2px] hover:shadow-[0_4px_0_#5b21b6]"
             >
               Check Eligibility <span className="material-symbols-outlined ml-2 text-[20px]">bolt</span>
             </Link>
 
-            <a 
-              href="https://app.udhary.com/loan-application" 
+            <a
+              href="https://app.udhary.com/loan-application"
               className="flex items-center justify-center px-6 py-3 bg-orange-200 hover:bg-orange-300 text-orange-900 font-black rounded-2xl transition-transform active:translate-y-[4px] active:shadow-none w-full sm:w-auto text-base md:text-lg shadow-[0_6px_0_#fb923c] hover:translate-y-[2px] hover:shadow-[0_4px_0_#fb923c]"
             >
               Apply Now <span className="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
@@ -115,10 +114,10 @@ export function HeroSection() {
 
         {/* IMAGE CONTENT - Solid Memphis Backdrop */}
         <div className="relative hidden lg:flex justify-center lg:justify-end mt-12 lg:mt-0 items-center">
-          
+
           {/* Solid Color Backdrop Shape */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-[450px] aspect-square bg-emerald-200 rounded-[3rem] rotate-12 -z-10"></div>
-          
+
           {/* Floating Background Accent Shapes */}
           <div className="absolute top-0 right-10 lg:-right-10 w-20 h-20 bg-amber-300 rounded-full -z-10 animate-[bounce_5s_infinite]"></div>
 
