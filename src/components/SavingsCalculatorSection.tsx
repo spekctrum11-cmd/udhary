@@ -48,7 +48,7 @@ export function SavingsCalculatorSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:auto-rows-fr">
           
           {/* Card 1: Total Interest Saved (Massive 2x2 Block) */}
-          <div className="col-span-2 md:col-start-1 md:col-span-2 md:row-start-1 md:row-span-2 bg-slate-900 rounded-[1.25rem] p-5 md:p-6 flex flex-col justify-center items-center text-center">
+          <div className="col-start-1 col-span-2 row-start-1 row-span-1 md:row-span-2 bg-slate-900 rounded-[1.25rem] p-5 md:p-6 flex flex-col justify-center items-center text-center">
             <p className="text-slate-400 font-bold mb-1 uppercase tracking-wider text-[10px] md:text-xs">Total Interest Saved</p>
             <div className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter mb-2">
               {formatCurrency(totalSaved)}
@@ -57,7 +57,7 @@ export function SavingsCalculatorSection() {
           </div>
           
           {/* Card 2: Loan Amount (Super Wide 3x1 Block) */}
-          <div className="col-span-2 md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-1 bg-amber-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
+          <div className="col-start-1 col-span-2 row-start-2 row-span-1 md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-1 bg-amber-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div className="flex justify-between items-start mb-2">
               <label className="text-amber-900 font-bold text-sm sm:text-base md:text-lg">Outstanding Loan</label>
               <span className="text-xl sm:text-2xl md:text-3xl font-black text-amber-700 tracking-tight">{formatCurrency(loanAmount)}</span>
@@ -77,7 +77,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 3: Interest Rate (Compact 1x1 Block) */}
-          <div className="col-span-1 md:col-start-3 md:col-span-1 md:row-start-2 md:row-span-1 bg-emerald-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
+          <div className="col-start-1 col-span-1 row-start-3 row-span-1 md:col-start-3 md:col-span-1 md:row-start-2 md:row-span-1 bg-emerald-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div>
               <label className="text-emerald-900 font-bold block mb-1 text-xs sm:text-sm md:text-base">Interest Rate</label>
               <span className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-700 block tracking-tight">{currentInterest}%</span>
@@ -97,7 +97,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 4: Tenure (Compact 1x1 Block) */}
-          <div className="col-span-1 md:col-start-4 md:col-span-1 md:row-start-3 md:row-span-1 bg-rose-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
+          <div className="col-start-1 col-span-1 row-start-4 row-span-1 md:col-start-4 md:col-span-1 md:row-start-3 md:row-span-1 bg-rose-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div>
               <label className="text-rose-900 font-bold block mb-1 text-xs sm:text-sm md:text-base">Tenure</label>
               <span className="text-2xl sm:text-3xl md:text-4xl font-black text-rose-700 block tracking-tight">
@@ -119,7 +119,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 5: Monthly Savings (Wide 2x1 Block) */}
-          <div className="col-span-1 md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-1 bg-blue-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-4">
+          <div className="col-start-2 col-span-1 row-start-3 row-span-2 md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-1 bg-blue-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col md:flex-row items-center md:justify-between justify-center gap-2 md:gap-4 text-center md:text-left">
             <div>
               <p className="text-blue-900 font-bold text-xs sm:text-sm md:text-lg">Monthly Savings</p>
               <p className="text-blue-700/70 text-[10px] sm:text-xs font-bold leading-tight mt-0.5 md:mt-0">Every month</p>
@@ -130,7 +130,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 6: New EMI (Compact 1x1 Block) */}
-          <div className="col-span-1 md:col-start-4 md:col-span-1 md:row-start-2 md:row-span-1 bg-violet-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between gap-2 md:gap-3">
+          <div className="col-start-1 col-span-2 row-start-5 row-span-1 md:col-start-4 md:col-span-1 md:row-start-2 md:row-span-1 bg-violet-100 rounded-[1.25rem] p-4 md:p-5 flex flex-row md:flex-col justify-between items-center md:items-start gap-2 md:gap-3">
             <div>
               <p className="text-violet-900 font-bold text-xs sm:text-sm md:text-base">New EMI (Est.)</p>
               <p className="text-violet-700/70 text-[10px] sm:text-xs font-bold leading-tight mt-0.5">@ 13.5% int.</p>
