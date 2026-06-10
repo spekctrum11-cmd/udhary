@@ -6,6 +6,7 @@ import { FinancialEcosystemSection } from "@/components/FinancialEcosystemSectio
 const ComparisonEngineSection = dynamic(() => import("@/components/ComparisonEngineSection").then(mod => mod.ComparisonEngineSection));
 const PremiumOfferingsSection = dynamic(() => import("@/components/PremiumOfferingsSection").then(mod => mod.PremiumOfferingsSection));
 const SimpleProcedure = dynamic(() => import("@/components/SimpleProcedure").then(mod => mod.SimpleProcedure));
+const SavingsCalculatorSection = dynamic(() => import("@/components/SavingsCalculatorSection").then(mod => mod.SavingsCalculatorSection));
 const PartnerMarquee = dynamic(() => import("@/components/PartnerMarquee").then(mod => mod.PartnerMarquee));
 const UdharyAdvantageSection = dynamic(() => import("@/components/UdharyAdvantageSection").then(mod => mod.UdharyAdvantageSection));
 const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection").then(mod => mod.TestimonialsSection));
@@ -24,6 +25,7 @@ export default function Home() {
         <ComparisonEngineSection />
         <PremiumOfferingsSection />
         <SimpleProcedure />
+        <SavingsCalculatorSection />
         <PartnerMarquee />
         <UdharyAdvantageSection />
         <TestimonialsSection />
