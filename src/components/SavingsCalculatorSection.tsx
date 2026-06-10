@@ -67,7 +67,8 @@ export function SavingsCalculatorSection() {
                 type="range" min="50000" max="5000000" step="50000" 
                 value={loanAmount} 
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
-                className="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600"
+                className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-amber-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-amber-500 [&::-moz-range-thumb]:transition-transform"
+                style={{ background: `linear-gradient(to right, #f59e0b ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%, #fde68a ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%)` }}
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-amber-700/60 font-black mt-2">
                 <span>₹50K</span><span>₹50L</span>
@@ -86,7 +87,8 @@ export function SavingsCalculatorSection() {
                 type="range" min="8" max="24" step="0.5" 
                 value={currentInterest} 
                 onChange={(e) => setCurrentInterest(Number(e.target.value))}
-                className="w-full h-2 bg-emerald-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
+                className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-emerald-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-emerald-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-emerald-500 [&::-moz-range-thumb]:transition-transform"
+                style={{ background: `linear-gradient(to right, #10b981 ${((currentInterest - 8) / (24 - 8)) * 100}%, #a7f3d0 ${((currentInterest - 8) / (24 - 8)) * 100}%)` }}
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-emerald-700/60 font-black mt-2">
                 <span>8%</span><span>24%</span>
@@ -107,7 +109,8 @@ export function SavingsCalculatorSection() {
                 type="range" min="1" max="7" step="1" 
                 value={tenureYears} 
                 onChange={(e) => setTenureYears(Number(e.target.value))}
-                className="w-full h-2 bg-rose-200 rounded-lg appearance-none cursor-pointer accent-rose-600"
+                className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-rose-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-rose-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-rose-500 [&::-moz-range-thumb]:transition-transform"
+                style={{ background: `linear-gradient(to right, #f43f5e ${((tenureYears - 1) / (7 - 1)) * 100}%, #fecaca ${((tenureYears - 1) / (7 - 1)) * 100}%)` }}
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-rose-700/60 font-black mt-2">
                 <span>1 Yr</span><span>7 Yrs</span>
