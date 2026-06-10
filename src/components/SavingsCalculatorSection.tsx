@@ -39,9 +39,31 @@ export function SavingsCalculatorSection() {
   return (
     <section className="py-8 md:py-12 bg-white">
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-6 md:mb-8">
-          <h2 className="text-2xl md:text-4xl font-black mb-2 text-slate-900 tracking-tight">How much can you save?</h2>
-          <p className="text-slate-600 text-sm md:text-base font-medium px-2">Refinance your existing loan with our partners and see instant savings.</p>
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10 relative z-10">
+          <h2 className="relative inline-block text-2xl md:text-4xl font-black mb-3 text-slate-900 tracking-tight z-10">
+            How much can you save?
+            
+            {/* Sparkle Doodle */}
+            <svg className="absolute -top-4 -left-6 md:-top-6 md:-left-8 w-6 h-6 md:w-8 md:h-8 text-emerald-400 -z-10 animate-[pulse_3s_ease-in-out_infinite]" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M50 10 Q50 50 10 50 Q50 50 50 90 Q50 50 90 50 Q50 50 50 10" />
+            </svg>
+
+            {/* Plus Doodle */}
+            <svg className="absolute -top-1 -right-6 md:-top-2 md:-right-8 w-4 h-4 md:w-5 md:h-5 text-rose-400 -z-10 rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="16" strokeLinecap="round">
+               <path d="M 50 10 L 50 90 M 10 50 L 90 50" />
+            </svg>
+            
+            {/* Dot Doodle */}
+            <svg className="absolute top-4 -right-8 md:top-6 md:-right-12 w-2 h-2 md:w-3 md:h-3 text-blue-400 -z-10" viewBox="0 0 100 100" fill="currentColor">
+               <circle cx="50" cy="50" r="50" />
+            </svg>
+
+            {/* Swoosh Underline Doodle */}
+            <svg className="absolute -bottom-2 md:-bottom-3 left-1/2 -translate-x-1/2 w-[105%] h-3 md:h-4 text-amber-400 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+              <path d="M 5 15 Q 50 -2 95 15" />
+            </svg>
+          </h2>
+          <p className="text-slate-600 text-sm md:text-base font-medium px-2 mt-2 md:mt-3">Refinance your existing loan with our partners and see instant savings.</p>
         </div>
 
         {/* Bento Grid Layout - Fully Asymmetric */}
