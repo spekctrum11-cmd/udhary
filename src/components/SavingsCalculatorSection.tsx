@@ -70,7 +70,7 @@ export function SavingsCalculatorSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:auto-rows-fr">
 
           {/* Card 1: Total Interest Saved (Massive 2x2 Block) */}
-          <div className="col-start-1 col-span-2 row-start-1 row-span-1 md:row-span-2 bg-slate-900 rounded-[1.25rem] p-5 md:p-6 flex flex-col justify-center items-center text-center">
+          <div className="col-start-1 col-span-2 row-start-1 row-span-1 md:row-span-2 bg-slate-700 rounded-[1.25rem] p-5 md:p-6 flex flex-col justify-center items-center text-center">
             <p className="text-slate-400 font-bold mb-1 uppercase tracking-wider text-[10px] md:text-xs">Total Interest Saved</p>
             <div className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter mb-2">
               {formatCurrency(totalSaved)}
@@ -79,7 +79,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 2: Loan Amount (Super Wide 3x1 Block) */}
-          <div className="col-start-1 col-span-2 row-start-2 row-span-1 md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-1 bg-amber-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
+          <div className="col-start-1 col-span-2 row-start-2 row-span-1 md:col-start-1 md:col-span-3 md:row-start-3 md:row-span-1 bg-amber-200 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div className="flex justify-between items-start mb-2">
               <label className="text-amber-900 font-bold text-sm sm:text-base md:text-lg">Outstanding Loan</label>
               <span className="text-xl sm:text-2xl md:text-3xl font-black text-amber-700 tracking-tight">{formatCurrency(loanAmount)}</span>
@@ -90,7 +90,7 @@ export function SavingsCalculatorSection() {
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
                 className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-amber-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-amber-500 [&::-moz-range-thumb]:transition-transform"
-                style={{ background: `linear-gradient(to right, #f59e0b ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%, #fde68a ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%)` }}
+                style={{ background: `linear-gradient(to right, #f59e0b ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%, #e9ce61ff ${((loanAmount - 50000) / (5000000 - 50000)) * 100}%)` }}
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-amber-700/60 font-black mt-2">
                 <span>₹50K</span><span>₹50L</span>
@@ -99,7 +99,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 3: Interest Rate (Compact 1x1 Block) */}
-          <div className="col-start-1 col-span-1 row-start-3 row-span-1 md:col-start-3 md:col-span-1 md:row-start-2 md:row-span-1 bg-emerald-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
+          <div className="col-start-1 col-span-1 row-start-3 row-span-1 md:col-start-3 md:col-span-1 md:row-start-2 md:row-span-1 bg-emerald-200 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div>
               <label className="text-emerald-900 font-bold block mb-1 text-xs sm:text-sm md:text-base">Interest Rate</label>
               <span className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-700 block tracking-tight">{currentInterest}%</span>
@@ -110,7 +110,7 @@ export function SavingsCalculatorSection() {
                 value={currentInterest}
                 onChange={(e) => setCurrentInterest(Number(e.target.value))}
                 className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-emerald-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-emerald-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-emerald-500 [&::-moz-range-thumb]:transition-transform"
-                style={{ background: `linear-gradient(to right, #10b981 ${((currentInterest - 8) / (24 - 8)) * 100}%, #a7f3d0 ${((currentInterest - 8) / (24 - 8)) * 100}%)` }}
+                style={{ background: `linear-gradient(to right, #10b981 ${((currentInterest - 8) / (24 - 8)) * 100}%, #6ba389ff ${((currentInterest - 8) / (24 - 8)) * 100}%)` }}
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-emerald-700/60 font-black mt-2">
                 <span>8%</span><span>24%</span>
@@ -119,7 +119,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 4: Tenure (Compact 1x1 Block) */}
-          <div className="col-start-1 col-span-1 row-start-4 row-span-1 md:col-start-4 md:col-span-1 md:row-start-3 md:row-span-1 bg-rose-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
+          <div className="col-start-1 col-span-1 row-start-4 row-span-1 md:col-start-4 md:col-span-1 md:row-start-3 md:row-span-1 bg-rose-200 rounded-[1.25rem] p-4 md:p-5 flex flex-col justify-between">
             <div>
               <label className="text-rose-900 font-bold block mb-1 text-xs sm:text-sm md:text-base">Tenure</label>
               <span className="text-2xl sm:text-3xl md:text-4xl font-black text-rose-700 block tracking-tight">
@@ -132,7 +132,7 @@ export function SavingsCalculatorSection() {
                 value={tenureYears}
                 onChange={(e) => setTenureYears(Number(e.target.value))}
                 className="w-full h-2.5 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-rose-500/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-rose-500 hover:[&::-webkit-slider-thumb]:scale-110 active:[&::-webkit-slider-thumb]:scale-95 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.15)] [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-rose-500 [&::-moz-range-thumb]:transition-transform"
-                style={{ background: `linear-gradient(to right, #f43f5e ${((tenureYears - 1) / (7 - 1)) * 100}%, #fecaca ${((tenureYears - 1) / (7 - 1)) * 100}%)` }}
+                style={{ background: `linear-gradient(to right, #f43f5e ${((tenureYears - 1) / (7 - 1)) * 100}%, #d6a2a2ff ${((tenureYears - 1) / (7 - 1)) * 100}%)` }}
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-rose-700/60 font-black mt-2">
                 <span>1 Yr</span><span>7 Yrs</span>
@@ -141,7 +141,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 5: Monthly Savings (Wide 2x1 Block) */}
-          <div className="col-start-2 col-span-1 row-start-3 row-span-2 md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-1 bg-blue-100 rounded-[1.25rem] p-4 md:p-5 flex flex-col md:flex-row items-center md:justify-between justify-center gap-2 md:gap-4 text-center md:text-left">
+          <div className="col-start-2 col-span-1 row-start-3 row-span-2 md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-1 bg-blue-200 rounded-[1.25rem] p-4 md:p-5 flex flex-col md:flex-row items-center md:justify-between justify-center gap-2 md:gap-4 text-center md:text-left">
             <div>
               <p className="text-blue-900 font-bold text-xs sm:text-sm md:text-lg">Monthly Savings</p>
               <p className="text-blue-700/70 text-[10px] sm:text-xs font-bold leading-tight mt-0.5 md:mt-0">Every month</p>
@@ -152,7 +152,7 @@ export function SavingsCalculatorSection() {
           </div>
 
           {/* Card 6: New EMI (Compact 1x1 Block) */}
-          <div className="col-start-1 col-span-2 row-start-5 row-span-1 md:col-start-4 md:col-span-1 md:row-start-2 md:row-span-1 bg-violet-100 rounded-[1.25rem] p-4 md:p-5 flex flex-row md:flex-col justify-between items-center md:items-start gap-2 md:gap-3">
+          <div className="col-start-1 col-span-2 row-start-5 row-span-1 md:col-start-4 md:col-span-1 md:row-start-2 md:row-span-1 bg-violet-200 rounded-[1.25rem] p-4 md:p-5 flex flex-row md:flex-col justify-between items-center md:items-start gap-2 md:gap-3">
             <div>
               <p className="text-violet-900 font-bold text-xs sm:text-sm md:text-base">New EMI (Est.)</p>
               <p className="text-violet-700/70 text-[10px] sm:text-xs font-bold leading-tight mt-0.5">@ 13.5% int.</p>
