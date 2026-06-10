@@ -6,76 +6,95 @@ import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-2 lg:py-12">
-      {/* Subtle background gradient / mesh */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white pointer-events-none z-0"></div>
+    <section className="relative overflow-hidden bg-white py-8 lg:py-10 z-0">
+      
+      {/* Background Floating Doodles */}
+      <svg className="absolute top-16 left-8 md:left-16 w-10 h-10 md:w-16 md:h-16 text-amber-300 -z-10 rotate-12 animate-pulse" viewBox="0 0 100 100" fill="currentColor">
+         <polygon points="50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40" />
+      </svg>
+      <svg className="absolute bottom-20 left-1/4 w-8 h-8 md:w-12 md:h-12 text-emerald-300 -z-10 -rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="12" strokeLinecap="round">
+         <path d="M 50 10 L 50 90 M 10 50 L 90 50" />
+      </svg>
+      <svg className="absolute top-32 right-10 lg:right-[45%] w-16 h-16 md:w-24 md:h-24 text-violet-200 -z-10" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round">
+         <path d="M 10 50 Q 30 10 50 50 T 90 50" />
+      </svg>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 text-center lg:text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6 items-center relative z-10 text-center lg:text-left">
 
-        {/* TEXT CONTENT - Takes primary focus at the top on Mobile */}
+        {/* TEXT CONTENT */}
         <div className="max-w-2xl mx-auto lg:mx-0 w-full pt-4 lg:pt-0">
-          <motion.span
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-1.5 bg-orange-50 text-orange-600 font-semibold text-xs tracking-widest uppercase rounded-full mb-6 border border-orange-100 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 bg-rose-200 text-rose-900 font-bold text-xs sm:text-sm uppercase tracking-widest rounded-full mb-5 border-2 border-rose-300 shadow-sm"
           >
+            <span className="w-2 h-2 rounded-full bg-rose-500 animate-[pulse_2s_infinite]"></span>
             Trusted Fintech Solutions
-          </motion.span>
+          </motion.div>
+          
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[36px] sm:text-5xl lg:text-[54px] font-extrabold text-slate-900 mb-5 lg:mb-6 leading-[1.15] tracking-tight"
+            className="text-[40px] sm:text-5xl lg:text-[56px] font-black text-slate-900 mb-4 leading-[1.05] tracking-tighter"
           >
-            Quick, Hassle-Free Loans to Meet Your Every Need
+            Quick, Hassle-Free Loans for Your <span className="text-blue-600 relative inline-block whitespace-nowrap">Every Need
+              <svg className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-3 md:h-5 text-amber-400 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+                <path d="M 5 15 Q 50 0 95 15" />
+              </svg>
+            </span>
           </motion.h1>
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 px-2 lg:px-0"
+            className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 font-bold leading-relaxed max-w-xl mx-auto lg:mx-0 px-2 lg:px-0"
           >
-            Are you a salaried professional looking for extra financial support? Whether it's for a dream vacation, medical emergency, or home renovation — we've got your back!
+            Are you a salaried professional looking for extra support? From dream vacations to home renovations — we've got your back!
           </motion.p>
 
-          {/* Sleek Pill Features for Mobile (Saves huge vertical space) */}
+          {/* Vibrant Solid Pill Features */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-4 lg:mb-10"
+            className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6"
           >
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm transition-all hover:border-orange-200">
-              <span className="material-symbols-outlined text-[18px] text-slate-600">verified</span>
-              <span className="font-semibold text-sm text-slate-800">Low Interest</span>
+            <div className="flex items-center gap-2 bg-emerald-200 text-emerald-900 px-4 py-2.5 rounded-2xl font-bold text-sm transition-transform hover:-translate-y-1">
+              <span className="material-symbols-outlined text-[18px]">verified</span>
+              Low Interest
             </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm transition-all hover:border-blue-200">
-              <span className="material-symbols-outlined text-[18px] text-blue-600">speed</span>
-              <span className="font-semibold text-sm text-slate-800">Fast Approval</span>
+            <div className="flex items-center gap-2 bg-amber-200 text-amber-900 px-4 py-2.5 rounded-2xl font-bold text-sm transition-transform hover:-translate-y-1">
+              <span className="material-symbols-outlined text-[18px]">speed</span>
+              Fast Approval
             </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm hidden sm:flex transition-all hover:border-purple-200">
-              <span className="material-symbols-outlined text-[18px] text-orange-600">security</span>
-              <span className="font-semibold text-sm text-slate-800">100% Secure</span>
+            <div className="flex items-center gap-2 bg-violet-200 text-violet-900 px-4 py-2.5 rounded-2xl font-bold text-sm hidden sm:flex transition-transform hover:-translate-y-1">
+              <span className="material-symbols-outlined text-[18px]">security</span>
+              100% Secure
             </div>
           </motion.div>
 
+          {/* Chunky 3D Solid Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full max-w-md mx-auto lg:mx-0"
+            className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full max-w-md mx-auto lg:mx-0"
           >
             <Link 
               href="/apply" 
-              className="relative flex items-center justify-center px-8 py-4 bg-gradient-to-r from-violet-900 to-fuchsia-900 hover:from-violet-950 hover:to-fuchsia-950 text-white font-extrabold rounded-2xl transition-all shadow-[0_8px_30px_rgba(124,58,237,0.4)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.6)] hover:-translate-y-0.5 w-full sm:w-auto text-lg overflow-hidden group border border-violet-500/30"
+              className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-transform active:translate-y-[4px] active:shadow-none w-full sm:w-auto text-base md:text-lg shadow-[0_6px_0_#1e40af] hover:translate-y-[2px] hover:shadow-[0_4px_0_#1e40af]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-150%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              Check Eligibility <span className="material-symbols-outlined ml-2 text-[22px] group-hover:scale-110 transition-transform">bolt</span>
+              Check Eligibility <span className="material-symbols-outlined ml-2 text-[20px]">bolt</span>
             </Link>
 
-            <a href="https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw" className="flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-2xl transition-all shadow-lg shadow-orange-500/25 hover:-translate-y-0.5 w-full sm:w-auto text-lg">
-              Apply Now <span className="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+            <a 
+              href="https://app.udhary.com/loan-application" 
+              className="flex items-center justify-center px-6 py-3 bg-orange-200 hover:bg-orange-300 text-orange-900 font-black rounded-2xl transition-transform active:translate-y-[4px] active:shadow-none w-full sm:w-auto text-base md:text-lg shadow-[0_6px_0_#fb923c] hover:translate-y-[2px] hover:shadow-[0_4px_0_#fb923c]"
+            >
+              Apply Now <span className="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
             </a>
           </motion.div>
 
@@ -83,7 +102,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-6 flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 text-slate-600 text-sm font-medium"
+            className="mt-6 flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 text-slate-700 text-xs md:text-sm font-bold"
           >
             <div className="flex items-center gap-1.5">
               <span className="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
@@ -93,35 +112,33 @@ export function HeroSection() {
               <span className="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
               Zero hidden charges
             </div>
-            <div className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-[18px] text-green-500">check_circle</span>
-              No paper work to get started
-            </div>
           </motion.div>
         </div>
 
-        {/* IMAGE CONTENT - Elite Interactive Signature Design */}
-        <div className="relative hidden lg:flex justify-end mt-4 lg:mt-0 flex-1 lg:flex-auto items-center">
-          {/* Decorative background shape for the image */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[700px] aspect-square bg-gradient-to-tr from-orange-200/50 via-purple-200/50 to-blue-200/50 rounded-full blur-[80px] -z-10 animate-blob"></div>
+        {/* IMAGE CONTENT - Solid Memphis Backdrop */}
+        <div className="relative hidden lg:flex justify-center lg:justify-end mt-12 lg:mt-0 items-center">
+          
+          {/* Solid Color Backdrop Shape */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-[450px] aspect-square bg-emerald-200 rounded-[3rem] rotate-12 -z-10"></div>
+          
+          {/* Floating Background Accent Shapes */}
+          <div className="absolute top-0 right-10 lg:-right-10 w-20 h-20 bg-amber-300 rounded-full -z-10 animate-[bounce_5s_infinite]"></div>
+          <div className="absolute bottom-10 left-5 w-16 h-16 bg-blue-300 rounded-[1rem] -rotate-12 -z-10 animate-[pulse_4s_infinite]"></div>
 
-          {/* Hero Family Graphic */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-10 w-full flex justify-center lg:translate-x-12"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative z-10 w-full flex justify-center"
           >
-            <div className="relative w-full flex justify-center scale-125">
-              <Image
-                alt="Family planning for their future"
-                src="/phone-hero-v2.png"
-                width={1000}
-                height={1000}
-                className="w-full max-w-[600px] lg:max-w-[1000px] object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.06)] pointer-events-none"
-                priority
-              />
-            </div>
+            <Image
+              alt="Family planning for their future"
+              src="/phone-hero-v2.png"
+              width={1000}
+              height={1000}
+              className="w-full max-w-[400px] lg:max-w-[600px] object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.15)] pointer-events-none lg:translate-x-6"
+              priority
+            />
           </motion.div>
         </div>
       </div>
