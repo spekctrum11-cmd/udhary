@@ -54,14 +54,14 @@ export function TestimonialsSection() {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/3 opacity-60 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10 flex flex-col items-center">
-        
+
         {/* Section Header */}
         <div className="text-center mb-4 lg:mb-8">
           <span className="inline-block px-3 py-1 bg-blue-100/50 text-blue-700 font-bold text-[9px] md:text-[10px] tracking-widest uppercase rounded-full mb-2 shadow-sm border border-blue-200/50 backdrop-blur-sm">
             Wall of Love
           </span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
-            Voice of Our Customers
+            Why People Prefer Udhary
           </h2>
           <p className="text-[13px] md:text-sm text-slate-600 max-w-xl mx-auto font-medium">
             Join thousands of satisfied Indians who found their true financial partner in Udhary.
@@ -114,14 +114,14 @@ export function TestimonialsSection() {
           {cards.map((card, index) => {
             const isFront = index === 0;
             // Only render top 3 cards to keep DOM light, but keep them in array
-            if (index > 3) return null; 
+            if (index > 3) return null;
 
             return (
               <motion.div
                 key={card.id}
                 layout
                 initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                animate={{ 
+                animate={{
                   opacity: 1 - index * 0.15,
                   scale: 1 - index * 0.05,
                   y: index * 22,
@@ -152,7 +152,7 @@ export function TestimonialsSection() {
                 <span className="absolute top-3 right-4 text-7xl text-white/10 font-serif leading-none select-none pointer-events-none">
                   "
                 </span>
-                
+
                 <div className="relative z-10">
                   <div className="flex gap-0.5 text-yellow-400 mb-3 drop-shadow-md">
                     {Array.from({ length: 5 }).map((_, i) => {
@@ -191,12 +191,12 @@ export function TestimonialsSection() {
 
         {/* Swipe Hint */}
         <div className="flex lg:hidden mt-8 flex-col items-center justify-center gap-1 opacity-60">
-           <div className="flex gap-2 items-center animate-bounce">
-             <span className="material-symbols-outlined text-[20px] text-slate-500">swipe</span>
-           </div>
-           <span className="text-[11px] font-bold uppercase tracking-widest text-slate-500">
-             Swipe or tap top card to explore
-           </span>
+          <div className="flex gap-2 items-center animate-bounce">
+            <span className="material-symbols-outlined text-[20px] text-slate-500">swipe</span>
+          </div>
+          <span className="text-[11px] font-bold uppercase tracking-widest text-slate-500">
+            Swipe or tap top card to explore
+          </span>
         </div>
 
       </div>
