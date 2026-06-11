@@ -2,7 +2,7 @@ import React from "react";
 
 export function WhatsAppFAB() {
   return (
-    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex items-center justify-center">
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex items-center justify-center max-[250px]:hidden">
       {/* Continuous Circular Line Ripples */}
       <div
         className="absolute inset-0 rounded-full border-2 border-green-500/60 animate-ping pointer-events-none"

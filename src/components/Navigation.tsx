@@ -34,9 +34,9 @@ export function Navigation() {
 
   return (
     <nav className={`w-full sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-0.5' : 'bg-white py-1'}`}>
-      <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex justify-between items-center">
+      <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex justify-between items-center max-[250px]:px-2">
         <div className="flex items-center gap-2">
-          <div className="w-[110px] sm:w-[120px]">
+          <div className="w-[110px] sm:w-[120px] max-[250px]:w-[80px]">
             <Image src="/logo.png" alt="logo" width={160} height={50} priority className="w-full h-auto object-contain" />
           </div>
         </div>

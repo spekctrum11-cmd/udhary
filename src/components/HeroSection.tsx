@@ -31,7 +31,7 @@ export function HeroSection() {
           </motion.div>
 
           <h1
-            className="text-[40px] sm:text-5xl lg:text-[56px] font-black text-slate-900 mb-4 leading-[1.05] tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700"
+            className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 mb-4 leading-[1.05] tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700"
           >
             Quick, Hassle-Free Loans for Your <span className="text-blue-600 relative inline-block whitespace-nowrap">Every Need
               <svg className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-3 md:h-5 text-yellow-400 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
