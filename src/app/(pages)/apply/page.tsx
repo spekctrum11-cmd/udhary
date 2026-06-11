@@ -576,7 +576,7 @@ export default function ApplyPage() {
                                         Additional Review Needed
                                     </h2>
                                     <p className="text-[13px] md:text-[14px] font-medium text-slate-600 leading-relaxed mb-6 md:mb-8 px-2 md:px-0">
-                                        Based on the details provided, we couldn't automatically generate pre-approved offers right now. One of our specialists will reach out to help find manual matches.
+                                        Based on the details provided, we couldn&apos;t automatically generate pre-approved offers right now. One of our specialists will reach out to help find manual matches.
                                     </p>
                                 </>
                             )}

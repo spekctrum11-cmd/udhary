@@ -42,7 +42,7 @@ const services = [
   { icon: 'trending_up', label: 'Investment Plan', href: 'https://beemaaa.com/' },
 ];
 
-const ServiceCard = ({ service, index }: { service: any, index: number }) => {
+const ServiceCard = ({ service, index }: { service: { icon: string, label: string, href: string }, index: number }) => {
   const colors = [
     "text-blue-300",
     "text-emerald-300",
@@ -71,7 +71,7 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => {
   );
 };
 
-const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: any[], reverse?: boolean, speed?: number }) => {
+const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon: string, label: string, href: string }[], reverse?: boolean, speed?: number }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);

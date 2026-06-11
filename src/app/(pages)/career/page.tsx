@@ -217,7 +217,7 @@ export default function CareerPage() {
                 </ul>
                 <div className="mt-10 p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
                   <h4 className="font-bold mb-2">Ready to make a difference?</h4>
-                  <p className="opacity-90">Send your updated resume to <a href="mailto:Info@udhary.com" className="font-bold underline text-secondary-fixed">Info@udhary.com</a> with the subject line: "Application for [Position Name] – North-Delhi".</p>
+                  <p className="opacity-90">Send your updated resume to <a href="mailto:Info@udhary.com" className="font-bold underline text-secondary-fixed">Info@udhary.com</a> with the subject line: &quot;Application for [Position Name] – North-Delhi&quot;.</p>
                 </div>
               </div>
             </div>

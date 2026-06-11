@@ -281,6 +281,7 @@ export default function EmiCalculator() {
                       ))}
                     </Pie>
                     <RechartsTooltip
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       formatter={(value: any) => formatCurrency(Number(value))}
                       contentStyle={{
                         borderRadius: '3px',

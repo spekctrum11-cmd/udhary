@@ -73,7 +73,7 @@ export function TestimonialsSection() {
           {testimonialsData.map((card) => (
             <div key={card.id} className={`relative p-6 lg:p-8 rounded-[1.5rem] shadow-[0_4px_20px_rgb(0,0,0,0.06)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-500 text-white ${card.bg} flex flex-col justify-between`}>
               <span className="absolute top-2 right-4 text-7xl lg:text-8xl text-white/10 font-serif leading-none select-none pointer-events-none">
-                "
+                &quot;
               </span>
               <div className="relative z-10">
                 <div className="flex gap-0.5 text-yellow-400 mb-4 drop-shadow-md">
@@ -150,7 +150,7 @@ export function TestimonialsSection() {
               >
                 {/* Decorative Giant Quote */}
                 <span className="absolute top-3 right-4 text-7xl text-white/10 font-serif leading-none select-none pointer-events-none">
-                  "
+                  &quot;
                 </span>
 
                 <div className="relative z-10">
