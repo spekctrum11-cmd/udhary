@@ -7,20 +7,16 @@ import {
   FcSalesPerformance, FcShop, FcPieChart, FcDoughnutChart, FcDocument, FcComboChart, FcBusiness, FcBusinesswoman, FcBusinessman, FcBusinessContact,
   FcBarChart, FcAreaChart, FcStatistics, FcPaid, FcOrganization, FcHome, FcGraduationCap, FcGoodDecision, FcFinePrint, FcAutomotive
 } from "react-icons/fc";
+import { IconType } from "react-icons";
 
 // --- Data Generation ---
 
 const names = [
-  "Ankit", "Priya", "Amit", "Neha", "Rahul", "Sneha", "Vikram", "Pooja", "Ravi", "Anjali",
-  "Rohan", "Kavita", "Suresh", "Divya", "Manish", "Riya", "Karan", "Kirti", "Arun", "Simran",
-  "Nitin", "Aarti", "Vikas", "Swati", "Deepak", "Nisha", "Saurabh", "Megha", "Tarun", "Shruti",
-  "Gaurav", "Preeti", "Mohit", "Shikha", "Ashish", "Jyoti", "Prateek", "Sakshi", "Harish", "Pallavi"
+  "Aarav", "Vihaan", "Vivaan", "Ananya", "Diya", "Advik", "Kabir", "Anika", "Navya", "Ayaan", "Shaurya", "Dhruv", "Ishani", "Myra", "Aadhya", "Reyansh", "Arnav", "Kian", "Sai", "Zara", "Samaira", "Riya", "Yash", "Aanya", "Aaryan", "Om", "Kiara", "Prisha", "Ishan", "Avni", "Kavya", "Aryan", "Pari", "Krishna", "Rudra", "Nisha", "Rohan", "Sneha", "Kritika", "Aditi", "Ravi", "Pooja", "Vikram", "Neha", "Rahul", "Ankit", "Priya", "Amit", "Anjali", "Suresh", "Divya", "Manish", "Karan", "Kirti", "Arun", "Simran", "Nitin", "Aarti", "Vikas", "Swati", "Deepak", "Saurabh", "Megha", "Tarun", "Shruti", "Gaurav", "Preeti", "Mohit", "Shikha", "Ashish", "Jyoti", "Prateek", "Sakshi", "Harish", "Pallavi", "Rishabh", "Tanvi", "Sahil", "Sonal", "Akash", "Ritu", "Varun", "Sonali", "Rohit", "Richa", "Siddharth", "Priyanka", "Kapil", "Kanika", "Nikhil", "Bhumika", "Abhishek", "Sheetal", "Sumit", "Reena", "Raj", "Rashmi", "Vishal", "Meenakshi", "Rakesh", "Shweta", "Anand", "Nidhi", "Rajeev", "Vandana", "Sandeep", "Kiran", "Vijay", "Poonam", "Ajay", "Anita", "Sanjay", "Sunita", "Rajesh", "Geeta", "Sunil", "Rekha", "Manoj", "Seema", "Ramesh", "Sangeeta", "Dinesh", "Kavita", "Naresh", "Manju", "Pramod", "Asha", "Vinod", "Usha", "Mukesh", "Renu", "Anil", "Sushma", "Prakash", "Neelam", "Kamal", "Shalini", "Ashok", "Kusum", "Gopal", "Sarita", "Harish", "Mamta", "Lalit", "Madhu", "Rajendra", "Saroj", "Mahesh", "Veena", "Surya", "Kamlesh", "Hari", "Pushpa", "Raman", "Nirmala", "Bipin", "Sharda", "Kailash", "Sheela", "Tushar", "Suman", "Virendra", "Radha", "Subhash", "Savita", "Yogesh", "Geeta", "Pradeep", "Meena", "Jitendra", "Shanti", "Ranjan", "Kamla", "Navin", "Tara", "Raghunath", "Sita", "Brijesh", "Laxmi", "Devendra", "Parvati", "Rajeshwari", "Jagdish", "Saraswati", "Chandrakant", "Gayatri", "Ram", "Sushila"
 ];
 
 const cities = [
-  "Jaipur", "Bangalore", "Pune", "Mumbai", "Delhi", "Hyderabad", "Chennai", "Kolkata", "Ahmedabad", "Surat",
-  "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", "Visakhapatnam", "Pimpri-Chinchwad", "Patna", "Vadodara",
-  "Ghaziabad", "Ludhiana", "Agra", "Nashik", "Faridabad", "Meerut", "Rajkot", "Kalyan-Dombivli", "Vasai-Virar", "Varanasi"
+  "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Ahmedabad", "Chennai", "Kolkata", "Surat", "Pune", "Jaipur", "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", "Visakhapatnam", "Pimpri-Chinchwad", "Patna", "Vadodara", "Ghaziabad", "Ludhiana", "Agra", "Nashik", "Faridabad", "Meerut", "Rajkot", "Kalyan-Dombivli", "Vasai-Virar", "Varanasi", "Srinagar", "Aurangabad", "Dhanbad", "Amritsar", "Navi Mumbai", "Allahabad", "Howrah", "Ranchi", "Gwalior", "Jabalpur", "Coimbatore", "Vijayawada", "Jodhpur", "Madurai", "Raipur", "Kota", "Guwahati", "Chandigarh", "Solapur", "Hubli-Dharwad", "Bareilly", "Moradabad", "Mysore", "Gurgaon", "Aligarh", "Jalandhar", "Tiruchirappalli", "Bhubaneswar", "Salem", "Mira-Bhayandar", "Warangal", "Thiruvananthapuram", "Bhiwandi", "Saharanpur", "Guntur", "Amravati", "Bikaner", "Noida", "Jamshedpur", "Bhilai", "Cuttack", "Firozabad", "Kochi", "Nellore", "Bhavnagar", "Dehradun", "Durgapur", "Asansol", "Rourkela", "Nanded", "Kolhapur", "Ajmer", "Akola", "Gulbarga", "Jamnagar", "Ujjain", "Loni", "Siliguri", "Jhansi", "Ulhasnagar", "Jammu", "Mangalore", "Erode", "Belgaum", "Ambattur", "Tirunelveli", "Malegaon", "Gaya", "Jalgaon", "Udaipur", "Maheshtala", "Davanagere", "Kozhikode", "Kurnool", "Rajahmundry", "Bokaro", "South Dumdum", "Bellary", "Patiala", "Gopalpur", "Agartala", "Bhagalpur", "Muzaffarnagar", "Bhatpara", "Panihati", "Latur", "Dhule", "Tirupati", "Rohtak", "Korba", "Bhilwara", "Berhampur", "Muzaffarpur", "Ahmednagar", "Mathura", "Kollam", "Avadi", "Kadapa", "Kamarhati", "Sambalpur", "Bilaspur", "Shahjahanpur", "Satara", "Bijapur", "Rampur", "Shivamogga", "Chandrapur", "Junagadh", "Thrissur", "Alwar", "Bardhaman", "Kulti", "Kakinada", "Nizamabad", "Parbhani", "Tumkur", "Khammam", "Ozhukarai", "Bihar Sharif", "Panipat", "Darbhanga", "Bally", "Aizawl", "Dewas", "Ichalkaranji", "Karnal", "Bathinda", "Jalna", "Eluru", "Barasat", "Purnia", "Satna", "Mau", "Sonipat", "Farrukhabad", "Sagar", "Durg", "Imphal", "Ratlam", "Hapur", "Arrah", "Karimnagar", "Anantapur", "Etawah", "Ambernath", "Bharatpur", "Begusarai", "New Delhi", "Gandhidham", "Baranagar", "Tiruvottiyur", "Pondicherry", "Sikar", "Thoothukudi", "Rewa", "Mirzapur", "Raichur", "Pali", "Ramagundam", "Haridwar", "Vijayanagaram", "Katihar", "Nagarcoil", "Sri Ganganagar", "Mango", "Thanjavur", "Bulandshahr", "Uluberia", "Murwara", "Sambhal", "Singrauli", "Nadiad", "Secunderabad", "Naihati", "Yamunanagar", "Bidhannagar", "Pallavaram", "Bidar", "Munger", "Panchkula", "Burhanpur", "Kharagpur", "Dindigul", "Gandhinagar", "Hospet", "Malda", "Ongole", "Deoghar", "Chapra", "Haldia", "Khandwa", "Nandyal", "Chittoor", "Morena", "Amroha", "Anand", "Bhind", "Bhiwani", "Baharampur", "Ambala", "Morvi", "Fatehpur", "Rae Bareli", "Khora", "Bhusawal", "Orai", "Bahraich", "Vellore", "Mahesana", "Raiganj", "Sirsa", "Danapur", "Serampore", "Guna", "Jaunpur", "Panvel", "Shivpuri", "Unnao", "Chinsurah", "Alappuzha", "Kottayam", "Machilipatnam", "Shimla", "Adoni", "Udupi", "Proddatur", "Mahbubnagar", "Saharsa", "Dibrugarh", "Jorhat", "Hazaribagh", "Hindupur", "Nagaon", "Sasaram", "Hajipur"
 ];
 
 const banks = [
@@ -30,7 +26,7 @@ const banks = [
 type Notification = {
   id: string;
   message: string;
-  iconData: { icon: any; cardBg: string; border: string; orb: string };
+  iconData: { icon: IconType; cardBg: string; border: string; orb: string };
 };
 
 const generateNotifications = (): Notification[] => {
@@ -128,6 +124,7 @@ export const LiveNotifications = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
 
     let timeoutId: NodeJS.Timeout;
@@ -168,7 +165,7 @@ export const LiveNotifications = () => {
     <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8 flex justify-start z-[100] pointer-events-none w-auto">
       <AnimatePresence mode="wait">
         {currentNotification && IconComponent && (
-          <div className="w-[260px] sm:w-[300px] relative" style={{ perspective: 1000 }}>
+          <motion.div key={currentNotification.id} className="w-[260px] sm:w-[300px] relative" style={{ perspective: 1000 }}>
             {/* The glowing orb behind the card */}
             <motion.div
               key={`orb-${currentNotification.id}`}
@@ -244,7 +241,7 @@ export const LiveNotifications = () => {
                 <IconComponent className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
