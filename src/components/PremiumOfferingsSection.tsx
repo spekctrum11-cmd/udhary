@@ -95,14 +95,14 @@ export function PremiumOfferingsSection() {
               <h3 className="text-lg md:text-xl font-bold text-white mb-1.5 tracking-tight">Dream Home</h3>
               <div className="flex items-baseline gap-1.5 mb-3">
                 <span className="text-[10px] text-blue-300/80 font-bold uppercase tracking-wider">Starts at</span>
-                <span className="text-2xl md:text-3xl font-black text-blue-400 leading-none tracking-tighter">11.9%</span>
+                <span className="text-2xl md:text-3xl font-black text-green-500 leading-none tracking-tighter">11.9%</span>
                 <span className="text-blue-400 font-bold">*</span>
               </div>
               <p className="text-blue-100/60 text-xs leading-relaxed mb-5 font-medium">
                 Simple eligibility for Indian residents and salaried professionals.
               </p>
-              <div className="mt-auto">
-                <a href="/emi-calculator" className="flex w-full justify-center items-center px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-semibold rounded-xl backdrop-blur-md transition-all duration-300 active:scale-[0.98] text-[13px]">
+              <div className="mt-auto bg-orange-700 border-[1px] border-white/40 hover:border-white/70 rounded-xl backdrop-blur-md transition-all duration-300 active:scale-[0.98]">
+                <a href="/emi-calculator" className="flex w-full justify-center items-center px-4 py-2  text-white font-semibold text-[16px]">
                   Check EMI
                 </a>
               </div>
