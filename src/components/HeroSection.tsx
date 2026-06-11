@@ -30,18 +30,15 @@ export function HeroSection() {
             Trusted Fintech Solutions
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[40px] sm:text-5xl lg:text-[56px] font-black text-slate-900 mb-4 leading-[1.05] tracking-tighter"
+          <h1
+            className="text-[40px] sm:text-5xl lg:text-[56px] font-black text-slate-900 mb-4 leading-[1.05] tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700"
           >
             Quick, Hassle-Free Loans for Your <span className="text-blue-600 relative inline-block whitespace-nowrap">Every Need
               <svg className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-3 md:h-5 text-yellow-400 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
                 <path d="M 5 15 Q 50 0 95 15" />
               </svg>
             </span>
-          </motion.h1>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -121,11 +118,8 @@ export function HeroSection() {
           {/* Floating Background Accent Shapes */}
           <div className="absolute top-0 right-10 lg:-right-10 w-20 h-20 bg-amber-300 rounded-full -z-10 animate-[bounce_5s_infinite]"></div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative z-10 w-full flex justify-center"
+          <div
+            className="relative z-10 w-full flex justify-center animate-in fade-in zoom-in-95 duration-700"
           >
             <Image
               alt="Family planning for their future"
@@ -135,7 +129,7 @@ export function HeroSection() {
               className="w-full max-w-[400px] lg:max-w-[600px] object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.15)] pointer-events-none lg:translate-x-6"
               priority
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

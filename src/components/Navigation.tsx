@@ -78,7 +78,7 @@ export function Navigation() {
                       className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/60 transition-all duration-300 group/item"
                     >
                       {loan.isImg ? (
-                        <img src={loan.icon} alt={loan.title} className="w-[18px] h-[18px] opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all object-contain" />
+                        <Image src={loan.icon} alt={loan.title} width={18} height={18} className="w-[18px] h-[18px] opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all object-contain" />
                       ) : (
                         <span className={`material-symbols-outlined text-[18px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
                       )}
@@ -141,7 +141,7 @@ export function Navigation() {
                 {loansList.map((loan, idx) => (
                   <a key={idx} href="https://app.udhary.com/loan-application" className="flex items-center gap-3 px-4 py-3 hover:bg-white transition-all duration-300 group/item rounded-xl">
                     {loan.isImg ? (
-                      <img src={loan.icon} alt={loan.title} className="w-[20px] h-[20px] opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all object-contain" />
+                      <Image src={loan.icon} alt={loan.title} width={20} height={20} className="w-[20px] h-[20px] opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all object-contain" />
                     ) : (
                       <span className={`material-symbols-outlined text-[20px] ${loan.color} opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all`} style={{ fontVariationSettings: "'wght' 300" }}>{loan.icon}</span>
                     )}

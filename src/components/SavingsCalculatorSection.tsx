@@ -86,6 +86,8 @@ export function SavingsCalculatorSection() {
             </div>
             <div className="mt-2 md:mt-auto">
               <input
+                id="loanAmount"
+                aria-label="Outstanding Loan Amount"
                 type="range" min="50000" max="5000000" step="50000"
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
@@ -106,6 +108,8 @@ export function SavingsCalculatorSection() {
             </div>
             <div className="mt-4 md:mt-3">
               <input
+                id="currentInterest"
+                aria-label="Current Interest Rate"
                 type="range" min="8" max="24" step="0.5"
                 value={currentInterest}
                 onChange={(e) => setCurrentInterest(Number(e.target.value))}
@@ -128,6 +132,8 @@ export function SavingsCalculatorSection() {
             </div>
             <div className="mt-4 md:mt-3">
               <input
+                id="tenureYears"
+                aria-label="Tenure in Years"
                 type="range" min="1" max="7" step="1"
                 value={tenureYears}
                 onChange={(e) => setTenureYears(Number(e.target.value))}

@@ -118,7 +118,7 @@ export function SimpleProcedure() {
                   className="px-0 md:px-4 flex-1 pt-1 md:pt-0"
                 >
                   <div className="text-orange-500 font-bold text-xs md:text-sm tracking-widest uppercase mb-1 md:mb-2">Step 0{item.step}</div>
-                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-3">{item.title}</h4>
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-3">{item.title}</h3>
                   <p className="text-sm md:text-base text-slate-600 leading-relaxed">{item.desc}</p>
                 </motion.div>
               </div>

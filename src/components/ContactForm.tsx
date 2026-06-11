@@ -111,8 +111,9 @@ export function ContactForm() {
         <div className={`transition-all duration-500 ${step === 1 ? 'opacity-100 translate-x-0' : 'hidden opacity-0 -translate-x-full'}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label className="text-label-md font-bold text-on-surface">First Name *</label>
+              <label htmlFor="firstName" className="text-label-md font-bold text-on-surface">First Name *</label>
               <input
+                id="firstName"
                 type="text"
                 placeholder="E.g. Himanshu"
                 value={formData.firstName}
@@ -122,8 +123,9 @@ export function ContactForm() {
               {errors.firstName && <p className="text-error text-label-sm animate-in fade-in slide-in-from-top-1">{errors.firstName}</p>}
             </div>
             <div className="space-y-2">
-              <label className="text-label-md font-bold text-on-surface">Last Name *</label>
+              <label htmlFor="lastName" className="text-label-md font-bold text-on-surface">Last Name *</label>
               <input
+                id="lastName"
                 type="text"
                 placeholder="E.g. Kumar"
                 value={formData.lastName}
@@ -148,8 +150,9 @@ export function ContactForm() {
         <div className={`transition-all duration-500 ${step === 2 ? 'opacity-100 translate-x-0 block' : 'hidden opacity-0 translate-x-full'}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="space-y-2">
-              <label className="text-label-md font-bold text-on-surface">Email Address</label>
+              <label htmlFor="email" className="text-label-md font-bold text-on-surface">Email Address</label>
               <input
+                id="email"
                 type="email"
                 placeholder="E.g. himanshu@gmail.com"
                 value={formData.email}
@@ -179,8 +182,9 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="space-y-2">
-              <label className="text-label-md font-bold text-on-surface">Date</label>
+              <label htmlFor="date" className="text-label-md font-bold text-on-surface">Date</label>
               <input
+                id="date"
                 type="date"
                 value={formData.date}
                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
@@ -188,9 +192,11 @@ export function ContactForm() {
               />
             </div>
             <div className="space-y-2">
-              <label className="text-label-md font-bold text-on-surface">Time</label>
+              <label htmlFor="timeHours" className="text-label-md font-bold text-on-surface">Time</label>
               <div className="flex items-center gap-2">
                 <select
+                  id="timeHours"
+                  aria-label="Hours"
                   value={formData.timeHours}
                   onChange={(e) => setFormData({ ...formData, timeHours: e.target.value })}
                   className="flex-1 px-3 py-3 rounded-xl border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-shadow cursor-pointer"
@@ -202,6 +208,8 @@ export function ContactForm() {
                 </select>
                 <span className="font-bold">:</span>
                 <select
+                  id="timeMinutes"
+                  aria-label="Minutes"
                   value={formData.timeMinutes}
                   onChange={(e) => setFormData({ ...formData, timeMinutes: e.target.value })}
                   className="flex-1 px-3 py-3 rounded-xl border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-shadow cursor-pointer"
@@ -212,6 +220,8 @@ export function ContactForm() {
                   ))}
                 </select>
                 <select
+                  id="timeAmPm"
+                  aria-label="AM PM"
                   value={formData.timeAmPm}
                   onChange={(e) => setFormData({ ...formData, timeAmPm: e.target.value })}
                   className="px-3 py-3 rounded-xl border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-shadow font-bold cursor-pointer"
@@ -224,8 +234,9 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2 mb-8">
-            <label className="text-label-md font-bold text-on-surface">Query</label>
+            <label htmlFor="query" className="text-label-md font-bold text-on-surface">Query</label>
             <textarea
+              id="query"
               rows={4}
               placeholder="How can we help you today?"
               value={formData.query}

@@ -87,6 +87,8 @@ export default function EmiCalculator() {
                   <div className="absolute top-0 left-0 w-full h-1/2 bg-white/10 pointer-events-none"></div>
                   <span className="text-slate-800 font-extrabold mr-1 text-xs drop-shadow-[0_1px_1px_rgba(255,255,255,0.3)]">₹</span>
                   <input
+                    id="principal-number"
+                    aria-label="Loan Amount Value"
                     type="number"
                     value={principal}
                     onChange={(e) => setPrincipal(Number(e.target.value))}
@@ -102,6 +104,8 @@ export default function EmiCalculator() {
                   style={{ width: `${((principal - 100000) / (10000000 - 100000)) * 100}%` }}
                 ></div>
                 <input
+                  id="principal-range"
+                  aria-label="Loan Amount Range"
                   type="range"
                   min="100000"
                   max="10000000"
@@ -126,6 +130,8 @@ export default function EmiCalculator() {
                 <div className="flex items-center bg-[#a3b09e] px-2 py-1 rounded-[4px] border-t-[5px] border-l-[5px] border-slate-700 border-b-[2px] border-r-[2px] border-slate-400 shadow-[inset_0_6px_12px_rgba(0,0,0,0.7),_0_1px_1px_rgba(255,255,255,0.8)] relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1/2 bg-white/10 pointer-events-none"></div>
                   <input
+                    id="interest-number"
+                    aria-label="Interest Rate Value"
                     type="number"
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
@@ -143,6 +149,8 @@ export default function EmiCalculator() {
                   style={{ width: `${((interestRate - 5) / (25 - 5)) * 100}%` }}
                 ></div>
                 <input
+                  id="interest-range"
+                  aria-label="Interest Rate Range"
                   type="range"
                   min="5"
                   max="25"
@@ -167,6 +175,8 @@ export default function EmiCalculator() {
                 <div className="flex items-center bg-[#a3b09e] px-2 py-1 rounded-[4px] border-t-[5px] border-l-[5px] border-slate-700 border-b-[2px] border-r-[2px] border-slate-400 shadow-[inset_0_6px_12px_rgba(0,0,0,0.7),_0_1px_1px_rgba(255,255,255,0.8)] relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1/2 bg-white/10 pointer-events-none"></div>
                   <input
+                    id="tenure-number"
+                    aria-label="Loan Tenure Value"
                     type="number"
                     value={tenure}
                     onChange={(e) => setTenure(Number(e.target.value))}
@@ -183,6 +193,8 @@ export default function EmiCalculator() {
                   style={{ width: `${((tenure - 1) / (30 - 1)) * 100}%` }}
                 ></div>
                 <input
+                  id="tenure-range"
+                  aria-label="Loan Tenure Range"
                   type="range"
                   min="1"
                   max="30"
