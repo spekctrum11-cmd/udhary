@@ -58,7 +58,7 @@ export function ComparisonEngineSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {/* Item 1 */}
-          <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/70 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-blue-200 active:border-blue-200 transition-all hover:-translate-y-1 active:-translate-y-1 hover:shadow-[0_8px_30px_rgb(59,130,246,0.12)] active:shadow-[0_8px_30px_rgb(59,130,246,0.12)] duration-500 group flex flex-row items-center md:flex-col text-left md:text-center gap-4 md:gap-0 cursor-pointer">
+          <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/70 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-blue-200 active:border-blue-200 transition-all hover:-translate-y-1 active:-translate-y-1 hover:shadow-[0_8px_30px_rgb(59,130,246,0.12)] active:shadow-[0_8px_30px_rgb(59,130,246,0.12)] duration-500 group flex flex-row items-center md:flex-col max-[250px]:flex-col text-left md:text-center max-[250px]:text-center gap-4 md:gap-0 max-[250px]:gap-2 cursor-pointer">
             <div className="w-20 sm:w-24 md:w-auto shrink-0 flex items-center justify-center md:justify-center">
               <div className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight group-hover:text-blue-600 group-active:text-blue-600 transition-colors duration-300 md:mb-4">
                 5 <span className="text-2xl sm:text-3xl lg:text-4xl font-bold">min</span>
@@ -75,7 +75,7 @@ export function ComparisonEngineSection() {
           </div>
 
           {/* Item 2 */}
-          <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/70 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-blue-200 active:border-blue-200 transition-all hover:-translate-y-1 active:-translate-y-1 hover:shadow-[0_8px_30px_rgb(59,130,246,0.12)] active:shadow-[0_8px_30px_rgb(59,130,246,0.12)] duration-500 group flex flex-row items-center md:flex-col text-left md:text-center gap-4 md:gap-0 cursor-pointer">
+          <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/70 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-blue-200 active:border-blue-200 transition-all hover:-translate-y-1 active:-translate-y-1 hover:shadow-[0_8px_30px_rgb(59,130,246,0.12)] active:shadow-[0_8px_30px_rgb(59,130,246,0.12)] duration-500 group flex flex-row items-center md:flex-col max-[250px]:flex-col text-left md:text-center max-[250px]:text-center gap-4 md:gap-0 max-[250px]:gap-2 cursor-pointer">
             <div className="w-20 sm:w-24 md:w-auto shrink-0 flex items-center justify-center md:justify-center">
               <div className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight group-hover:text-blue-600 group-active:text-blue-600 transition-colors duration-300 md:mb-4">
                 2.3%
@@ -92,7 +92,7 @@ export function ComparisonEngineSection() {
           </div>
 
           {/* Item 3 */}
-          <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/70 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-blue-200 active:border-blue-200 transition-all hover:-translate-y-1 active:-translate-y-1 hover:shadow-[0_8px_30px_rgb(59,130,246,0.12)] active:shadow-[0_8px_30px_rgb(59,130,246,0.12)] duration-500 group flex flex-row items-center md:flex-col text-left md:text-center gap-4 md:gap-0 cursor-pointer">
+          <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/70 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-blue-200 active:border-blue-200 transition-all hover:-translate-y-1 active:-translate-y-1 hover:shadow-[0_8px_30px_rgb(59,130,246,0.12)] active:shadow-[0_8px_30px_rgb(59,130,246,0.12)] duration-500 group flex flex-row items-center md:flex-col max-[250px]:flex-col text-left md:text-center max-[250px]:text-center gap-4 md:gap-0 max-[250px]:gap-2 cursor-pointer">
             <div className="w-20 sm:w-24 md:w-auto shrink-0 flex items-center justify-center md:justify-center">
               <div className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight group-hover:text-blue-600 group-active:text-blue-600 transition-colors duration-300 md:mb-4">
                 Zero

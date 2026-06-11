@@ -211,13 +211,7 @@ body {
   font-family: var(--font-inter);
 }
 
-/* Smartwatch & Ultra-Small Screen Scaling */
-@media (max-width: 250px) {
-  html {
-    /* Compress root font size by ~50% so all rem-based units (padding, margins, texts) scale down gracefully */
-    font-size: 8px !important;
-  }
-}
+/* True responsive behavior for smartwatches is now handled via component stacking (flex-col) */
 
 ::selection {
   background-color: #c6dd40cb;

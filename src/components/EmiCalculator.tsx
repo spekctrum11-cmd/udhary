@@ -13,31 +13,19 @@ export default function EmiCalculator() {
   const [interestRate, setInterestRate] = useState<number>(10.5);
   const [tenure, setTenure] = useState<number>(20);
 
-  const [emi, setEmi] = useState<number>(0);
-  const [totalInterest, setTotalInterest] = useState<number>(0);
-  const [totalPayment, setTotalPayment] = useState<number>(0);
+  // Derived state calculations (replaces useEffect and multiple useStates to prevent infinite loops)
+  let emi = 0;
+  let totalInterest = 0;
+  let totalPayment = 0;
 
-  useEffect(() => {
-    calculateEmi(principal, interestRate, tenure);
-  }, [principal, interestRate, tenure]);
-
-  const calculateEmi = (p: number, r: number, t: number) => {
-    let emiValue = 0;
-    let totalInterestValue = 0;
-    let totalPaymentValue = 0;
-
-    if (p > 0 && r > 0 && t > 0) {
-      const monthlyRate = r / 12 / 100;
-      const months = t * 12;
-      emiValue = (p * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
-      totalPaymentValue = emiValue * months;
-      totalInterestValue = totalPaymentValue - p;
-    }
-
-    setEmi(Math.round(emiValue));
-    setTotalInterest(Math.round(totalInterestValue));
-    setTotalPayment(Math.round(totalPaymentValue));
-  };
+  if (principal > 0 && interestRate > 0 && tenure > 0) {
+    const monthlyRate = interestRate / 12 / 100;
+    const months = tenure * 12;
+    const emiValue = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+    totalPayment = Math.round(emiValue * months);
+    totalInterest = Math.round(totalPayment - principal);
+    emi = Math.round(emiValue);
+  }
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {

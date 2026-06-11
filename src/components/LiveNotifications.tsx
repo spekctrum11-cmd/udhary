@@ -188,7 +188,7 @@ export const LiveNotifications = () => {
 
             {/* The actual card */}
             <motion.div
-              key={currentNotification.id}
+              key={`card-${currentNotification.id}`}
               initial={{ opacity: 0, y: 80, scale: 0.8, rotateX: 45 }}
               animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
               exit={{

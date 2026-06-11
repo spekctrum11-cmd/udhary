@@ -24,7 +24,7 @@ export function LenderRatesSection() {
             Compare top lender rates today
           </h2>
           <p className="text-slate-500 text-[14px] md:text-lg font-light leading-relaxed">
-            Live interest rates from India's leading banks and NBFCs.
+            Live interest rates from India&apos;s leading banks and NBFCs.
           </p>
         </div>
 

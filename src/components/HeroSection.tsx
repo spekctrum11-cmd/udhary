@@ -46,7 +46,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 font-bold leading-relaxed max-w-xl mx-auto lg:mx-0 px-2 lg:px-0"
           >
-            Are you a salaried professional looking for extra support? From dream vacations to home renovations — we've got your back!
+            Are you a salaried professional looking for extra support? From dream vacations to home renovations — we&apos;ve got your back!
           </motion.p>
 
           {/* Vibrant Solid Pill Features */}

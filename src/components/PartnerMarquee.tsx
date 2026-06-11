@@ -26,7 +26,7 @@ export function PartnerMarquee() {
 
       <div className="text-center mb-6 lg:mb-10 relative z-20">
         <h3 className="text-sm font-bold text-slate-800 uppercase tracking-widest">
-          Trusted by India's Top Financial Institutions
+          Trusted by India&apos;s Top Financial Institutions
         </h3>
       </div>
 

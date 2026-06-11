@@ -29,7 +29,7 @@ export default function ContactUsPage() {
             Contact <span className="text-secondary">Us</span>
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            We'd love to hear from you. Please fill out the form below or reach us through our contact details.
+            We&apos;d love to hear from you. Please fill out the form below or reach us through our contact details.
           </p>
         </div>
       </section>

@@ -9,26 +9,25 @@ export function SavingsCalculatorSection() {
 
   const newInterestRate = 13.5;
 
-  const [monthlySavings, setMonthlySavings] = useState(0);
-  const [totalSaved, setTotalSaved] = useState(0);
-  const [newEmi, setNewEmi] = useState(0);
+  // Derived state calculations (replaces useEffect to prevent cascading render loops)
+  let monthlySavings = 0;
+  let totalSaved = 0;
+  let newEmi = 0;
 
-  useEffect(() => {
-    if (loanAmount > 0 && tenureYears > 0 && currentInterest > 0) {
-      const months = tenureYears * 12;
-      const rCurrent = currentInterest / 12 / 100;
-      const emiCurrent = (loanAmount * rCurrent * Math.pow(1 + rCurrent, months)) / (Math.pow(1 + rCurrent, months) - 1);
-      const rNew = newInterestRate / 12 / 100;
-      const emiNew = (loanAmount * rNew * Math.pow(1 + rNew, months)) / (Math.pow(1 + rNew, months) - 1);
+  if (loanAmount > 0 && tenureYears > 0 && currentInterest > 0) {
+    const months = tenureYears * 12;
+    const rCurrent = currentInterest / 12 / 100;
+    const emiCurrent = (loanAmount * rCurrent * Math.pow(1 + rCurrent, months)) / (Math.pow(1 + rCurrent, months) - 1);
+    const rNew = newInterestRate / 12 / 100;
+    const emiNew = (loanAmount * rNew * Math.pow(1 + rNew, months)) / (Math.pow(1 + rNew, months) - 1);
 
-      const savings = emiCurrent - emiNew;
-      const actualSavings = Math.max(0, savings);
+    const savings = emiCurrent - emiNew;
+    const actualSavings = Math.max(0, savings);
 
-      setNewEmi(Math.round(emiNew));
-      setMonthlySavings(Math.round(actualSavings));
-      setTotalSaved(Math.round(actualSavings * months));
-    }
-  }, [currentInterest, loanAmount, tenureYears]);
+    newEmi = Math.round(emiNew);
+    monthlySavings = Math.round(actualSavings);
+    totalSaved = Math.round(actualSavings * months);
+  }
 
   const formatCurrency = (val: number) => {
     if (val >= 100000) return `₹${(val / 100000).toFixed(1)}L`;
