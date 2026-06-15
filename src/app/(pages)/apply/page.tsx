@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
+import { submitApplication, resetApplication } from "@/lib/store/features/applySlice";
 
 type FormData = {
     // Step 1
@@ -21,12 +23,14 @@ type FormData = {
     pincode: string;
 };
 
-type Step = 1 | 2 | 3 | "loading" | "result";
+type Step = 1 | 2 | 3;
 
 export default function ApplyPage() {
     const router = useRouter();
+    const dispatch = useAppDispatch();
+    const { status, isEligible, error } = useAppSelector((state) => state.apply);
+    
     const [step, setStep] = useState<Step>(1);
-    const [isEligible, setIsEligible] = useState<boolean>(true);
 
     const [formData, setFormData] = useState<FormData>({
         loanType: "personal",
@@ -63,21 +67,7 @@ export default function ApplyPage() {
             return;
         }
 
-        setStep("loading");
-
-        // Mock API call to check eligibility
-        setTimeout(() => {
-            const incomeNum = parseInt(formData.income || "0");
-            const amountNum = parseInt(formData.amount || "0");
-
-            if (incomeNum < 20000 || (amountNum > 5000000 && incomeNum < 100000)) {
-                setIsEligible(false);
-            } else {
-                setIsEligible(true);
-            }
-
-            setStep("result");
-        }, 2500);
+        dispatch(submitApplication(formData));
     };
 
     // Animation variants for crossfading inputs inside the rigid box
@@ -119,7 +109,7 @@ export default function ApplyPage() {
 
             {/* Top Navigation Bar */}
             <header className="absolute top-0 inset-x-0 h-14 md:h-16 flex items-center px-4 md:px-8 z-20">
-                {(step === 1 || step === 2 || step === 3) && (
+                {status === "idle" && (
                     <button
                         onClick={handleBack}
                         className="inline-flex items-center text-[11px] md:text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors group bg-white/50 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-slate-200/50"
@@ -137,7 +127,7 @@ export default function ApplyPage() {
                 <AnimatePresence mode="wait">
 
                     {/* ======================= STEPS 1 to 3 (BENTO GRID) ======================= */}
-                    {(step === 1 || step === 2 || step === 3) && (
+                    {status === "idle" && (
                         <motion.form
                             id="apply-form"
                             onSubmit={handleSubmit}
@@ -516,7 +506,7 @@ export default function ApplyPage() {
                     )}
 
                     {/* ======================= LOADING STATE ======================= */}
-                    {step === "loading" && (
+                    {status === "loading" && (
                         <motion.div
                             key="loading"
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -548,7 +538,7 @@ export default function ApplyPage() {
                     )}
 
                     {/* ======================= RESULT STATE ======================= */}
-                    {step === "result" && (
+                    {(status === "success" || status === "error") && (
                         <motion.div
                             key="result"
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -583,6 +573,7 @@ export default function ApplyPage() {
 
                             <Link
                                 href="/"
+                                onClick={() => dispatch(resetApplication())}
                                 className="inline-flex w-full h-12 md:h-14 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-[13px] md:text-[14px] font-bold tracking-wide shadow-lg transition-all active:scale-[0.98] items-center justify-center gap-2"
                             >
                                 <span className="material-symbols-outlined text-[18px] md:text-[20px]">home</span>

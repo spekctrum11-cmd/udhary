@@ -1,60 +1,111 @@
-import Link from "next/link";
+"use client";
 
-export function FinancialEcosystemSection() {
-  const ecosystemItems = [
-    { icon: 'account_balance', label: 'Personal Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw", bgBase: "bg-blue-50", bgHover: "hover:bg-blue-200", iconColor: "text-blue-600" },
-    { icon: 'credit_card', label: 'Credit Card', href: "https://app.udhary.com/apply-credit-card?_gl=1*1n4nhtf*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzEkdDE3Nzk0MjUzOTAkajgkbDAkaDA.", bgBase: "bg-emerald-50", bgHover: "hover:bg-emerald-200", iconColor: "text-emerald-600" },
-    { icon: 'home', label: 'Home Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw", bgBase: "bg-amber-50", bgHover: "hover:bg-amber-200", iconColor: "text-amber-600" },
-    { icon: 'directions_car', label: 'Car Loan', href: "https://app.udhary.com/loan-application?_gl=1*10jgv0m*_ga*MTQ3NTA3ODg0MC4xNzc5MjcyNTkz*_ga_W44M2VB8CN*czE3Nzk0MjUyNDYkbzUkZzAkdDE3Nzk0MjUyNDYkajYwJGwwJGgw", bgBase: "bg-rose-50", bgHover: "hover:bg-rose-200", iconColor: "text-rose-600" },
-    { icon: 'health_and_safety', label: 'Insurance', href: "https://beemaaa.com/", bgBase: "bg-violet-50", bgHover: "hover:bg-violet-200", iconColor: "text-violet-600" },
-    { icon: 'flight_takeoff', label: 'Travel Booking', href: "https://www.spectrumtravel.in/", bgBase: "bg-orange-50", bgHover: "hover:bg-orange-200", iconColor: "text-orange-600" },
-  ];
+import React from "react";
+import Image from "next/image";
 
+export default function Ecosystem() {
   return (
-    <section className="py-12 bg-white relative overflow-hidden z-10">
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-
-        {/* Minimalist Heading Inline with Dock */}
-        <div className="text-center mb-8">
-          <span className="inline-block px-4 py-1.5 bg-slate-100 border border-slate-200 text-slate-600 font-bold text-[11px] tracking-widest uppercase rounded-full mb-4 shadow-sm">
-            Core Services
-          </span>
-          <h2 className="text-xl md:text-2xl font-normal text-slate-800 tracking-tight">
-            One platform for all your <span className="font-medium text-blue-600">financial needs</span>.
+    <section className="eco-section">
+      <div className="eco-container">
+        {/* Header */}
+        <div className="eco-header">
+          <h2>
+            The{" "}
+            <span className="eco-spektrum-text">SPEKCTRUM</span>{" "}
+            Ecosystem
           </h2>
+          <p>All Your Financial Needs in One Place.</p>
         </div>
 
-        {/* Floating Solid Dock Container */}
-        <div className="relative mx-auto w-full max-w-4xl">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-2 md:gap-3 p-2 md:p-3 bg-slate-50 border border-slate-200/60 rounded-2xl lg:rounded-3xl shadow-[0_10px_30px_rgb(0,0,0,0.04)]">
-            {ecosystemItems.map((item, idx) => {
-              const content = (
-                <div className={`flex flex-col items-center justify-center gap-1.5 px-2 py-3 lg:py-4 rounded-xl lg:rounded-2xl ${item.bgBase} ${item.bgHover} transition-colors duration-300 group text-center h-full border border-black/5`}>
-                  <div className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white shadow-sm mb-1 group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ${item.iconColor}`}>
-                    <span className="material-symbols-outlined text-[20px] md:text-[24px]" style={{ fontVariationSettings: "'wght' 400" }}>
-                      {item.icon}
-                    </span>
-                  </div>
-                  <span className="text-xs font-bold text-slate-700 group-hover:text-slate-900 transition-colors duration-300">
-                    {item.label}
-                  </span>
-                </div>
-              );
+        {/* Diagram */}
+        <div className="eco-diagram">
+          {/* Left Column */}
+          <div className="eco-col eco-left">
+            {/* Item 1 */}
+            <div className="eco-item">
+              <div className="eco-meta">
+                <div className="eco-icon"><span role="img" aria-label="insurance">🛡️</span></div>
+                <span>Insurance<br />Platform</span>
+              </div>
+              <div className="eco-card border-orange">
+                <img src="/Brands/beemaaa_logo.png" alt="Beeमा" className="eco-logo-img" />
+                <span className="eco-url">www.beemaaa.com</span>
+                <div className="eco-line line-tl"></div>
+              </div>
+            </div>
 
-              return item.href === "#" ? (
-                <div key={idx} className="cursor-default outline-none h-full">
-                  {content}
+            {/* Item 2 */}
+            <div className="eco-item">
+              <div className="eco-meta">
+                <div className="eco-icon"><span role="img" aria-label="finance">₹</span></div>
+                <span>Financial<br />Services</span>
+              </div>
+              <div className="eco-card border-green">
+                <img src="/Brands/sahipe_logo.jpg" alt="सही पे" className="eco-logo-img" />
+                <span className="eco-url">www.sahipe.com</span>
+                <div className="eco-line line-ml"></div>
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="eco-item">
+              <div className="eco-meta">
+                <div className="eco-icon"><span role="img" aria-label="invest">📈</span></div>
+                <span>Investment<br />Platform</span>
+              </div>
+              <div className="eco-card border-blue">
+                <img src="/Brands/investesy_logo.jpg" alt="InvestEsy" className="eco-logo-img" />
+                <span className="eco-url">www.investesy.in</span>
+                <div className="eco-line line-bl"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Center Hub */}
+          <div className="eco-center">
+            <div className="eco-hub-ring">
+              <div className="eco-hub-inner">
+                <img src="/Brands/spekctrum_icon.jpg" alt="SPEKTRUM" className="eco-hub-icon" />
+                <div className="eco-hub-text">
+                  <span className="eco-spektrum-text">SPEKCTRUM</span>
+                  <span className="eco-hub-com">.com</span>
                 </div>
-              ) : (
-                <Link href={item.href} key={idx} className="outline-none block h-full">
-                  {content}
-                </Link>
-              );
-            })}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="eco-col eco-right">
+            {/* Item 4 */}
+            <div className="eco-item">
+              <div className="eco-card border-purple">
+                <img src="/Brands/travelezi.png" alt="TravelEzi" className="eco-logo-img" />
+                <span className="eco-url">www.travelezi.com</span>
+                <div className="eco-line line-tr"></div>
+              </div>
+              <div className="eco-meta">
+                <div className="eco-icon"><span role="img" aria-label="travel">✈️</span></div>
+                <span>Travel<br />Solutions</span>
+              </div>
+            </div>
+
+            {/* Item 5 */}
+            <div className="eco-item">
+              <div className="eco-card border-blue">
+                <img src="/Brands/udhary_logo.png" alt="उधारी" className="eco-logo-img" />
+                <span className="eco-url">www.udhary.com</span>
+                <div className="eco-line line-br"></div>
+              </div>
+              <div className="eco-meta">
+                <div className="eco-icon"><span role="img" aria-label="loan">💸</span></div>
+                <span>Loan<br />Solutions</span>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );
 }
+
+export { Ecosystem as FinancialEcosystemSection };

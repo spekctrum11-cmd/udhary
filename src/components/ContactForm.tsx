@@ -1,8 +1,13 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '@/lib/store/hooks';
+import { submitContact, resetContact } from '@/lib/store/features/contactSlice';
 
 export function ContactForm() {
+  const dispatch = useAppDispatch();
+  const { status, error } = useAppSelector((state) => state.contact);
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -16,8 +21,6 @@ export function ContactForm() {
     query: ''
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleNext = () => {
     const newErrors: { [key: string]: string } = {};
@@ -46,26 +49,10 @@ export function ContactForm() {
     }
 
     setErrors({});
-    setIsSubmitting(true);
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (res.ok) {
-        setIsSuccess(true);
-      }
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    dispatch(submitContact(formData));
   };
 
-  if (isSuccess) {
+  if (status === 'success') {
     return (
       <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-outline-variant/20 flex flex-col items-center justify-center min-h-[400px] text-center animate-in fade-in zoom-in duration-500">
         <div className="w-24 h-24 bg-blue-500/20 text-blue-500 rounded-full flex items-center justify-center mb-6">
@@ -75,9 +62,10 @@ export function ContactForm() {
         <p className="text-on-surface-variant mb-8">
           Thank you, {formData.firstName}. Your appointment details have been successfully received and an email confirmation has been sent.
         </p>
+        {error && <p className="text-error text-label-sm mb-4">{error}</p>}
         <button
           onClick={() => {
-            setIsSuccess(false);
+            dispatch(resetContact());
             setStep(1);
             setFormData({ firstName: '', lastName: '', email: '', phone: '', date: '', timeHours: '', timeMinutes: '', timeAmPm: 'AM', query: '' });
           }}
@@ -257,10 +245,10 @@ export function ContactForm() {
             <button
               type="button"
               onClick={handleSubmit}
-              disabled={isSubmitting}
+              disabled={status === 'loading'}
               className="w-full sm:flex-1 py-4 bg-primary text-white font-bold rounded-xl hover:bg-deep-navy transition-all active:scale-[0.98] shadow-md hover:shadow-lg flex justify-center items-center gap-2 disabled:opacity-70 disabled:active:scale-100 cursor-pointer"
             >
-              {isSubmitting ? (
+              {status === 'loading' ? (
                 <>
                   <span className="material-symbols-outlined animate-spin">progress_activity</span>
                   Processing...

@@ -21,7 +21,6 @@ export default function Home() {
 
       <main className="flex-1">
         <HeroSection />
-        <FinancialEcosystemSection />
         <ComparisonEngineSection />
         <PremiumOfferingsSection />
         <SimpleProcedure />
@@ -32,6 +31,7 @@ export default function Home() {
         <LenderRatesSection />
         <FAQSection />
         <CTASection />
+        <FinancialEcosystemSection />
       </main>
     </>
   );

@@ -39,6 +39,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { LiveNotifications } from "@/components/LiveNotifications";
 import { WhatsAppFAB } from "@/components/WhatsAppFAB";
+import StoreProvider from '@/lib/store/StoreProvider';
 
 export default function RootLayout({
   children,
@@ -59,13 +60,15 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
       </head>
       <body className="min-h-full flex flex-col bg-white text-on-surface font-body-md" suppressHydrationWarning>
-        <Navigation />
-        <main className="flex-1 flex flex-col w-full">
-          {children}
-        </main>
-        <Footer />
-        <LiveNotifications />
-        <WhatsAppFAB />
+        <StoreProvider>
+          <Navigation />
+          <main className="flex-1 flex flex-col w-full">
+            {children}
+          </main>
+          <Footer />
+          <LiveNotifications />
+          <WhatsAppFAB />
+        </StoreProvider>
       </body>
     </html>
   );
