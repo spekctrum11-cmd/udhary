@@ -3,6 +3,16 @@
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/lib/store/hooks';
 import { submitContact, resetContact } from '@/lib/store/features/contactSlice';
+import { z } from 'zod';
+
+const contactStep1Schema = z.object({
+  firstName: z.string().trim().min(1, "This field is required. Please input your first name."),
+  lastName: z.string().trim().min(1, "This field is required. Please input your last name."),
+});
+
+const contactStep2Schema = z.object({
+  phone: z.string().trim().min(1, "This field is required. Please input your phone number."),
+});
 
 export function ContactForm() {
   const dispatch = useAppDispatch();
@@ -23,11 +33,12 @@ export function ContactForm() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const handleNext = () => {
-    const newErrors: { [key: string]: string } = {};
-    if (!formData.firstName.trim()) newErrors.firstName = "This field is required. Please input your first name.";
-    if (!formData.lastName.trim()) newErrors.lastName = "This field is required. Please input your last name.";
-
-    if (Object.keys(newErrors).length > 0) {
+    const result = contactStep1Schema.safeParse(formData);
+    if (!result.success) {
+      const newErrors: { [key: string]: string } = {};
+      result.error.issues.forEach(issue => {
+        newErrors[String(issue.path[0])] = issue.message;
+      });
       setErrors(newErrors);
     } else {
       setErrors({});
@@ -40,10 +51,12 @@ export function ContactForm() {
   };
 
   const handleSubmit = async () => {
-    const newErrors: { [key: string]: string } = {};
-    if (!formData.phone.trim()) newErrors.phone = "This field is required. Please input your phone number.";
-
-    if (Object.keys(newErrors).length > 0) {
+    const result = contactStep2Schema.safeParse(formData);
+    if (!result.success) {
+      const newErrors: { [key: string]: string } = {};
+      result.error.issues.forEach(issue => {
+        newErrors[String(issue.path[0])] = issue.message;
+      });
       setErrors(newErrors);
       return;
     }

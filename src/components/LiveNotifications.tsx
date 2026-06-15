@@ -47,7 +47,7 @@ const generateNotifications = (): Notification[] => {
     const bank = getRandomItem(banks);
 
     const amount = Math.floor(random() * 15 + 1) * 100000; // 1L to 15L
-    const amountFormatted = amount >= 100000 ? `₹${amount / 100000}L` : `₹${amount.toLocaleString('en-IN')}`;
+    const amountFormatted = `₹${amount / 100000}L`;
     const rate = (10 + random() * 3).toFixed(1); // 10.0% to 13.0%
     const randomCashback = `₹${Math.floor(random() * 5 + 1) * 1000}`;
     const randomSip = `₹${Math.floor(random() * 5 + 1) * 1000}`;

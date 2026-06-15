@@ -114,7 +114,6 @@ export function TestimonialsSection() {
           {cards.map((card, index) => {
             const isFront = index === 0;
             // Only render top 3 cards to keep DOM light, but keep them in array
-            if (index > 3) return null;
 
             return (
               <motion.div

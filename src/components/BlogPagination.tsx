@@ -17,7 +17,6 @@ export function BlogPagination({ totalPages }: { totalPages: number }) {
   };
 
   const handlePageChange = (page: number | string) => {
-    if (page === '...') return;
     router.push(createPageURL(page), { scroll: false });
   };
 
@@ -63,7 +62,7 @@ export function BlogPagination({ totalPages }: { totalPages: number }) {
             }`}
           >
             {/* Format numbers over 1000 with a comma like 2,023 */}
-            {typeof p === 'number' ? p.toLocaleString() : p}
+            {p.toLocaleString()}
           </button>
         );
       })}

@@ -53,25 +53,19 @@ const ServiceCard = ({ service, index }: { service: { icon: string, label: strin
   ];
   const color = colors[index % colors.length];
 
-  const inner = (
-    <div className="relative flex items-center gap-1.5 px-1 py-1 pr-2.5 md:px-1.5 md:py-1 md:pr-3 bg-white rounded-md md:rounded-lg shadow-[0_1px_3px_rgb(0,0,0,0.04)] border border-slate-200/60 min-w-max transition-all duration-300 group-hover:border-slate-300 group-hover:bg-slate-50 group-hover:-translate-y-0.5 group-hover:shadow-[0_2px_8px_rgb(0,0,0,0.06)]">
-      <div className={`w-5 h-5 md:w-6 md:h-6 rounded-[4px] md:rounded-md flex items-center justify-center shrink-0 ${color} transition-transform duration-300 group-hover:scale-110`}>
-        <span className="material-symbols-outlined text-[12px] md:text-[14px]" style={{ fontVariationSettings: "'wght' 400" }}>{service.icon}</span>
-      </div>
-      <span className="text-[10px] md:text-[13px] font-bold text-slate-700 group-hover:text-slate-900 whitespace-nowrap">{service.label}</span>
-    </div>
-  );
-
-  return service.href === "#" ? (
-    <div className="group cursor-default pointer-events-auto block outline-none">{inner}</div>
-  ) : (
+  return (
     <Link href={service.href} className="group cursor-pointer pointer-events-auto block outline-none" target="_blank" rel="noopener noreferrer" draggable={false}>
-      {inner}
+      <div className="relative flex items-center gap-1.5 px-1 py-1 pr-2.5 md:px-1.5 md:py-1 md:pr-3 bg-white rounded-md md:rounded-lg shadow-[0_1px_3px_rgb(0,0,0,0.04)] border border-slate-200/60 min-w-max transition-all duration-300 group-hover:border-slate-300 group-hover:bg-slate-50 group-hover:-translate-y-0.5 group-hover:shadow-[0_2px_8px_rgb(0,0,0,0.06)]">
+        <div className={`w-5 h-5 md:w-6 md:h-6 rounded-[4px] md:rounded-md flex items-center justify-center shrink-0 ${color} transition-transform duration-300 group-hover:scale-110`}>
+          <span className="material-symbols-outlined text-[12px] md:text-[14px]" style={{ fontVariationSettings: "'wght' 400" }}>{service.icon}</span>
+        </div>
+        <span className="text-[10px] md:text-[13px] font-bold text-slate-700 group-hover:text-slate-900 whitespace-nowrap">{service.label}</span>
+      </div>
     </Link>
   );
 };
 
-const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon: string, label: string, href: string }[], reverse?: boolean, speed?: number }) => {
+const AutoScrollRow = ({ items, reverse = false, speed }: { items: { icon: string, label: string, href: string }[], reverse?: boolean, speed: number }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -108,7 +102,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon:
     if (inertiaFrameId.current) cancelAnimationFrame(inertiaFrameId.current);
   };
 
-  const resumeAutoScroll = (delay = 2000) => {
+  const resumeAutoScroll = (delay: number) => {
     if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
     pauseTimeout.current = setTimeout(() => {
       isPaused.current = false;
@@ -136,8 +130,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon:
 
   useEffect(() => {
     let animationFrameId: number;
-    const el = scrollRef.current;
-    if (!el) return;
+    const el = scrollRef.current!;
 
     const scroll = () => {
       if (!isDragging.current && !isPaused.current) {
@@ -153,7 +146,7 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon:
       animationFrameId = requestAnimationFrame(scroll);
     };
 
-    setTimeout(() => {
+    const initTimeout = setTimeout(() => {
       if (el) {
         const unit = el.scrollWidth / 4;
         el.scrollLeft = unit * 1.5;
@@ -162,14 +155,19 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon:
     }, 150);
 
     animationFrameId = requestAnimationFrame(scroll);
-    return () => cancelAnimationFrame(animationFrameId);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      clearTimeout(initTimeout);
+      if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
+      if (inertiaFrameId.current) cancelAnimationFrame(inertiaFrameId.current);
+    };
   }, [reverse, speed]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     pauseAutoScroll();
     isDragging.current = true;
     startX.current = e.pageX;
-    scrollLeft.current = scrollRef.current?.scrollLeft || 0;
+    scrollLeft.current = scrollRef.current!.scrollLeft;
 
     lastTime.current = performance.now();
     lastX.current = e.pageX;
@@ -206,8 +204,8 @@ const AutoScrollRow = ({ items, reverse = false, speed = 0.5 }: { items: { icon:
     isDragging.current = false;
 
     const applyInertia = () => {
-      if (Math.abs(velocity.current) > 0.05 && scrollRef.current) {
-        const el = scrollRef.current;
+      if (Math.abs(velocity.current) > 0.05) {
+        const el = scrollRef.current!;
         el.scrollLeft -= velocity.current * 16 * 1.2;
         exactScrollLeft.current = el.scrollLeft;
 
