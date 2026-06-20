@@ -13,11 +13,11 @@ describe('sitemap metadata route', () => {
   });
 
   afterEach(() => {
-    process.env.NODE_ENV = originalEnv;
+    (process.env as any).NODE_ENV = originalEnv;
   });
 
   it('should return correct sitemap array in development mode', () => {
-    process.env.NODE_ENV = 'development';
+    (process.env as any).NODE_ENV = 'development';
     
     // Mock blog API to return one blog with a date, and one without a date to cover both branches
     (getAllBlogs as jest.Mock).mockReturnValue([
@@ -45,7 +45,7 @@ describe('sitemap metadata route', () => {
   });
 
   it('should return production base URLs in production mode', () => {
-    process.env.NODE_ENV = 'production';
+    (process.env as any).NODE_ENV = 'production';
     (getAllBlogs as jest.Mock).mockReturnValue([]);
     const result = sitemap();
     expect(result[0].url).toContain('https://www.udhary.com');

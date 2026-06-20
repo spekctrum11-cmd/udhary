@@ -54,7 +54,7 @@ export default function Ecosystem() {
                 <span>Investment<br />Platform</span>
               </div>
               <div className="eco-card border-blue">
-                <img src="/Brands/investesy_logo.jpg" alt="InvestEsy" className="eco-logo-img" />
+                <img src="/logo-astro.png" alt="InvestEsy" className="eco-logo-img" />
                 <span className="eco-url">www.investesy.in</span>
                 <div className="eco-line line-bl"></div>
               </div>
