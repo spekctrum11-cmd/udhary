@@ -15,13 +15,13 @@ export function Footer() {
 
           {/* Brand Section */}
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <Link href="/" className="mb-6 inline-block">
+            <Link href="/" className="mb-6 px-3 py-1 bg-white rounded inline-block">
               <Image
-                src="/logo.png"
+                src="/udhary-new-logo.png"
                 alt="Udhary.com Logo"
                 width={160}
                 height={50}
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
                 style={{ width: 'auto' }}
               />
             </Link>

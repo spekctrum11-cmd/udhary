@@ -36,8 +36,8 @@ export function Navigation() {
     <nav className={`w-full sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-0.5' : 'bg-white py-1'}`}>
       <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex justify-between items-center max-[250px]:px-2">
         <div className="flex items-center gap-2">
-          <div className="w-[110px] sm:w-[120px] max-[250px]:w-[80px]">
-            <Image src="/logo.png" alt="logo" width={160} height={50} priority className="w-full h-auto object-contain" />
+          <div className="w-[95px] sm:w-[105px] max-[250px]:w-[70px]">
+            <Image src="/udhary-new-logo.png" alt="logo" width={160} height={50} priority className="w-full h-auto object-contain" />
           </div>
         </div>
 
@@ -99,10 +99,10 @@ export function Navigation() {
 
           {/* Desktop Actions */}
           <div className="flex gap-4 items-center">
-            <a href="https://app.udhary.com/login" className="px-5 lg:px-6 py-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300 font-bold text-[13px] sm:text-sm transition-all shadow-sm">
+            <a href="https://app.udhary.com/login" className="px-5 lg:px-6 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300 font-bold text-[13px] sm:text-sm transition-all shadow-sm">
               Login
             </a>
-            <a href="https://app.udhary.com/phone-verification" className="px-5 lg:px-6 py-2 rounded-xl bg-blue-600 text-white font-bold text-[13px] sm:text-sm transition-transform active:translate-y-[3px] active:shadow-none shadow-[0_4px_0_#1e40af] hover:translate-y-[1px] hover:shadow-[0_3px_0_#1e40af]">
+            <a href="https://app.udhary.com/phone-verification" className="px-5 lg:px-6 py-1.5 rounded-xl bg-blue-600 text-white font-bold text-[13px] sm:text-sm transition-transform active:translate-y-[2px] active:shadow-none shadow-[0_3px_0_#1e40af] hover:translate-y-[1px] hover:shadow-[0_2px_0_#1e40af]">
               Become a Partner
             </a>
           </div>
@@ -110,11 +110,11 @@ export function Navigation() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden p-2 text-slate-600 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
+          className="lg:hidden p-1.5 text-slate-600 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Mobile Menu"
         >
-          <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'wght' 300" }}>
+          <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'wght' 300" }}>
             {isMobileMenuOpen ? 'close' : 'menu'}
           </span>
         </button>
