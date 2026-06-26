@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Are you a salaried professional looking for extra financial support? Get quick, hassle-free loans to meet your every need at Udhary.com. Low interest, fast approval.",
   keywords: ["personal loan", "business loan", "home loan", "car loan", "credit card", "finance", "instant approval", "India"],
   icons: {
-    icon: "/favicon.png",
+    icon: "/new-favicon.png",
   },
   openGraph: {
     title: "Udhary.com | Quick, Hassle-Free Loans",
