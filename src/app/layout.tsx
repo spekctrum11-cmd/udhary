@@ -7,7 +7,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const lplusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
 });
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${plusJakartaSans.variable} h-full antialiased scroll-smooth`}
+      className={`${inter.variable} ${lplusJakartaSans.variable} h-full antialiased scroll-smooth`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
