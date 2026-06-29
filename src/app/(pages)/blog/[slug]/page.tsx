@@ -50,7 +50,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
   const formattedDate = formatDate(blog.date);
 
   // Generate URL for social sharing (mock domain if deployed)
-  const shareUrl = `https://udhary.onrender.app/blog/${blog.slug}`;
+  const shareUrl = `https://udhary.onrender.com/blog/${blog.slug}`;
 
   return (
     <main className="flex-1 bg-surface-container-lowest">
@@ -63,13 +63,13 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             "@type": "Article",
             "headline": blog.title,
             "image": [
-              `https://udhary.onrender.app${blog.image}`
+              `https://udhary.onrender.com${blog.image}`
             ],
             "datePublished": new Date(blog.date).toISOString(),
             "author": [{
               "@type": "Organization",
               "name": "Udhary",
-              "url": "https://udhary.onrender.app"
+              "url": "https://udhary.onrender.com"
             }],
             "description": blog.excerpt
           })
