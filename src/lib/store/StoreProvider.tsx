@@ -9,12 +9,14 @@ export default function StoreProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const storeRef = useRef<AppStore>(null);
-  
-  if (!storeRef.current) {
-    // Create the store instance the first time this renders
+  // allow null and initialize only once using the recommended null-check pattern
+  const storeRef = useRef<AppStore | null>(null);
+
+  if (storeRef.current == null) {
     storeRef.current = makeStore();
   }
 
-  return <Provider store={storeRef.current}>{children}</Provider>;
+  // assert non-null for Provider after initialization
+  return <Provider store={storeRef.current!}>{children}</Provider>;
 }
+
