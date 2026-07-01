@@ -51,5 +51,3 @@ For inquiries, support, or partnership opportunities, please reach out to our te
 <div align="center">
   <sub>© Udhary. All rights reserved.</sub>
 </div>
-
-new merge branch update development
