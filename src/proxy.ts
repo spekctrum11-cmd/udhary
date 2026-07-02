@@ -59,7 +59,7 @@ export function proxy(request: NextRequest) {
               { status: 403, headers: { 'Content-Type': 'application/json' } }
             );
           }
-        } catch (e) {
+        } catch {
           return new NextResponse(
             JSON.stringify({ error: 'CSRF Protection: Invalid origin header.' }),
             { status: 403, headers: { 'Content-Type': 'application/json' } }
@@ -74,7 +74,7 @@ export function proxy(request: NextRequest) {
               { status: 403, headers: { 'Content-Type': 'application/json' } }
             );
           }
-        } catch (e) {
+        } catch {
           return new NextResponse(
             JSON.stringify({ error: 'CSRF Protection: Invalid referer header.' }),
             { status: 403, headers: { 'Content-Type': 'application/json' } }

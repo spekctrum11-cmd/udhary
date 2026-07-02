@@ -49,6 +49,7 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (error) {
+    console.error('Error booking appointment:', error);
     return NextResponse.json(
       { error: 'Failed to book appointment' },
       { status: 500 }

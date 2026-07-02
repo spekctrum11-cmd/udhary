@@ -31,6 +31,7 @@ jest.mock('framer-motion', () => {
     }
     return resolved;
   };
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const DummyComponent = React.forwardRef(({
     children,
     onDragEnd,
@@ -53,6 +54,7 @@ jest.mock('framer-motion', () => {
     const resolvedStyle = resolveStyle(style);
     return <div ref={ref} style={resolvedStyle} {...props}>{children}</div>;
   });
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   const mockMotionValue = {
     get: () => 0,
     set: () => {},

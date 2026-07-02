@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  FcApproval, FcLineChart, FcRating, FcFlashOn, FcDepartment, FcMoneyTransfer, FcSafe, FcCurrencyExchange, FcBriefcase, FcVip,
-  FcSalesPerformance, FcShop, FcPieChart, FcDoughnutChart, FcDocument, FcComboChart, FcBusiness, FcBusinesswoman, FcBusinessman, FcBusinessContact,
-  FcBarChart, FcAreaChart, FcStatistics, FcPaid, FcOrganization, FcHome, FcGraduationCap, FcGoodDecision, FcFinePrint, FcAutomotive
+  FcApproval, FcLineChart, FcFlashOn, FcDepartment, FcMoneyTransfer, FcSafe, FcCurrencyExchange, FcBriefcase,
+  FcSalesPerformance, FcShop, FcDocument, FcComboChart, FcBusiness, FcBusinesswoman,
+  FcBarChart, FcAreaChart, FcStatistics, FcOrganization, FcHome, FcGraduationCap, FcGoodDecision, FcFinePrint, FcAutomotive
 } from "react-icons/fc";
 import { IconType } from "react-icons";
 
@@ -49,10 +49,7 @@ const generateNotifications = (): Notification[] => {
     const amount = Math.floor(random() * 15 + 1) * 100000; // 1L to 15L
     const amountFormatted = `₹${amount / 100000}L`;
     const rate = (10 + random() * 3).toFixed(1); // 10.0% to 13.0%
-    const randomCashback = `₹${Math.floor(random() * 5 + 1) * 1000}`;
-    const randomSip = `₹${Math.floor(random() * 5 + 1) * 1000}`;
     const randomTwoWheeler = `₹${Math.floor(random() * 5 + 5) * 10000}`;
-    const randomBonus = `₹${Math.floor(random() * 3 + 1) * 500}`;
 
     const templates = [
       // Personal Loans
