@@ -437,6 +437,38 @@ describe('Shared UI Components', () => {
         window.dispatchEvent(new Event('scroll'));
       });
     });
+
+    it('handles brand logo click when on "/" to scroll to top', () => {
+      const originalScrollTo = window.scrollTo;
+      window.scrollTo = jest.fn();
+      window.history.pushState({}, '', '/');
+
+      render(<Navigation />);
+      const logoImg = screen.getByAltText('logo');
+      const logoLink = logoImg.closest('a');
+      expect(logoLink).toBeInTheDocument();
+
+      fireEvent.click(logoLink!);
+
+      expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+      window.scrollTo = originalScrollTo;
+    });
+
+    it('handles brand logo click when on another path without scrolling to top', () => {
+      const originalScrollTo = window.scrollTo;
+      window.scrollTo = jest.fn();
+      window.history.pushState({}, '', '/some-other-path');
+
+      render(<Navigation />);
+      const logoImg = screen.getByAltText('logo');
+      const logoLink = logoImg.closest('a');
+      expect(logoLink).toBeInTheDocument();
+
+      fireEvent.click(logoLink!);
+
+      expect(window.scrollTo).not.toHaveBeenCalled();
+      window.scrollTo = originalScrollTo;
+    });
   });
 
   describe('Static Sections Rendering', () => {
