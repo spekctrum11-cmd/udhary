@@ -28,7 +28,7 @@ export default function Ecosystem() {
                 <span>Insurance<br />Platform</span>
               </div>
               <div className="eco-card border-orange">
-                <img src="/Brands/beemaaa_logo.png" alt="Beeमा" className="eco-logo-img" />
+                <Image src="/Brands/beemaaa_logo.png" alt="Beeमा" width={130} height={40} className="eco-logo-img" />
                 <span className="eco-url">www.beemaaa.com</span>
                 <div className="eco-line line-tl"></div>
               </div>
@@ -41,7 +41,7 @@ export default function Ecosystem() {
                 <span>Financial<br />Services</span>
               </div>
               <div className="eco-card border-green">
-                <img src="/sahipe.png" alt="सही पे" className="eco-logo-img" />
+                <Image src="/sahipe.png" alt="सही पे" width={130} height={40} className="eco-logo-img" />
                 <span className="eco-url">www.sahipe.com</span>
                 <div className="eco-line line-ml"></div>
               </div>
@@ -54,7 +54,7 @@ export default function Ecosystem() {
                 <span>Investment<br />Platform</span>
               </div>
               <div className="eco-card border-blue">
-                <img src="/logo-astro.png" alt="InvestEsy" className="eco-logo-img" />
+                <Image src="/logo-astro.png" alt="InvestEsy" width={160} height={40} className="eco-logo-img" />
                 <span className="eco-url">www.investesy.in</span>
                 <div className="eco-line line-bl"></div>
               </div>
@@ -65,7 +65,7 @@ export default function Ecosystem() {
           <div className="eco-center">
             <div className="eco-hub-ring">
               <div className="eco-hub-inner">
-                <img src="/Brands/SPEKCTRUM.png" alt="SPEKTRUM" className="eco-hub-icon" />
+                <Image src="/Brands/SPEKCTRUM.png" alt="SPEKTRUM" width={160} height={80} className="eco-hub-icon" />
                 <div className="eco-hub-text">
                   <span className="eco-spektrum-text">SPEKCTRUM</span>
                   <span className="eco-hub-com">.com</span>
@@ -79,7 +79,7 @@ export default function Ecosystem() {
             {/* Item 4 */}
             <div className="eco-item">
               <div className="eco-card border-purple">
-                <img src="/Brands/travelezi.png" alt="TravelEzi" className="eco-logo-img" />
+                <Image src="/Brands/travelezi.png" alt="TravelEzi" width={130} height={40} className="eco-logo-img" />
                 <span className="eco-url">www.travelezi.com</span>
                 <div className="eco-line line-tr"></div>
               </div>
@@ -92,7 +92,7 @@ export default function Ecosystem() {
             {/* Item 5 */}
             <div className="eco-item">
               <div className="eco-card border-blue">
-                <img src="/udhary-new-logo.png" alt="उधारी" className="eco-logo-img" />
+                <Image src="/udhary-new-logo.png" alt="उधारी" width={130} height={40} className="eco-logo-img" />
                 <span className="eco-url">www.udhary.com</span>
                 <div className="eco-line line-br"></div>
               </div>

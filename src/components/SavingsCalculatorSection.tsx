@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export function SavingsCalculatorSection() {
   const [currentInterest, setCurrentInterest] = useState<number>(16);
