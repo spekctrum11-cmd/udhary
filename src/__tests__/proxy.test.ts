@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 import defaultProxy, { proxy, config } from '@/proxy';
 import { checkRateLimit } from '@/lib/security';
 

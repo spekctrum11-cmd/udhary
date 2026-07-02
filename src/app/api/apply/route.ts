@@ -47,6 +47,7 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (error) {
+    console.error('Error processing application:', error);
     return NextResponse.json(
       { error: 'Failed to process application' },
       { status: 500 }

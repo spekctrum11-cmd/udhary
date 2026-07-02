@@ -66,7 +66,7 @@ jobs:
         name: next-build
 
     - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v3.0
+      uses: nwtgck/actions-netlify@v4
       with:
         publish-dir: './'
         production-deploy: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' }}
