@@ -28,7 +28,7 @@ type Step = 1 | 2 | 3;
 export default function ApplyPage() {
     const router = useRouter();
     const dispatch = useAppDispatch();
-    const { status, isEligible, error } = useAppSelector((state) => state.apply);
+    const { status, isEligible } = useAppSelector((state) => state.apply);
     
     const [step, setStep] = useState<Step>(1);
 

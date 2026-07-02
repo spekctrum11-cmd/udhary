@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calculator, TrendingUp, PieChart as PieChartIcon } from "lucide-react";
@@ -281,7 +281,6 @@ export default function EmiCalculator() {
                       ))}
                     </Pie>
                     <RechartsTooltip
-                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       formatter={(value: any) => formatCurrency(Number(value))}
                       contentStyle={{
                         borderRadius: '3px',

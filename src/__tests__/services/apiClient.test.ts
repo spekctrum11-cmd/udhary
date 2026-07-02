@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 // Mock axios BEFORE importing apiClient
 jest.mock('axios', () => {
   const mockAxiosInstance = {
