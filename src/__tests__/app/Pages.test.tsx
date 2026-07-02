@@ -329,6 +329,34 @@ describe('Application Page Components', () => {
       expect(screen.getByText('Share this article')).toBeInTheDocument();
     });
 
+    it('covers env var NEXT_PUBLIC_APP_URL branches on BlogPost details page', async () => {
+      const originalAppUrl = process.env.NEXT_PUBLIC_APP_URL;
+
+      // Case 1: NEXT_PUBLIC_APP_URL is defined
+      process.env.NEXT_PUBLIC_APP_URL = 'https://test.udhary.com';
+      let resolvedJSX = await BlogPostPage({
+        params: Promise.resolve({ slug: '2026-new-online-casinos-australia' }),
+      });
+      const rendered = render(resolvedJSX);
+      expect(screen.getByText('Share this article')).toBeInTheDocument();
+      rendered.unmount();
+
+      // Case 2: NEXT_PUBLIC_APP_URL is empty/undefined
+      delete process.env.NEXT_PUBLIC_APP_URL;
+      resolvedJSX = await BlogPostPage({
+        params: Promise.resolve({ slug: '2026-new-online-casinos-australia' }),
+      });
+      render(resolvedJSX);
+      expect(screen.getByText('Share this article')).toBeInTheDocument();
+
+      // Restore original env var
+      if (originalAppUrl !== undefined) {
+        process.env.NEXT_PUBLIC_APP_URL = originalAppUrl;
+      } else {
+        delete process.env.NEXT_PUBLIC_APP_URL;
+      }
+    });
+
     it('calls notFound when slug is invalid', async () => {
       await expect(
         BlogPostPage({

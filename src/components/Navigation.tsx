@@ -2,12 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from "next/link";
+
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileLoansOpen, setIsMobileLoansOpen] = useState(false);
   const [isDesktopLoansOpen, setIsDesktopLoansOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -33,12 +37,29 @@ export function Navigation() {
   ];
 
   return (
-    <nav className={`w-full sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-0.5' : 'bg-white py-1'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-[999] transition-all duration-300 ${scrolled
+      ? "bg-white/90 backdrop-blur-md shadow-sm py-0.5"
+      : "bg-white py-1"
+      }`}
+    >
       <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex justify-between items-center max-[250px]:px-2">
         <div className="flex items-center gap-2">
-          <div className="w-[95px] sm:w-[105px] max-[250px]:w-[70px]">
-            <Image src="/udhary-new-logo.png" alt="logo" width={160} height={50} priority className="w-full h-auto object-contain" />
-          </div>
+
+          <Link href="/"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            className="block">
+            <div className="w-[95px] sm:w-[105px] max-[250px]:w-[70px]">
+              <Image
+                src="/udhary-new-logo.png"
+
+                alt="logo" width={160} height={50} priority className="w-full h-auto object-contain" />
+            </div>
+          </Link>
         </div>
 
         {/* Desktop Navigation & Actions (Right Aligned) */}
