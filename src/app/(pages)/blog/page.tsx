@@ -22,17 +22,17 @@ export default async function BlogPage(props: { searchParams: Promise<{ [key: st
   return (
     <main className="flex-1 bg-surface-container-lowest">
       {/* Header Section */}
-                  {/* Elegant Ambient Background */}
+      {/* Elegant Ambient Background */}
       <section className="bg-slate-50 pt-20 pb-16 border-b border-slate-200 relative overflow-hidden">
         {/* Ambient Aurora Glows (Highly Visible) */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-[150px] -left-[100px] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[80px]"></div>
           <div className="absolute -bottom-[150px] -right-[100px] w-[500px] h-[500px] bg-orange-500/15 rounded-full blur-[80px]"></div>
         </div>
-        
+
         {/* Crisp Top Highlight */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"></div>
-        
+
         <div className="max-w-container-max mx-auto px-gutter text-center relative z-10">
           <span className="inline-block px-4 py-1.5 bg-blue-500/10 text-primary font-bold text-xs tracking-widest uppercase rounded-full mb-6 border border-blue-500/20 shadow-sm backdrop-blur-sm">
             Insights
@@ -53,26 +53,34 @@ export default async function BlogPage(props: { searchParams: Promise<{ [key: st
             {currentBlogs.map((blog, idx) => (
               <div key={idx} className="bg-white rounded-3xl shadow-lg border border-outline-variant/30 overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform duration-300">
                 <div className="aspect-[16/9] w-full relative overflow-hidden bg-slate-50">
-                  <Image 
-                    src={blog.image} 
-                    alt={`Cover image for ${blog.title}`}
-                    title={blog.title}
-                    fill
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 z-10">
-                    <span className="bg-white text-primary text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                      {blog.category}
-                    </span>
-                  </div>
+
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="block aspect-[16/9] w-full relative overflow-hidden bg-slate-50"
+                  >
+                    <Image
+                      src={blog.image}
+                      alt={`Cover image for ${blog.title}`}
+                      title={blog.title}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 z-10">
+                      <span className="bg-white text-primary text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                        {blog.category}
+                      </span>
+                    </div>
+                  </Link>
+
+
                 </div>
                 <div className="p-6 md:p-8 flex-1 flex flex-col">
                   <div className="flex items-center gap-4 text-xs text-slate-500 font-medium mb-3">
                     <span className="flex items-center gap-1.5">
-                      <span className="material-symbols-outlined text-[14px]">calendar_today</span> 
+                      <span className="material-symbols-outlined text-[14px]">calendar_today</span>
                       {formatDate(blog.date)}
                     </span>
                   </div>
@@ -89,7 +97,7 @@ export default async function BlogPage(props: { searchParams: Promise<{ [key: st
               </div>
             ))}
           </div>
-          
+
           {/* Pagination */}
           {totalPages > 1 && (
             <React.Suspense fallback={<div className="h-10 mt-16 w-full animate-pulse bg-surface-container rounded-xl"></div>}>
