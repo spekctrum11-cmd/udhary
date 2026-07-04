@@ -64,7 +64,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-on-surface font-body-md" suppressHydrationWarning>
         <StoreProvider>
           <Navigation />
-          <main className="flex-1 flex flex-col w-full">
+          <main className="flex-1 flex flex-col w-full pt-10">
             {children}
           </main>
           <Footer />
